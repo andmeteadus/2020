@@ -1,0 +1,22 @@
+# Permalinks
+permalink:        pretty
+
+# Setup
+title:            Statistiline andmeteadus ja visualiseerimine
+tagline:          MTMS.01.100
+url:              http://andmeteadus.github.io/
+paginate:         1
+baseurl:          /2020
+author:
+  name:           Tanel Pärnamaa, Kaspar Märtens, Taavi Unt, Kaur Lumiste
+  url:            
+  email:          andmeteadus@gmail.com, kaur.lumiste@ut.ee
+
+# Custom vars
+version:          1.0.0
+github:
+  repo:           http://andmeteadus.github.io/2020
+
+pages_list:       
+  Praktikumid: '/praktikumid'
+  Projektid: '/projektid'

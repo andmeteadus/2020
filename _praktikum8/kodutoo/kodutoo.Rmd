@@ -1,0 +1,21 @@
+---
+title: "Kodutöö"
+output: 
+  html_document:
+    theme: null
+---
+
+Tähtaeg: 08.04.2019 10:15
+
+
+(**25 punkti**) Lahenda praktikumis alustatud [dopingutesti ülesanded](../praktikum8_doping).
+
+
+# Mida on vaja esitada?
+
+* Tuleb esitada nii andmeanalüüsi raport (html või pdf formaadis) kui ka selle lähtekood .Rmd failina.
+
+* Lisaks palun kirjutada, kui palju aega kulus ülesannete peale. Mida arvad ülesannetest (kasulikkus, huvitavus)?
+
+
+Lahendused esitada [Moodle keskkonna](https://moodle.ut.ee/course/view.php?id=8013#section-1) kaudu.
