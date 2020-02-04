@@ -61,27 +61,29 @@ Lisaks praktikumidele sisaldab õppeaine järgnevaid komponente:
 * **Kodutööd:** Kokku antakse 8 kodutööd (igaüks 25 punkti). 
   * Kodutöö sisaldab enamasti andmete analüüsimist, visualiseerimist jne. Iga kodutöö tulemuseks on [knitr](http://yihui.name/knitr/)-i raport koos R-i koodi ning kommentaaridega. 
   * Kodutöö võib sisaldada ka küsimusi iseseisvalt õpitu (näiteks videoloengu) kohta. 
-  * Kodutööde esitamine käib läbi Moodle'i.
+  * Kodutööde esitamine käib läbi Moodle'i ja tähtaeg on 1 nädal. Kui kodutöö esitatakse pärast tähtaega, siis on võimalik seda esitada veel 1 nädala jooksul aga trahv -50% punktidest.
 * **Projekt:** Lisaks tuleb läbi viia üks praktiline andmeanalüüs ning kirjutada populaarteaduslikus vormis artikkel saadud tulemustest. 
 Artikkel on illustreeritud asjakohaste joonistega ning on arusaadav ka mittestatistikule. 
 Projekti võib teha kas üksinda või paaristööna. Tulemusi on vaja esitleda suulisel kaitsmisel. Soovi korral võib tutvuda [2017.](../2017/projektid/) ja [2019.](../2019/projektid/) aasta projektidega.
- * Iga projekti esitanud tudeng(id) saavad ühe kaastudengi(te) projekti retsenseerimiseks.
+ * Iga projekti esitanud tudeng(id) saavad ühe (juhusliku) kaastudengi(te) projekti retsenseerimiseks.
 
 Aine läbimiseks on vaja:
 
 1. kodutööde eest saada vähemalt 75% punktidest (on vaja saada vähemalt 150 punkti 200st võimalikust), 
 2. koostada projekt ning seda esitleda. 
+3. anda põhjalik tagasiside ühele kaastudengi(te) projektile.
 
 Õppeaines (3 EAP) ette nähtud 78 tundi tööd jaguneb järgnevalt:
 
 * praktikumid kokku 12 tundi (8 praktikumi, igaüks 1,5 tundi)
 * kodutööd kokku 40 tundi (8 kodutööd, igaüks 5 tundi)
-* projekti koostamine 24,5 tundi
-* projekti esitlemine 1,5 tundi
+* projekti koostamine 22 tundi
+* projekti esitlemine + retsenseerimine 2 tundi
+* teiste esitluste kuulamine 2 tundi
 
 # Tunniplaan
 
-Õppeaine toimub 2018/2019. õppeaasta kevadsemestril. 
+Õppeaine toimub 2019/2020. õppeaasta kevadsemestril. 
 
 * **Praktikumid kolmapäeviti kell 10:15** ruumis 2004
 (nädalatel 24 - 31). 
