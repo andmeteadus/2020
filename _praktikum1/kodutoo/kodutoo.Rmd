@@ -54,8 +54,8 @@ Kui tunned ennast veel ebakindlalt *dplyr* paketi kasutamise osas, siis soovitam
 
 # Mida on vaja esitada?
 
-* I osa kohta tuleb esitada vastused tekstifailis või kirjutada vastused meili sisusse. 
-* II osa kohta tuleb esitada nii andmeanalüüsi raport (html või pdf formaadis) kui ka selle lähtekood .Rmd failina.
+* I osa kohta tuleb esitada vastused [Moodle testi](https://moodle.ut.ee/mod/quiz/view.php?id=669005). 
+* II osa kohta tuleb esitada nii andmeanalüüsi raport (html või pdf formaadis) kui ka selle lähtekood .Rmd failina Moodle keskkonnas.
 
 
 Lahendused esitada [Moodle keskkonna](https://moodle.ut.ee/course/view.php?id=8013#section-1) kaudu.
