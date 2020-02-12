@@ -1,3 +1,5 @@
+<!DOCTYPE html>
+
 <html xmlns="http://www.w3.org/1999/xhtml">
 
 <head>
@@ -5,6 +7,7 @@
 <meta charset="utf-8" />
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <meta name="generator" content="pandoc" />
+<meta http-equiv="X-UA-Compatible" content="IE=EDGE" />
 
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -25,6 +28,9 @@ if (window.hljs) {
   }
 }
 </script>
+
+
+
 
 
 
@@ -53,7 +59,7 @@ if (window.hljs) {
 <li>aktsiaturu ülevaade sektorite lõikes;</li>
 <li>aktsiate ostusoovitused.</li>
 </ul>
-<p>Andmetabelist info kättesaamiseks kasutame R-i paketti <em>dplyr</em>. Selle paketi kohta loe täpsemalt <a href="/2018/praktikum1_dplyr">praktikumimaterjalist</a> ning uuri sealseid minimalistlikke näiteid.</p>
+<p>Andmetabelist info kättesaamiseks kasutame R-i paketti <em>dplyr</em>. Selle paketi kohta loe täpsemalt <a href="../praktikum1_dplyr">praktikumimaterjalist</a> ning uuri sealseid minimalistlikke näiteid.</p>
 </div>
 <div id="ulevaade-andmestikust" class="section level2">
 <h2>Ülevaade andmestikust</h2>
@@ -68,7 +74,7 @@ if (window.hljs) {
 <li><em>kasum_aktsia_kohta</em>: ettevõtte aastakasum / aktsiate koguarv</li>
 <li><em>dividend_aktsia_kohta</em>: väljamakstud dividendid aastas / aktsiate koguarv</li>
 </ul>
-<p>Laadi alla andmestik <a href="/2018/data/Aktsiad%202018.csv">Aktsiad 2018.csv</a> ning loe andmestik töökeskonda.</p>
+<p>Laadi alla andmestik <a href="/2020/data/Aktsiad%202020.csv">Aktsiad 2020.csv</a> ning loe andmestik töökeskonda.</p>
 </div>
 <div id="kodutoo-raport" class="section level2">
 <h2>Kodutöö raport</h2>
@@ -193,7 +199,7 @@ opts_chunk$set(echo=FALSE, message=FALSE, warning = FALSE)
 </div>
 <div id="boonusulesanne-2-3-punkti-andmete-automaatne-uuenemine" class="section level3">
 <h3>Boonusülesanne 2 (3 punkti): andmete automaatne uuenemine</h3>
-<p>Muuda kodutööd selliselt, et staatilise faili <em>Aktsiad 2018.csv</em> asemel kasutatakse reaalajas andmeid, mis on saadud portaalist <em>finance.yahoo.com</em>.</p>
+<p>Muuda kodutööd selliselt, et staatilise faili <em>Aktsiad 2020.csv</em> asemel kasutatakse reaalajas andmeid, mis on saadud portaalist <em>finance.yahoo.com</em>.</p>
 <p>Mõned näpunäited:</p>
 <ul>
 <li>kasuta R-i paketti <code>quantmod</code></li>
@@ -207,7 +213,8 @@ sp500_wiki &lt;- read_html(
   &quot;https://en.wikipedia.org/wiki/List_of_S%26P_500_companies&quot;)
 
 aktsiad_wiki &lt;- sp500_wiki %&gt;%
-  html_nodes(&quot;table.wikitable:nth-child(7)&quot;) %&gt;%
+  html_nodes(&quot;table&quot;) %&gt;%
+  html_nodes(xpath = '//*[@id=&quot;constituents&quot;]') %&gt;% 
   html_table()
 
 aktsiad_wiki &lt;- aktsiad_wiki[[1]][,c(1,2,4)]
@@ -215,12 +222,14 @@ colnames(aktsiad_wiki) = c(&quot;symbol&quot;, &quot;nimi&quot;, &quot;sektor&qu
 aktsiad_wiki$symbol = gsub(&quot;.&quot;, &quot;-&quot;, aktsiad_wiki$symbol, fixed = TRUE)</code></pre>
 <ul>
 <li>ühenda Wikist laetud andmestik Yahoo’st saadud andmestikuga tunnuse <em>symbol</em> alusel (vt<code>?join</code> või <code>?merge</code>)</li>
-<li>juhime tähelepanu, et tunnus <em>tootlus</em> vajab puhastamist</li>
 </ul>
 </div>
 </div>
 </div>
 
+
+
+<!-- code folding -->
 
 
 <!-- dynamically load mathjax for compatibility with self-contained -->

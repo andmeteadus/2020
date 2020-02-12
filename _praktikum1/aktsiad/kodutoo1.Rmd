@@ -20,7 +20,7 @@ Eesmärgiks on koostada automaatselt uuenev raport, kus on:
 * aktsiaturu ülevaade sektorite lõikes;
 * aktsiate ostusoovitused.
 
-Andmetabelist info kättesaamiseks kasutame R-i paketti *dplyr*. Selle paketi kohta loe täpsemalt [praktikumimaterjalist](/2018/praktikum1_dplyr) ning uuri sealseid minimalistlikke näiteid. 
+Andmetabelist info kättesaamiseks kasutame R-i paketti *dplyr*. Selle paketi kohta loe täpsemalt [praktikumimaterjalist](../praktikum1_dplyr) ning uuri sealseid minimalistlikke näiteid. 
 
 ## Ülevaade andmestikust
 
@@ -35,7 +35,7 @@ Andmestikus on näidatud 505 ettevõtte (kõik need ettevõtted, mis on kuulsas 
 * *kasum_aktsia_kohta*: ettevõtte aastakasum / aktsiate koguarv
 * *dividend_aktsia_kohta*: väljamakstud dividendid aastas / aktsiate koguarv
 
-Laadi alla andmestik [Aktsiad 2018.csv](/2018/data/Aktsiad 2018.csv) ning loe andmestik töökeskonda.
+Laadi alla andmestik [Aktsiad 2020.csv](/2020/data/Aktsiad 2020.csv) ning loe andmestik töökeskonda.
 
 ## Kodutöö raport
 
@@ -164,7 +164,7 @@ Kasuta paketti `kableExtra`, et vormindada ühte või enamat raportis olevat tab
 
 ### Boonusülesanne 2 (3 punkti): andmete automaatne uuenemine
 
-Muuda kodutööd selliselt, et staatilise faili *Aktsiad 2018.csv* asemel kasutatakse reaalajas andmeid, mis on saadud portaalist *finance.yahoo.com*.
+Muuda kodutööd selliselt, et staatilise faili *Aktsiad 2020.csv* asemel kasutatakse reaalajas andmeid, mis on saadud portaalist *finance.yahoo.com*.
 
 Mõned näpunäited:
 
@@ -180,7 +180,8 @@ sp500_wiki <- read_html(
   "https://en.wikipedia.org/wiki/List_of_S%26P_500_companies")
 
 aktsiad_wiki <- sp500_wiki %>%
-  html_nodes("table.wikitable:nth-child(6)") %>%
+  html_nodes("table") %>%
+  html_nodes(xpath = '//*[@id="constituents"]') %>% 
   html_table()
 
 aktsiad_wiki <- aktsiad_wiki[[1]][,c(1,2,4)]
@@ -189,4 +190,3 @@ aktsiad_wiki$symbol = gsub(".", "-", aktsiad_wiki$symbol, fixed = TRUE)
 ```
 
 * ühenda Wikist laetud andmestik Yahoo'st saadud andmestikuga tunnuse *symbol* alusel (vt`?join` või `?merge`)
-* juhime tähelepanu, et tunnus *tootlus* vajab puhastamist
