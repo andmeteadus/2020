@@ -5,7 +5,6 @@ output:
     theme: null
 ---
 
-Tähtaeg: 18.02.2019 10:15
 
 # I osa - veebiloengud, videod, artiklid (5 punkti)
 1. (**2 punkti**) Vaata Johns Hopkinsi reprodutseeritava analüüsi videosid:
@@ -46,7 +45,7 @@ Abimaterjalid:
 <div class="message">
 Kui tunned ennast veel ebakindlalt *dplyr* paketi kasutamise osas, siis soovitame ühte järgnevatest:
 
-* Lugeda juhendit [Introduction to dplyr](http://cran.rstudio.com/web/packages/dplyr/vignettes/introduction.html)
+* Lugeda juhendit [Introduction to dplyr](https://cran.rstudio.com/web/packages/dplyr/vignettes/dplyr.html)
 * Vaadata videot https://www.youtube.com/watch?v=8SGif63VW6E&t=4m5s, kus Hadley Wickham, kes on *dplyr* paketi autor, õpetab *UseR 2014* konverentsil seda paketti
     * 4:05 - 8:25 sissejuhatus, ülevaade andmestikest
     * 8:25 - 27:45 funktsioonid `filter`, `select`, `arrange`, `mutate`
@@ -55,8 +54,8 @@ Kui tunned ennast veel ebakindlalt *dplyr* paketi kasutamise osas, siis soovitam
 
 # Mida on vaja esitada?
 
-* I osa kohta tuleb esitada vastused tekstifailis või kirjutada vastused meili sisusse. 
-* II osa kohta tuleb esitada nii andmeanalüüsi raport (html või pdf formaadis) kui ka selle lähtekood .Rmd failina.
+* I osa kohta tuleb esitada vastused [Moodle testi](https://moodle.ut.ee/mod/quiz/view.php?id=669005). 
+* II osa kohta tuleb esitada nii andmeanalüüsi raport (html või pdf formaadis) kui ka selle lähtekood .Rmd failina Moodle keskkonnas.
 
 
 Lahendused esitada [Moodle keskkonna](https://moodle.ut.ee/course/view.php?id=8013#section-1) kaudu.
