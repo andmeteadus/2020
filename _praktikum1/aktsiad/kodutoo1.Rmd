@@ -35,7 +35,7 @@ Andmestikus on näidatud 505 ettevõtte (kõik need ettevõtted, mis on kuulsas 
 * *kasum_aktsia_kohta*: ettevõtte aastakasum / aktsiate koguarv
 * *dividend_aktsia_kohta*: väljamakstud dividendid aastas / aktsiate koguarv
 
-Laadi alla andmestik [Aktsiad 2020.csv](/2020/data/Aktsiad 2020.csv) ning loe andmestik töökeskonda.
+Laadi alla andmestik [Aktsiad 2020.csv](../data/Aktsiad 2020.csv) ning loe andmestik töökeskonda.
 
 ## Kodutöö raport
 
