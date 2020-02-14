@@ -1,6 +1,6 @@
 ﻿---
 layout: page
-title: Praktikumimaterjalid
+title: Huvitavat materjali
 ---
 
 ## Kasulikku kirjandust
