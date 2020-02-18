@@ -7,11 +7,17 @@ output:
 
 # Eeltöö
 
-Kodutööde esitamiseks kasutame Jupyter Notebooki. Jupyteri paigaldamiseks ja jooksutamiseks vaata palun järgnevat videot [Jupyter Notebook Tutorial](https://www.youtube.com/embed/HW29067qVWk), et saada aimu, milleks Jupyteri kasutatakse. 
+Kodutööde esitamiseks kasutame Jupyter Notebooki. Jupyteri paigaldamiseks ja jooksutamiseks vaata palun järgnevat videot [Jupyter Notebook Tutorial](https://www.youtube.com/watch?v=HW29067qVWk), et saada aimu, milleks Jupyteri kasutatakse. 
 
-**NB! Anacondas R-i keskkonna käivitamiseks tekita uus keskkond. Käsurealt ei pea käivitama.** 
+**NB! Anacondas R-i keskkonna käivitamiseks tekita uus keskkond.**
 
-**Kodutöö esitamiseks lae alla [Jupyter Notebook fail](/kodutoo1.ipynb) ja [abifail](/kodutoo1_naide2.PNG).**
+![](jupyter_instructions1.png "Keskkonna käivitamine")
+
+Jupyteri käivitamiseks:
+
+![](jupyter_instructions2.png "Keskkonna käivitamine")
+
+**Kodutöö esitamiseks lae alla [Jupyter Notebook fail ja abifail](kodutoo1.zip).**
 
 # I osa - veebiloengud, videod, artiklid (5 punkti)
 1. (**2 punkti**) Vaata Johns Hopkinsi reprodutseeritava analüüsi videosid:
@@ -61,7 +67,7 @@ Kui tunned ennast veel ebakindlalt *dplyr* paketi kasutamise osas, siis soovitam
 
 # Mida on vaja esitada?
 
-* I osa ja II osa tuleb esitada vastused [Jupyter Notebook faili](/kodutoo1.ipynb). 
+* I osa ja II osa tuleb esitada vastused [Jupyter Notebook faili](kodutoo1.ipynb). 
 * II osa kohta tee andmeanalüüsi raport R-is, Rmarkdown keeles, ning väljasta raport (html või pdf formaadis). Lähtekood .Rmd failis kopeeri Jupyter Notebook faili.
 
 

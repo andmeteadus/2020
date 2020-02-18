@@ -20,7 +20,7 @@ Pakett knitr. Markdown. Pakett dplyr. Näide: automaatne aktsiaturu ülevaade.
     * [dplyr minimalistlik näide](../praktikum1_dplyr)
 * [Automaatne aktsiaturu ülevaade](../praktikum1_aktsiad)
 * [Kodutöö](../praktikum1_kodutoo)
-    * Tähtaeg 19.02.2020 kell 23:59.
+    * Tähtaeg 23.02.2020 kell 23:59.
 
 
 ## Praktikum 2
