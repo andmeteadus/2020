@@ -20,7 +20,7 @@ Pakett knitr. Markdown. Pakett dplyr. Näide: automaatne aktsiaturu ülevaade.
     * [dplyr minimalistlik näide](../praktikum1_dplyr)
 * [Automaatne aktsiaturu ülevaade](../praktikum1_aktsiad)
 * [Kodutöö](../praktikum1_kodutoo)
-    * Tähtaeg 19.02.2020 kell 10:15.
+    * Tähtaeg 19.02.2020 kell 23:59.
 
 
 ## Praktikum 2
@@ -38,7 +38,7 @@ Pettuse tuvastamine Benfordi seaduse abil.
 * [*Growth in a time of debt*: riigi võlakoormuse ja SKP vaheline seos](../praktikum2_riigivolg)
 * [Pettuse tuvastamise ülesanded](../praktikum2_pettus)
 * [Kodutöö](../praktikum2_kodutoo)
-    * Tähtaeg 26.02.2020 kell 10:15.
+    * Tähtaeg 26.02.2020 kell 23:59.
 
 ## Praktikum 3
 
@@ -51,7 +51,7 @@ Joonised paketiga ggplot2: erinevad joonisetüübid. Interaktiivsed rakendused p
     * [jaotuste ära arvamise ülesanne](../praktikum3_quiz1) ja [graafikute tajumise ülesanne](../praktikum3_quiz2)
 * [Õppetulemuste visualiseerimise ülesanded](../praktikum3_oppeained)
 * [Kodutöö](../praktikum3_kodutoo)
-    * Tähtaeg 04.03.2020 kell 10:15.
+    * Tähtaeg 04.03.2020 kell 23:59.
 
 ## Praktikum 4
 
@@ -62,7 +62,7 @@ Mittestandardne graafika. Kuidas teha sama häid jooniseid nagu NY Times seda te
 * [NBA ülesanded](../praktikum4_nba)
 * [Lennuliikluse visualiseerimise ülesanded](../praktikum4_geo)
 * [Kodutöö](../praktikum4_kodutoo)
-    * Tähtaeg 11.03.2020 kell 10:15.
+    * Tähtaeg 11.03.2020 kell 23:59.
 
 ## Praktikum 5
 
@@ -74,7 +74,7 @@ Andmete kraapimine veebist. Näide: Riigikogu saadikute hääletamismustrid.
     * [rvest minimalistlik näide](../praktikum5_rvest_minimal)
 * [Veebi kraapimise ülesanded](../praktikum5_web)
 * [Kodutöö](../praktikum5_kodutoo)
-    * Tähtaeg 18.03.2020 kell 10:15.
+    * Tähtaeg 18.03.2020 kell 23:59.
 
 ## Praktikum 6
 
@@ -88,7 +88,7 @@ Heatmap. Peakomponentanalüüs. Näide (jätkub): Riigikogu saadikute hääletam
 * [Käsitsi kirjutatud numbritel põhinevad ülesanded](../praktikum6_numbrid)
 * [Riigikogu saadikute hääletusmustrite analüüs](../praktikum6_polaarsus)
 * [Kodutöö](../praktikum6_kodutoo)
-    * Tähtaeg 25.03.2020 kell 10:15.
+    * Tähtaeg 25.03.2020 kell 23:59.
 
 ## Praktikum 7
 
@@ -100,7 +100,7 @@ Logistiline regressioon. Mitmese testimise probleem. Näide: biomarkerid ja stat
     * [Logistilise regressiooni minimalistlik näide](../praktikum7_logreg_minimal)
 * [Biomarkerite abil surma prognoosimine](../praktikum7_biomarkerid)
 * [Kodutöö](../praktikum7_kodutoo)
-    * Tähtaeg 01.04.2020 kell 10:15.
+    * Tähtaeg 01.04.2020 kell 23:59.
 
 ## Praktikum 8
 
@@ -110,7 +110,7 @@ Doping ja statistika. Statistiline test. Näide: ühe dopingujuhtumi analüüs.
 
 * [Dopingutesti ülesanded](../praktikum8_doping)
 * [Kodutöö](../praktikum8_kodutoo)
-    * Tähtaeg 08.04.2020 kell 10:15.
+    * Tähtaeg 08.04.2020 kell 23:59.
 	
 <!--
 ## Lisa praktikum

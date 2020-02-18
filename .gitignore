@@ -27,6 +27,7 @@ nbproject
 *.sublime-project
 *.sublime-workspace
 .idea
+.ipynb_checkpoints
 
 # Komodo
 *.komodoproject

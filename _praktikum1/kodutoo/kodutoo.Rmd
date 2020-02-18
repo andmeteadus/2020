@@ -5,6 +5,13 @@ output:
     theme: null
 ---
 
+# Eeltöö
+
+Kodutööde esitamiseks kasutame Jupyter Notebooki. Jupyteri paigaldamiseks ja jooksutamiseks vaata palun järgnevat videot [Jupyter Notebook Tutorial](https://www.youtube.com/embed/HW29067qVWk), et saada aimu, milleks Jupyteri kasutatakse. 
+
+**NB! Anacondas R-i keskkonna käivitamiseks tekita uus keskkond. Käsurealt ei pea käivitama.** 
+
+**Kodutöö esitamiseks lae alla [Jupyter Notebook fail](/kodutoo1.ipynb) ja [abifail](/kodutoo1_naide2.PNG).**
 
 # I osa - veebiloengud, videod, artiklid (5 punkti)
 1. (**2 punkti**) Vaata Johns Hopkinsi reprodutseeritava analüüsi videosid:
@@ -54,10 +61,10 @@ Kui tunned ennast veel ebakindlalt *dplyr* paketi kasutamise osas, siis soovitam
 
 # Mida on vaja esitada?
 
-* I osa kohta tuleb esitada vastused [Moodle testi](https://moodle.ut.ee/mod/quiz/view.php?id=669005). 
-* II osa kohta tuleb esitada nii andmeanalüüsi raport (html või pdf formaadis) kui ka selle lähtekood .Rmd failina Moodle keskkonnas.
+* I osa ja II osa tuleb esitada vastused [Jupyter Notebook faili](/kodutoo1.ipynb). 
+* II osa kohta tee andmeanalüüsi raport R-is, Rmarkdown keeles, ning väljasta raport (html või pdf formaadis). Lähtekood .Rmd failis kopeeri Jupyter Notebook faili.
 
 
-Lahendused esitada [Moodle keskkonna](https://moodle.ut.ee/course/view.php?id=8013#section-1) kaudu.
+Täidetud Jupyter Notebook fail esitada [Moodle keskkonna](https://moodle.ut.ee/course/view.php?id=8013#section-1) kaudu.
 
 
