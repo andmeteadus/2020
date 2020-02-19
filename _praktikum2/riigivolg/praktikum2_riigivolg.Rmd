@@ -7,49 +7,49 @@ output:
 
 # Sissejuhatus
 
-Kati "Makro" ÷konoomika on tavaline Eesti naine, kes saab kıigega hakkama: ta kasvatab ¸ksi last, maksab koguperelaenu ning tˆˆtab Euroopa Komisjoni struktuuri¸ksuses ametnikuna. 2013. aasta alguses andis Olli Rehn, ¸ks toonastest 28-st Euroopa Komisjoni volinikust, talle ¸lesandeks uurida vılakoorma mıju majanduskasvule.
+Kati "Makro" √ñkonoomika on tavaline Eesti naine, kes saab k√µigega hakkama: ta kasvatab √ºksi last, maksab koguperelaenu ning t√∂√∂tab Euroopa Komisjoni struktuuri√ºksuses ametnikuna. 2013. aasta alguses andis Olli Rehn, √ºks toonastest 28-st Euroopa Komisjoni volinikust, talle √ºlesandeks uurida v√µlakoorma m√µju majanduskasvule.
 
-Kati teadis, et hea uurimus peab pıhinema andmetel, mitte ekspertide kıhutundel. Peagi leidis ta artikli [*Growth in a Time of Debt*](http://www.nber.org/papers/w15639), mille pıhitulemuseks oli, et kırgem riigivılg on seotud madalama majanduskasvuga ning v‰ga probemaatiline on riigivılg, mis on ¸le 90% SKP-st. Artikkel tundus usaldusv‰‰rne, sest artikli autoriteks on tunnustatud majandusteadlased Harvardist, artiklit oli tsiteeritud sel hetkel juba ¸le 500 korra ning see pıhines 50-aastasel perioodil.
+Kati teadis, et hea uurimus peab p√µhinema andmetel, mitte ekspertide k√µhutundel. Peagi leidis ta artikli [*Growth in a Time of Debt*](http://www.nber.org/papers/w15639), mille p√µhitulemuseks oli, et k√µrgem riigiv√µlg on seotud madalama majanduskasvuga ning v√§ga probemaatiline on riigiv√µlg, mis on √ºle 90% SKP-st. Artikkel tundus usaldusv√§√§rne, sest artikli autoriteks on tunnustatud majandusteadlased Harvardist, artiklit oli tsiteeritud sel hetkel juba √ºle 500 korra ning see p√µhines 50-aastasel perioodil.
 
-Juba 9. aprillil 2013 kasutas Olli Rehn oma kınes Rahvusvahelisele Tˆˆorganisatsioonile Kati leitut:
+Juba 9. aprillil 2013 kasutas Olli Rehn oma k√µnes Rahvusvahelisele T√∂√∂organisatsioonile Kati leitut:
 
 > public debt in Europe is expected to stabilise only by 2014 and to do so at above 90% of GDP. Serious empirical research has shown that at such high levels, public debt acts as a permanent drag on growth.
 
-Kati tundis, et ta oma tˆˆd h‰sti teinud ja unistas aastalıpu boonusest. Tema sisemine rahulolu j‰i aga ¸¸rikeseks. Majandusteadlased (Herndon, Ash, Pollin) ¸likoolist UMass Amherst avaldasid teadusartikli, kus v‰itsid, et Reinhart-Rogoffi metoodikas on tısiseid vigu sees, alustades Exceli arvutusveast, andmete v‰ljaj‰tmisest ja valest kaalumismeetodist. Majandusteemalised ajalehed olid t‰is kriitilisi kommentaare, sest Exceli viga on ju hoomatav kıigile.
+Kati tundis, et ta oma t√∂√∂d h√§sti teinud ja unistas aastal√µpu boonusest. Tema sisemine rahulolu j√§i aga √º√ºrikeseks. Majandusteadlased (Herndon, Ash, Pollin) √ºlikoolist UMass Amherst avaldasid teadusartikli, kus v√§itsid, et Reinhart-Rogoffi metoodikas on t√µsiseid vigu sees, alustades Exceli arvutusveast, andmete v√§ljaj√§tmisest ja valest kaalumismeetodist. Majandusteemalised ajalehed olid t√§is kriitilisi kommentaare, sest Exceli viga on ju hoomatav k√µigile.
 
-![alt text](reinhart_rogoff_coding_error.png "N‰ide")
+![alt text](reinhart_rogoff_coding_error.png "N√§ide")
 
-Moodustati kriisikomisjon, mida pandi juhtima Kati. Vaja on teha suurele hulgale poliitikutele vıimalikult lihtsasti selgeks, mille vastu eksisid Reinhart-Rogoff ja kui palju esialgsed tulemused muutusid.
+Moodustati kriisikomisjon, mida pandi juhtima Kati. Vaja on teha suurele hulgale poliitikutele v√µimalikult lihtsasti selgeks, mille vastu eksisid Reinhart-Rogoff ja kui palju esialgsed tulemused muutusid.
 
 # Tutvumine andmestikuga
 
-20 arenenud riigi kohta on teada SKP kasvunumber ja vılakoorma-SKP suhe aastatel 1946-2009. Andmestikus on j‰rgnevad tunnused:
+20 arenenud riigi kohta on teada SKP kasvunumber ja v√µlakoorma-SKP suhe aastatel 1946-2009. Andmestikus on j√§rgnevad tunnused:
 
-* *riik*: mis riigi kohta n‰itajad on toodud
-* *aasta*: mis aasta kohta k‰ivad SKP kasv ja vılakoorma-SKP suhe
-* *vola_skp_suhe*: vılakoorma ja SKP suhe protsentides
+* *riik*: mis riigi kohta n√§itajad on toodud
+* *aasta*: mis aasta kohta k√§ivad SKP kasv ja v√µlakoorma-SKP suhe
+* *vola_skp_suhe*: v√µlakoorma ja SKP suhe protsentides
 * *skp_kasv*: SKP kasvunumber
-* *exceli_viga*: binaarne tunnus, mis n‰itab, kas andmepunkt j‰i RR anal¸¸sist v‰lja Exceli *arvutusvea* tıttu (kui on 1, siis j‰i v‰lja)
-* *valikuline*: binaarne tunnus, mis n‰itab, kas andmepunkt j‰i RR anal¸¸sist v‰lja (HAP v‰itel selekteerimise tıttu, RR v‰itel, et neid andmeid anal¸¸si tegemise ajal polnud. Kui on 1, siis j‰i RR anal¸¸sist v‰lja.)
+* *exceli_viga*: binaarne tunnus, mis n√§itab, kas andmepunkt j√§i RR anal√º√ºsist v√§lja Exceli *arvutusvea* t√µttu (kui on 1, siis j√§i v√§lja)
+* *valikuline*: binaarne tunnus, mis n√§itab, kas andmepunkt j√§i RR anal√º√ºsist v√§lja (HAP v√§itel selekteerimise t√µttu, RR v√§itel, et neid andmeid anal√º√ºsi tegemise ajal polnud. Kui on 1, siis j√§i RR anal√º√ºsist v√§lja.)
 
-Laadi alla andmestik [skp_ja_volg.csv](../data/skp_ja_volg.csv) ja loe tˆˆkeskkonda.
+Laadi alla andmestik [skp_ja_volg.csv](../data/skp_ja_volg.csv) ja loe t√∂√∂keskkonda.
 
-### ‹lesanne 1 (2 punkti) - RR ja HAP tulemuste reprodutseerimine
+### √úlesanne 1 (2 punkti) - RR ja HAP tulemuste reprodutseerimine
 
 Kontrolli, kas suudad reprodutseerida RR ja HAP tulemused.
-Praktikumis tutvusime paketi *dplyr* [%>% operaatoriga](../praktikum1_dplyr). Soovitame seda kasutada selle ¸lesande lahendamisel.
+Praktikumis tutvusime paketi *dplyr* [%>% operaatoriga](../praktikum1_dplyr). Soovitame seda kasutada selle √ºlesande lahendamisel.
 
 Juhised: 
 
-* Lisa uus tunnus, mis n‰itab *vola_skp_suhe* kategooriat (`< 30%`, `30-60%`, `60-90%`, `> 90%`). N‰pun‰ide: kasuks tuleb k‰sk `cut`.
+* Lisa uus tunnus, mis n√§itab *vola_skp_suhe* kategooriat (`< 30%`, `30-60%`, `60-90%`, `> 90%`). N√§pun√§ide: kasuks tuleb k√§sk `cut`.
 * kaalumisviisid  
-HAP kaalub igas kategoorias andmepunkte vırdselt (ehk vıtab tavalise aritmeetilise keskmise), RR arvutab igas grupis riikide keskmise ja vıtab neist aritmeetilise keskmise.
+HAP kaalub igas kategoorias andmepunkte v√µrdselt (ehk v√µtab tavalise aritmeetilise keskmise), RR arvutab igas grupis riikide keskmise ja v√µtab neist aritmeetilise keskmise.
 
-![alt text](kaalumine.png "N‰ide")
+![alt text](kaalumine.png "N√§ide")
 
-* RR-i tulemuste reprodutseerimiseks j‰ta arvutustest v‰lja andmepunktid, mis j‰id v‰lja Exceli vea tıttu (vt tunnus *exceli_viga*) ja andmete puudumise tıttu (vt tunnus *valikuline*).
+* RR-i tulemuste reprodutseerimiseks j√§ta arvutustest v√§lja andmepunktid, mis j√§id v√§lja Exceli vea t√µttu (vt tunnus *exceli_viga*) ja andmete puudumise t√µttu (vt tunnus *valikuline*).
 
-- RR tegid ka kopeerimisvea: kopeerides riikide keskmisi ¸hest Exceli tabelist teise, muutus Uus-Meremaa keskmine SKP tıus grupis *"> 90%"* v‰‰rtuselt -7.6 v‰‰rtuseks -7.9. (N‰pun‰ide: kasuks tuleb k‰sk `ifelse`.)
+- RR tegid ka kopeerimisvea: kopeerides riikide keskmisi √ºhest Exceli tabelist teise, muutus Uus-Meremaa keskmine SKP t√µus grupis *"> 90%"* v√§√§rtuselt -7.6 v√§√§rtuseks -7.9. (N√§pun√§ide: kasuks tuleb k√§sk `ifelse`.)
 
 ```{r}
 # sinu kood
@@ -70,9 +70,9 @@ kable(df)
 ```
 
 
-### ‹lesanne 2 (1 punkt) - visualiseeri vılakoormuse muutumist ajas
+### √úlesanne 2 (1 punkt) - visualiseeri v√µlakoormuse muutumist ajas
 
-Visualiseeri, kuidas vılakoorem on aastate jooksul muutunud riikide lıikes
+Visualiseeri, kuidas v√µlakoorem on aastate jooksul muutunud riikide l√µikes
 
 ```{r}
 # sinu kood
@@ -80,26 +80,26 @@ Visualiseeri, kuidas vılakoorem on aastate jooksul muutunud riikide lıikes
 
 # Kuidas efektiivselt visualiseerida ...
 
-J‰rgnevalt p¸¸ame leida parima viisi, kuidas efektiivselt visualiseerida
+J√§rgnevalt p√º√ºame leida parima viisi, kuidas efektiivselt visualiseerida
 
-1. millised vaatlused j‰id RR anal¸¸sist v‰lja
-2. kuivırd erinesid RR ja HAP anal¸¸side tulemused
-3. kas vılakoormus suurem kui 90% on maagilise t‰htsusega (st kas piir on just t‰pselt 90%)
-4. milline on seos SKP ja vılakoormuse vahel
+1. millised vaatlused j√§id RR anal√º√ºsist v√§lja
+2. kuiv√µrd erinesid RR ja HAP anal√º√ºside tulemused
+3. kas v√µlakoormus suurem kui 90% on maagilise t√§htsusega (st kas piir on just t√§pselt 90%)
+4. milline on seos SKP ja v√µlakoormuse vahel
 
-### ‹lesanne 3 (1 punkt) - millised vaatlused j‰id RR anal¸¸sist v‰lja
+### √úlesanne 3 (1 punkt) - millised vaatlused j√§id RR anal√º√ºsist v√§lja
 
 ```{r}
 # sinu kood
 ```
 
-### Boonus¸lesanne 1 (2 punkti) - kuidas erinesid RR ja HAP anal¸¸side tulemused
+### Boonus√ºlesanne 1 (2 punkti) - kuidas erinesid RR ja HAP anal√º√ºside tulemused
 
-HAPi raportis kasutati vasakpoolset joonist, et visualiseerida RR ja HAP tulemuste erinevusi. NY times pani samale joonisele aga mediaani ja keskmise (parempoolne joonis)! Paku v‰lja parem visualiseerimise idee, kuidas muuta arusaadavaks tulemuste erinevus.
+HAPi raportis kasutati vasakpoolset joonist, et visualiseerida RR ja HAP tulemuste erinevusi. NY times pani samale joonisele aga mediaani ja keskmise (parempoolne joonis)! Paku v√§lja parem visualiseerimise idee, kuidas muuta arusaadavaks tulemuste erinevus.
 
-![alt text](HAP_NYtimes.png "N‰ide")
+![alt text](HAP_NYtimes.png "N√§ide")
 
-> Praktikumis pakuti v‰lja sarnane joonis NY Times joonisega, aga joondiagrammi asemel kasutame tulpdiagrammi ning mediaanide ja aritmeetiliste keskmiste kohta teeme eraldi joonised. Kuna see meetod nıuab oskusi, mida me ei k‰sitlenud tunni raames, j‰‰b see ¸lesanne boonus¸lesandeks.
+> Praktikumis pakuti v√§lja sarnane joonis NY Times joonisega, aga joondiagrammi asemel kasutame tulpdiagrammi ning mediaanide ja aritmeetiliste keskmiste kohta teeme eraldi joonised. Kuna see meetod n√µuab oskusi, mida me ei k√§sitlenud tunni raames, j√§√§b see √ºlesanne boonus√ºlesandeks.
 
 Vihje:
 
@@ -117,34 +117,34 @@ ggplot(df, aes(x=grupp, y=mediaan, fill=analyys)) +
 # sinu kood
 ```
 
-### ‹lesanne 4 (2 punkti) - kas vılakoormus suurem kui 90% on maagilise t‰htsusega
+### √úlesanne 4 (2 punkti) - kas v√µlakoormus suurem kui 90% on maagilise t√§htsusega
 
 > Our main finding is that across both advanced countries and emerging markets, high debt/GDP levels (90 percent and above) are associated with notably lower growth outcomes.
 
-Selgitage v‰lja, kas t‰pselt 90% on just see piir, millest suurem vılakoormus on seotud madalama SKP kasvuga, vıi on see suhteliselt suvaliselt valitud arv? 
+Selgitage v√§lja, kas t√§pselt 90% on just see piir, millest suurem v√µlakoormus on seotud madalama SKP kasvuga, v√µi on see suhteliselt suvaliselt valitud arv? 
 
-‹ks vıimalik lahendusviis: Tekitage uus kategooria, kus vılg jaotatakse 5 gruppi: `< 30%`, `30-60%`, `60-90%`, `90-120%`, `> 120%`). Arvutage iga grupi kohta mediaanid ja keskmised kasutades RR kaalumisviisi.
+√úks v√µimalik lahendusviis: Tekitage uus kategooria, kus v√µlg jaotatakse 5 gruppi: `< 30%`, `30-60%`, `60-90%`, `90-120%`, `> 120%`). Arvutage iga grupi kohta mediaanid ja keskmised kasutades RR kaalumisviisi.
 
 ```{r}
 # sinu kood
 ```
 
-### ‹lesanne 5 (4 punkti) - Kuidas visuaalselt uurida, milline on seos SKP ja vılakoormuse vahel?
+### √úlesanne 5 (4 punkti) - Kuidas visuaalselt uurida, milline on seos SKP ja v√µlakoormuse vahel?
 
-Kıigepealt, tehke joonis, kus oleks n‰ha seos SKP ja vılakoormuse vahel. Seose iseloomustamiseks vıite kasutada `stat_smooth()` abil leitavat joont. 
+K√µigepealt, tehke joonis, kus oleks n√§ha seos SKP ja v√µlakoormuse vahel. Seose iseloomustamiseks v√µite kasutada `stat_smooth()` abil leitavat joont. 
 
-N‰inud seost andmestikus, tekib k¸simus, ega see seos ei ole lihtsalt juhuslik. Ehk kas vaadeldud seos erineb oluliselt seostest sellistes andmestikes, kus tegelikult SKP ja vılakoormuse vahel mingisugust seost ei eksisteeri. 
+N√§inud seost andmestikus, tekib k√ºsimus, ega see seos ei ole lihtsalt juhuslik. Ehk kas vaadeldud seos erineb oluliselt seostest sellistes andmestikes, kus tegelikult SKP ja v√µlakoormuse vahel mingisugust seost ei eksisteeri. 
 
-Selle visuaalseks kontrollimiseks vıime kasutada j‰rgmist skeemi. See pıhineb permutatsioonitestil, mille kohta vaadake esmalt [kodutˆˆ osa I](../praktikum2_kodutoo) videot https://www.youtube.com/watch?v=5Dnw46eC-0o
+Selle visuaalseks kontrollimiseks v√µime kasutada j√§rgmist skeemi. See p√µhineb permutatsioonitestil, mille kohta vaadake esmalt [kodut√∂√∂ osa I](../praktikum2_kodutoo) videot https://www.youtube.com/watch?v=5Dnw46eC-0o
 
 Skeem:
 
-* Nullh¸potees on, et SKP ja riigivıla vahel seos puudub. 
-* Genereerime meie andmetest permuteerimise teel sellise andmestiku, mis vastab nullh¸poteesile. N‰iteks vıib fikseerida SKP v‰‰rtused ning neile vastavusse seatavad riigivıla v‰‰rtused permuteerida. (N‰pun‰ide: permuteerimisel on kasuks funktsioon `sample`.) J‰rgneval joonisel on n‰idatud tegelik andmestik ning permuteeritud andmestik (permuteeritud andmestik on saadud, kui on fikseeritud x-tunnus, aga y-tunnused on segamini aetud.)
+* Nullh√ºpotees on, et SKP ja riigiv√µla vahel seos puudub. 
+* Genereerime meie andmetest permuteerimise teel sellise andmestiku, mis vastab nullh√ºpoteesile. N√§iteks v√µib fikseerida SKP v√§√§rtused ning neile vastavusse seatavad riigiv√µla v√§√§rtused permuteerida. (N√§pun√§ide: permuteerimisel on kasuks funktsioon `sample`.) J√§rgneval joonisel on n√§idatud tegelik andmestik ning permuteeritud andmestik (permuteeritud andmestik on saadud, kui on fikseeritud x-tunnus, aga y-tunnused on segamini aetud.)
 
-![alt text](permuteeritud_vs_tegelik_andmestik.png "N‰ide")
+![alt text](permuteeritud_vs_tegelik_andmestik.png "N√§ide")
 
 * Leidke eelmises punktis genereeritud andmestikul `stat_smooth` hinnang. 
-* Korrake eelnevat n‰iteks 100 korral ning kandke leitud 100 joont joonisele. Vırdluseks lisage esialgsetel andmetel leitud joon teise v‰rviga. Lıpptulemus vıiks tulla sarnane j‰rgmise joonisega:
+* Korrake eelnevat n√§iteks 100 korral ning kandke leitud 100 joont joonisele. V√µrdluseks lisage esialgsetel andmetel leitud joon teise v√§rviga. L√µpptulemus v√µiks tulla sarnane j√§rgmise joonisega:
 
-![alt text](permuteerimine_tulemus.png "N‰ide")
+![alt text](permuteerimine_tulemus.png "N√§ide")

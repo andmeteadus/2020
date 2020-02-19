@@ -8,25 +8,25 @@ editor_options:
 ---
 
 ```{r, include = FALSE}
-# See fail ei tee html faili päris sellisel kujul nagu vaja!
+# See fail ei tee html faili pÃ¤ris sellisel kujul nagu vaja!
 
-# Viimased joonised on välja võetud, muidu annaks siinset koodi githubist otse ümber kopida. 
+# Viimased joonised on vÃ¤lja vÃµetud, muidu annaks siinset koodi githubist otse Ã¼mber kopida. 
 ```
 
 
 ## Sissejuhatus
 
-Markus "Märul" Veekahuri isa on politseinik, ema on politseinik, mõlemad vanaemad on politseinikud ja õde on politseinik.
-Algul vaadati viltuselt Markuse soovile ülikooli statistikat õppima minna, kuid pärast kahte kuud vaikimist vahetati telefoni teel esimene "tere" ning lepiti uuesti ära.
+Markus "MÃ¤rul" Veekahuri isa on politseinik, ema on politseinik, mÃµlemad vanaemad on politseinikud ja Ãµde on politseinik.
+Algul vaadati viltuselt Markuse soovile Ã¼likooli statistikat Ãµppima minna, kuid pÃ¤rast kahte kuud vaikimist vahetati telefoni teel esimene "tere" ning lepiti uuesti Ã¤ra.
 
-Kuid nagu elus ikka, ei kuku käbi kännust kaugele. Markus läks tööle Politsei- ja Piirivalveametisse ning tema igapäevatööks sai pettuste tuvastamine, kasutades statistilisi meetodeid.
+Kuid nagu elus ikka, ei kuku kÃ¤bi kÃ¤nnust kaugele. Markus lÃ¤ks tÃ¶Ã¶le Politsei- ja Piirivalveametisse ning tema igapÃ¤evatÃ¶Ã¶ks sai pettuste tuvastamine, kasutades statistilisi meetodeid.
 Tema ametirelvaks on Benfordi seadus.
 
-Benfordi seadus (sageli nimetatud kui esimese numbri seadus) kirjeldab arvu esimese numbri sagedust. Paljudes reaalsetes andmetes esineb number 1 esinumbrina umbes 30% juhtudest ning iga järgneva numbri sagedus kahaneb monotoonselt.
+Benfordi seadus (sageli nimetatud kui esimese numbri seadus) kirjeldab arvu esimese numbri sagedust. Paljudes reaalsetes andmetes esineb number 1 esinumbrina umbes 30% juhtudest ning iga jÃ¤rgneva numbri sagedus kahaneb monotoonselt.
 
-![](benfordi_seadus.png "Näide")
+![](benfordi_seadus.png "NÃ¤ide")
 
-Empiiriliselt on näidatud, et Benfordi seadus kehtib näiteks aktsiahindade, jõgede pikkuse, riikide rahvaarvu andmetel. Järgneval joonisel on toodud kaks näidet Benfordi seaduse *kehtimisest*.
+Empiiriliselt on nÃ¤idatud, et Benfordi seadus kehtib nÃ¤iteks aktsiahindade, jÃµgede pikkuse, riikide rahvaarvu andmetel. JÃ¤rgneval joonisel on toodud kaks nÃ¤idet Benfordi seaduse *kehtimisest*.
 
 ```{r, include=FALSE}
 library(ggplot2)
@@ -38,7 +38,7 @@ library(dplyr)
 ```{r, echo=FALSE}
 df1 = data.frame(x=factor(c(1:9)),
                 y=c(32.62, 16.66, 11.8, 9.26, 7.63, 6.55, 5.76, 5.14, 4.56))
-p1 = ggplot(df1, aes(x=x, weight=y)) + geom_bar() + ggtitle("Twitteri kasutajaid jälgijate arvu lõikes \n") +
+p1 = ggplot(df1, aes(x=x, weight=y)) + geom_bar() + ggtitle("Twitteri kasutajaid jÃ¤lgijate arvu lÃµikes \n") +
   scale_x_discrete("Esimene number") + scale_y_continuous("") + theme(text = element_text(size=11))
 
 df1 = data.frame(x=factor(c(1:9)),
@@ -49,41 +49,41 @@ p2 = ggplot(df1, aes(x=x, weight=y)) + geom_bar() + ggtitle("Riikide SKP suurus 
 grid.arrange(p1, p2, nrow=1)
 ```
 
-Markuse ametivennad on järeldanud Benfordi seadusest kõrvalekaldumisest, et Kreeka on võltsinud makromajanduslikke näitajaid või et Iraani valimised olid ebaausad. Benfordi seadusest saad täpsemalt lugeda [Vikipeediast.](http://en.wikipedia.org/wiki/Benford%27s_law)
+Markuse ametivennad on jÃ¤reldanud Benfordi seadusest kÃµrvalekaldumisest, et Kreeka on vÃµltsinud makromajanduslikke nÃ¤itajaid vÃµi et Iraani valimised olid ebaausad. Benfordi seadusest saad tÃ¤psemalt lugeda [Vikipeediast.](http://en.wikipedia.org/wiki/Benford%27s_law)
 
-Selles kodutöös on sinu ülesandeks uurida: 
+Selles kodutÃ¶Ã¶s on sinu Ã¼lesandeks uurida: 
 
-* kas Benfordi seaduse põhjal võib väita, et FIE-d on võltsinud maksunäitajaid, 
-* kas Benfordi seaduse põhjal võib väita, et 2017. aasta kohaliku omavalitsuse volikogu valimistel toimus pettus.
+* kas Benfordi seaduse pÃµhjal vÃµib vÃ¤ita, et FIE-d on vÃµltsinud maksunÃ¤itajaid, 
+* kas Benfordi seaduse pÃµhjal vÃµib vÃ¤ita, et 2017. aasta kohaliku omavalitsuse volikogu valimistel toimus pettus.
 
-Kuna ülesannetes on vaja teha *ggplot2* abil jooniseid, soovitame esmalt vaadata ära osa III videod *ggplot2* kohta. 
+Kuna Ã¼lesannetes on vaja teha *ggplot2* abil jooniseid, soovitame esmalt vaadata Ã¤ra osa III videod *ggplot2* kohta. 
 
 ## Maksude andmestik
 
-Loe sisse Maksu- ja Tolliameti 2014. aasta [maksude andmestik](../data/maksude_andmestik.csv) ja tutvu andmetega. Andmestikus on järgnevad tunnused:
+Loe sisse Maksu- ja Tolliameti 2014. aasta [maksude andmestik](../data/maksude_andmestik.csv) ja tutvu andmetega. Andmestikus on jÃ¤rgnevad tunnused:
 
 * *registrikood*: juriidilise isiku registrikood
 * *nimi*: juriidilise isiku nimi
-* *liik*: kas tegemist on äriühingu, MTÜ, FIE vms
-* *kaibemaksukohuslane*: kas juriidiline isik on käibemaksukohuslane
+* *liik*: kas tegemist on Ã¤riÃ¼hingu, MTÃœ, FIE vms
+* *kaibemaksukohuslane*: kas juriidiline isik on kÃ¤ibemaksukohuslane
 * *maakond*: millises maakonnas on juriidiline isik registreeritud
-* *riiklikud_maksud*: käibemaks, tollimaks jne
-* *toojoumaksud_ja_maksed*: sotsiaalmaks, töötuskindlustusmakse jne
+* *riiklikud_maksud*: kÃ¤ibemaks, tollimaks jne
+* *toojoumaksud_ja_maksed*: sotsiaalmaks, tÃ¶Ã¶tuskindlustusmakse jne
 
 
-### Ülesanne 1 (2 punkti)
+### Ãœlesanne 1 (2 punkti)
 
-Tee 3 joonist, mis iseloomustavad hästi seda andmestikku. Iga joonise juurde kirjuta üks lause, mida see joonis sinu arvates näitab.
+Tee 3 joonist, mis iseloomustavad hÃ¤sti seda andmestikku. Iga joonise juurde kirjuta Ã¼ks lause, mida see joonis sinu arvates nÃ¤itab.
 
 ```{r}
 # sinu kood
 ```
 
-### Ülesanne 2 (2 punkti) 
+### Ãœlesanne 2 (2 punkti) 
 
-Kontrolli visuaalselt Benfordi seaduse kehtimist tunnustel *riiklikud_maksud* ja *toojoumaksud_ja_maksed*. Selleks tekita esinumbrite histogramm. Nulliga võrduvad väärtused jäta kõrvale. Tee vastav joonis ka FIE-de, äriühingute jne lõikes (vt tunnus *liik*).
+Kontrolli visuaalselt Benfordi seaduse kehtimist tunnustel *riiklikud_maksud* ja *toojoumaksud_ja_maksed*. Selleks tekita esinumbrite histogramm. Nulliga vÃµrduvad vÃ¤Ã¤rtused jÃ¤ta kÃµrvale. Tee vastav joonis ka FIE-de, Ã¤riÃ¼hingute jne lÃµikes (vt tunnus *liik*).
 
-Näpunäide: esimest numbrit aitab eraldada näiteks funktsioon `substr`.
+NÃ¤punÃ¤ide: esimest numbrit aitab eraldada nÃ¤iteks funktsioon `substr`.
 
 ```{r}
 # sinu kood
@@ -91,28 +91,28 @@ Näpunäide: esimest numbrit aitab eraldada näiteks funktsioon `substr`.
 
 Kommenteeri tulemusi. 
 
-Kas sellest võib järeldada, et FIE-d jahmerdavad maksudega?
+Kas sellest vÃµib jÃ¤reldada, et FIE-d jahmerdavad maksudega?
 
 
-## 2017 KOV valimiste hääletustulemuste andmestik
+## 2017 KOV valimiste hÃ¤Ã¤letustulemuste andmestik
 
-Loe sisse [andmestik](../data/KOV_valimised_2017.csv) ja tutvu andmetega. Andmestikus on järgnevad tunnused:
+Loe sisse [andmestik](../data/KOV_valimised_2017.csv) ja tutvu andmetega. Andmestikus on jÃ¤rgnevad tunnused:
 
 * *nimi* - kandidaadi nimi
 * *nr* - kandidaadi number
 * *Maakond*
 * *Omavalitsus*
 * *Kood* - omavalitsuse kood
-* *nimekiri* - partei või valimisliit, kuhu kandidaat kuulub
-* *paberhaali* - kandidaadi poolt saadud paberhäälte arv
-* *ehaali* - kandidaadi poolt saadud e-häälte arv
-* *valitud* - kas kandidaat osutus valituks (*true*) või mitte (*false*)
+* *nimekiri* - partei vÃµi valimisliit, kuhu kandidaat kuulub
+* *paberhaali* - kandidaadi poolt saadud paberhÃ¤Ã¤lte arv
+* *ehaali* - kandidaadi poolt saadud e-hÃ¤Ã¤lte arv
+* *valitud* - kas kandidaat osutus valituks (*true*) vÃµi mitte (*false*)
 
-### Ülesanne 3 (2 punkti)
+### Ãœlesanne 3 (2 punkti)
 
-* Esmalt tee juurde tunnus, mis näitab kandidaadile antud koguhäälte arvu (paberhäälte ja e-häälte summa). 
-* Seejärel tekita tunnus, mille väärtusteks on *Eesti Keskerakond*, *Eesti Reformierakond*, *Sotsiaaldemokraatlik Erakond*, *Erakond Isamaa ja Res Publica Liit*, *Eesti Konservatiivne Rahvaerakond* ja *Muu*, st väiksemad erakonnad ja valimisliidud on ühte gruppi kokku võetud.
-* Tee 3 joonist, mis iseloomustavad hästi seda andmestikku. Iga joonise juurde kirjuta üks lause, mida see joonis sinu arvates näitab.
+* Esmalt tee juurde tunnus, mis nÃ¤itab kandidaadile antud koguhÃ¤Ã¤lte arvu (paberhÃ¤Ã¤lte ja e-hÃ¤Ã¤lte summa). 
+* SeejÃ¤rel tekita tunnus, mille vÃ¤Ã¤rtusteks on *Eesti Keskerakond*, *Eesti Reformierakond*, *Sotsiaaldemokraatlik Erakond*, *Erakond Isamaa ja Res Publica Liit*, *Eesti Konservatiivne Rahvaerakond* ja *Muu*, st vÃ¤iksemad erakonnad ja valimisliidud on Ã¼hte gruppi kokku vÃµetud.
+* Tee 3 joonist, mis iseloomustavad hÃ¤sti seda andmestikku. Iga joonise juurde kirjuta Ã¼ks lause, mida see joonis sinu arvates nÃ¤itab.
 
 ```{r}
 # sinu kood
@@ -125,40 +125,40 @@ andmed = read.table("../../data/KOV_valimised_2017.csv", sep=";", header=T)
 ```
 
 
-### Ülesanne 4 (2 punkti)
+### Ãœlesanne 4 (2 punkti)
 
 Kontrolli visuaalselt Benfordi seaduse kehtimist: 
 
-* e-häälte arvul,
-* paberhäälte arvul,
-* koguhäälte arvul.
+* e-hÃ¤Ã¤lte arvul,
+* paberhÃ¤Ã¤lte arvul,
+* koguhÃ¤Ã¤lte arvul.
 
-Seejärel tee eelnevad joonised ka erakondade kaupa. Kommenteeri tulemusi.
+SeejÃ¤rel tee eelnevad joonised ka erakondade kaupa. Kommenteeri tulemusi.
 
 ```{r}
 # sinu kood
 ```
 
 
-### Ülesanne 5 (3 punkti) 
+### Ãœlesanne 5 (3 punkti) 
 
-Tee järgnevale joonisele võimalikult sarnane. 
+Tee jÃ¤rgnevale joonisele vÃµimalikult sarnane. 
 
 ```{r, echo=FALSE, warning=FALSE, message=FALSE }
 # Kood
 ```
 
-Näpunäited:
+NÃ¤punÃ¤ited:
 
-* Log-skaala kasutamiseks uuri [järgmisi ggplot2 näiteid.](http://docs.ggplot2.org/current/scale_continuous.html)
-* Legendi peitmiseks uuri [järgmisi ggplot2 näiteid.](http://docs.ggplot2.org/current/theme.html)  (märksõnaks on `legend.position`)
-* Käsuga `facet_wrap` saab joonise jaotada tükkideks (Mõned [näited](http://docs.ggplot2.org/current/facet_wrap.html).)
-* Et muuta värvid vastavaks erakonna sümboolikaga, kasuta värve "#00983A", "#FFDE00","#E30613", "#009FE3","#8B4513", "#82368C" (vastavalt KESK, REF, SDE, IRL, EKRE, Muu).
-* Värvide muutmiseks uuri [järgmisi ggplot2 näiteid.](http://docs.ggplot2.org/current/scale_manual.html)
-* Pööra tähelepanu n-ö akende pealkirjadele ja järjekorrale. Abiks võib olla funktsioon `factor`.
+* Log-skaala kasutamiseks uuri [jÃ¤rgmisi ggplot2 nÃ¤iteid.](http://docs.ggplot2.org/current/scale_continuous.html)
+* Legendi peitmiseks uuri [jÃ¤rgmisi ggplot2 nÃ¤iteid.](http://docs.ggplot2.org/current/theme.html)  (mÃ¤rksÃµnaks on `legend.position`)
+* KÃ¤suga `facet_wrap` saab joonise jaotada tÃ¼kkideks (MÃµned [nÃ¤ited](http://docs.ggplot2.org/current/facet_wrap.html).)
+* Et muuta vÃ¤rvid vastavaks erakonna sÃ¼mboolikaga, kasuta vÃ¤rve "#00983A", "#FFDE00","#E30613", "#009FE3","#8B4513", "#82368C" (vastavalt KESK, REF, SDE, IRL, EKRE, Muu).
+* VÃ¤rvide muutmiseks uuri [jÃ¤rgmisi ggplot2 nÃ¤iteid.](http://docs.ggplot2.org/current/scale_manual.html)
+* PÃ¶Ã¶ra tÃ¤helepanu n-Ã¶ akende pealkirjadele ja jÃ¤rjekorrale. Abiks vÃµib olla funktsioon `factor`.
 
 
-### Boonusülesanne 1 (2 punkti)
+### BoonusÃ¼lesanne 1 (2 punkti)
 
 Lisa hallid mummud taustale. Tulemus peaks olema selline:
 
