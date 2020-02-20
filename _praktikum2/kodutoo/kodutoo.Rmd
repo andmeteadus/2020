@@ -29,11 +29,7 @@ Lahenda [pettuse tuvastamise ülesanded](../praktikum2_pettus).
 
 # Mida on vaja esitada?
 
-* I osa kohta tuleb esitada vastused tekstina Jupyter failis. 
-* II ja III osa kohta tuleb esitada nii andmeanalüüsi raport (html või pdf formaadis) kui ka selle lähtekood .Rmd failina.
-
-Lisaks võiksid mainida, kui palju aega kulus osa I, II ja III peale. Mida arvad ülesannetest ja videotest (kasulikkus, huvitavus)?
-
+* I, II ja III osa kohta tuleb esitada [Jupyter Notebook fail](/_praktikum2/kodutoo/kodutoo2.ipynb).
 
 Lahendused esitada [Moodle keskkonna](https://moodle.ut.ee/course/view.php?id=8013#section-1) kaudu.
 
