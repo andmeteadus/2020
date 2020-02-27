@@ -5,7 +5,6 @@ output:
     theme: null
 ---
 
-Tähtaeg: 11.03.2019 10:15
 
 # I osa 
 (**15 punkti**) Lahenda praktikumis alustatud [*NBA*](../praktikum4_nba) ülesanded.
@@ -16,8 +15,8 @@ Tähtaeg: 11.03.2019 10:15
 
 # Mida on vaja esitada?
 
-* I osa kohta tuleb esitada Shiny rakenduse fail (app.R või ui.R ja server.R). 
-* II osa kohta tuleb esitada nii andmeanalüüsi raport (html formaadis) kui ka selle lähtekood .Rmd failina. 
+* I osa ülesanne 1.6 kohta tuleb esitada iseseisvalt töötav Shiny rakenduse fail (app.R või ui.R ja server.R), 
+* Ülejäänud I osa ülesanded ja II osa lahendused esita [Jupyter failis](https://raw.githubusercontent.com/andmeteadus/2020/master/_praktikum4/kodutoo/kodutoo4.ipynb).
 * Lisaks võiksid mainida, kui palju aega kulus I ja II osa peale. Mida arvad ülesannetest?
 
 Lahendused esitada [Moodle keskkonna](https://moodle.ut.ee/course/view.php?id=8013#section-1) kaudu.
