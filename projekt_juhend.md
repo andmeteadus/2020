@@ -10,9 +10,9 @@ Inspiratsiooniks saab vaadata [2017.](https://andmeteadus.github.io/2017/projekt
 
 * Teema valimine - 25.03.2020
 * Projekti esitamise tähtaeg - 13.05.2020 kell 10.15.
-* Projekti tulemuste müümine (st esitlus) - 20.05.2020 kell 10:15 ruumis 2004
+* Projekti tulemuste müümine (st esitlus) - 20.05.2020 kell 10:15 ja 27.05.2020 kell 10:15 Delta majas aud. 2030
 
-Mõned meie välja pakutud teemad on [siin](https://docs.google.com/spreadsheets/d/1pWFMwq3mPY0OXMGVlFcxJIqnfTv41c8Xvr4rNEOGfpg/edit#gid=0). Samas failis saab ka oma teemad registreerida.
+Mõned meie välja pakutud teemad on [siin](https://docs.google.com/spreadsheets/d/1pWFMwq3mPY0OXMGVlFcxJIqnfTv41c8Xvr4rNEOGfpg/edit#gid=0). Teema registreerimine toimub Moodle's Projekti foorumis. Lisa sinna projektiteema, andmete allikas, projekti tegijad ja paari lauseda, mida hakkate tegema/analüüsima/lahendama.
 
 ### Mida on vaja esitada?
 
