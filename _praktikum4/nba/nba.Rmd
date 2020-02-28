@@ -45,7 +45,7 @@ Andmestikust ülevaate saamiseks võid enda jaoks visualiseerida huvipakkuva mä
 Näpunäide: kasuta käsku `coord_fixed(ratio = 1)` (ka edaspidiselt).
 
 
-### Ülesanne 1 - väljak diskreetseks (2 punkti)
+### Ülesanne 1.1 - väljak diskreetseks (2 punkti)
 
 Diskretiseeri mänguväljak (jaga mänguväljak tükkideks). 
 
@@ -67,7 +67,7 @@ Näpunäited:
 # sinu kood
 ```
 
-### Ülesanne 2 - mänguväljaku põhja lisamine (1 punkti)
+### Ülesanne 1.2 - mänguväljaku põhja lisamine (1 punkti)
 
 Kasuta edasisel visualiseerimisel järgnevat koodi näidist mänguväljaku loomiseks:
 
@@ -81,6 +81,8 @@ courtImg.URL <- "https://thedatagame.files.wordpress.com/2016/03/nba_court.jpg"
 manguvaljak <- rasterGrob(readJPEG(getURLContent(courtImg.URL)),
                     width=unit(1,"npc"), height=unit(1,"npc"))
                     
+valitud_mangija = filter(nba, PLAYER_NAME == '<sinu valitud mängija nimi>') # Vaheta nimi!
+
 valjak <- ggplot(valitud_mangija, aes(x = x, y = y)) + 
   annotation_custom(manguvaljak, -250, 250, -50, 420) + geom_point()
   
@@ -97,7 +99,7 @@ Näpunäited:
 * määra `ylim(-50,300)`.
 
 
-### Ülesanne 3 - suuruse muutmine (1 punkti)
+### Ülesanne 1.3 - suuruse muutmine (1 punkti)
 
 NY Timesi graafikaosakond on jaganud visete arvu kolme kategooriasse: *low*, *medium*, *high*. Vali välja piirid, mille põhjal jaotatakse visete arv kolme kategooriasse (*low*, *medium*, *high*). Iga kategooria jaoks vali sobiv pindala suurus (kontrolli, et tulemus oleks visuaalselt kena). Kirjuta funktsioon `kolm_suurust`, mis vastavalt valitud suuruste väärtustele ning kategooriate piiridele tagastab andmestiku, kus tunnus "uus_suurus" vastab kategooria suurusele.
 
@@ -116,7 +118,7 @@ Visualiseeri enda jaoks viskepositsioone sarnaselt eelmisele joonisele, kuid nü
 
 
 
-### Ülesanne 4 - värvid (1 punkti)
+### Ülesanne 1.4 - värvid (1 punkti)
 
 Uuri, mida tähistavad [NY Times'i graafikul](http://www.nytimes.com/interactive/2012/06/11/sports/basketball/nba-shot-analysis.html) punane ja roheline värv.
 
@@ -127,7 +129,7 @@ Näpunäide:
 * uuri, mida teeb käsk `scale_color_gradient2()`, sh parameeter *midpoint*.
 
 
-### Ülesanne 5 - kuusnurgad (3 punkti)
+### Ülesanne 1.5 - kuusnurgad (3 punkti)
 
 Kasuta nüüd ringide asemel kuusnurki. 
 
@@ -160,7 +162,7 @@ kuusnurk = function(x, y, pindala){
 
 ```
 
-### Ülesanne 6 - shiny rakendus (7 punkti)
+### Ülesanne 1.6 - shiny rakendus (7 punkti)
 
 Ehita Shiny rakendus, kus kasutaja saab valida meeskonna ja valitud meeskonnas oleva mängija. Seejärel peab rakendus kuvama valitud mängijale vastava viskeprofiili.
 
@@ -208,10 +210,10 @@ Lõplik tulemus võiks välja nähe umbes selline:
 
 
 
-### Boonusülesanne 1 - mängijate valik (2 punkt)
+### Boonusülesanne B1.1 - mängijate valik (2 punkt)
 
 Muuda mängijate valikut selliselt, et mängijaid kuvatakse vastavalt sooritatud visete arvule (rohkem viskeid teinud mängijad eespool).
 
-### Boonusülesanne 2 - geomeetria (1 punkt)
+### Boonusülesanne B1.2 - geomeetria (1 punkt)
 
 Kui võrrelda meie kuusnurki NY Times'i omadega, siis on näha, et NY Times'i omi on 90 kraadi pööratud. Muuda funktsiooni `kuusnurk()` selliselt, et selle väljundiks olev kuusnurk oleks 90 kraadi pööratud.

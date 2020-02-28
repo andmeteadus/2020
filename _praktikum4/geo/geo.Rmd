@@ -49,7 +49,7 @@ Järgneval joonisel on see tähistatud punase joonega.
 
 ### Näide1: suurringjoon R-is
 
-Näide, kuidas joonistada suurringjoont R-is. Ühendame Liivi 2 maja Facebooki peakontoriga kasutades baasgraafika võimalusi.
+Näide, kuidas joonistada suurringjoont R-is. Ühendame Delta maja Facebooki peakontoriga kasutades baasgraafika võimalusi.
 
 ```{r, message=FALSE}
 library(maps)
@@ -57,12 +57,12 @@ library(geosphere)
 
 map("world", col="#f2f2f2", fill=TRUE, border=NA)
 
-lat_liivi = 58.379491
-lon_liivi = 26.713199
+lat_delta = 58.385582 
+lon_delta = 26.725512
 lat_fb = 37.485245
 lon_fb = -122.148807
 
-gc_points = gcIntermediate(c(lon_liivi, lat_liivi), 
+gc_points = gcIntermediate(c(lon_delta, lat_delta), 
                            c(lon_fb, lat_fb), 
                            n=50, addStartEnd=TRUE)
 lines(gc_points)
@@ -70,21 +70,25 @@ lines(gc_points)
 
 ### Näide2: suurringjoon R-is
 
-Näide, kuidas joonistada suurringjoont R-is. Ühendame Liivi 2 maja Eyjafjallajökulliga kasutades `ggmap()` funktsiooni. Loe rohkem `ggmap()` funktsiooni kohta [siit.](https://journal.r-project.org/archive/2013-1/kahle-wickham.pdf)
+Näide, kuidas joonistada suurringjoont R-is. Ühendame Delta maja Eyjafjallajökulliga kasutades `ggmap()` funktsiooni. Loe rohkem `ggmap()` funktsiooni kohta [siit](https://journal.r-project.org/archive/2013-1/kahle-wickham.pdf).
 
-```{r, message=FALSE}
+**NB! Näites kasutatud Google API tavapäraseks töötamiseks on vaja registreerida Google's tasuline konto!** Otseselt maksma ei pea aga krediitkaardi numbrit on ikka vaja. Seejärel pärida koos väljastatud API võtmega.
+
+```{r, message=FALSE, eval = F}
 library(ggmap)
 library(geosphere)
 
-lat_liivi = 58.379491
-lon_liivi = 26.713199
+lat_delta = 58.385582 
+lon_delta = 26.725512
 lat_eyjafjallajokull = 63.37120
 lon_eyjafjallajokull = -19.36480
+
+register_google(key = "...") # Sisesta siia Google'st saadud API võti
 
 map <- get_map(location = 'Europe', zoom = 3 ,source = "google")
 a <- ggmap(map)
 
-gc_points = gcIntermediate(c(lon_liivi, lat_liivi), 
+gc_points = gcIntermediate(c(lon_delta, lat_delta), 
                            c(lon_eyjafjallajokull, lat_eyjafjallajokull),
                            n=50, addStartEnd=TRUE)
 gc = data.frame(gc_points)
@@ -93,31 +97,35 @@ a <- a + geom_path(data = gc, aes(x = lon, y = lat, colour = 'red'))
 a
 ```
 
+![](google_naide.png "Näide"){width=600px}
+
+
 ### Näide3: suurringjoon R-is
 
-Näide, kuidas joonistada suurringjoont R-is. Ühendame Liivi 2 maja maailma suurima pitsa sünnikohaga kahutades `leaflet` paketti. Loe rohkem `leaflet`'i kohta [siit.](https://rstudio.github.io/leaflet/)
+Näide, kuidas joonistada suurringjoont R-is. Ühendame Delta maja maailma suurima pitsa sünnikohaga kahutades `leaflet` paketti. Loe rohkem `leaflet`'i kohta [siit.](https://rstudio.github.io/leaflet/)
 
 
 ```{r, message=FALSE}
-lat_liivi = 58.379491
-lon_liivi = 26.713199
+lat_delta = 58.385582 
+lon_delta = 26.725512
 lat_pitsa = 41.535158
 lon_pitsa = 12.306798
 
 library(leaflet)
+library(geosphere)
 
 m = leaflet() #koordinaatsüsteemis sisse lugemine
 
 m = addTiles(m) #kaardikihtide lisamine
 
 #suurringjoone punktid
-gc_points = gcIntermediate(c(lon_liivi, lat_liivi), 
+gc_points = gcIntermediate(c(lon_delta, lat_delta), 
                            c(lon_pitsa, lat_pitsa), 
-                           n=50, addStartEnd=TRUE)
+                           n = 50, addStartEnd = TRUE)
 gc = data.frame(gc_points)
 
 m = m %>% #punktide lisamine kaardile
-  addCircles(lng = lon_liivi,lat = lat_liivi,color = 'red',weight = 3) %>%
+  addCircles(lng = lon_delta,lat = lat_delta,color = 'red',weight = 3) %>%
   addCircles(lng = lon_pitsa,lat = lat_pitsa,color = 'red',weight = 3)
 
 m = m %>% #joonte lisamine kaardile
@@ -129,7 +137,7 @@ m = m %>%
 m
 ```
 
-### Ülesanne 1 (4 punkti)
+### Ülesanne 2.1 (4 punkti)
 
 Visualiseeri suurringjoonte abil ühendusi, kuhu saab Tallinna lennujaamast otselennuga. Võid kasutada vabalt valitud meetodit eelnevalt toodud näidete seast. 
 
@@ -145,7 +153,7 @@ Näpunäited:
 
 ```
 
-### Ülesanne 2 (6 punkti)
+### Ülesanne 2.2 (6 punkti)
 
 Visualiseeri ühendusi, kuhu saab Tallinna lennujaamast otselennu või ühe vahepeatusega. Võid kasutada esimeses ning kolmandas näites tutvustatud võimalusi.
 
@@ -169,7 +177,7 @@ või selline:
 
 ![](otselend_voi_yks_vahepeatus2.png "Näide2")
 
-### Boonusülesanne 1 (1 punkt) - Juhuslik ekslemine eralennukiga
+### Boonusülesanne B2.1 (1 punkt) - Juhuslik ekslemine eralennukiga
 
 Alusta Tallinna lennujaamast. Vali kõikvõimalikest lennujaamadest juhuslikult üks ja lenda sinna. Vali nüüd juhuslikult järgmine sihtpunkt ning lenda sinna. Jätka seda protsessi 100 korral ja visualiseeri läbitud teekonda.
 
@@ -178,7 +186,7 @@ Alusta Tallinna lennujaamast. Vali kõikvõimalikest lennujaamadest juhuslikult 
 ```
 
 
-### Boonusülesanne 2 (2 punkti) - Juhuslik ekslemine kasutades kommertsliine
+### Boonusülesanne B2.2 (2 punkti) - Juhuslik ekslemine kasutades kommertsliine
 
 Alusta Tallinna lennujaamast. Vali võimalikest sihtkohtadest üks ja lenda sinna. Vali selle lennujaama võimalikest sihtkohtadest juhuslikult järgmine ning lenda sinna. Jätka seda protsessi 100 korral ja visualiseeri läbitud teekonda.
 
