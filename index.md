@@ -90,13 +90,10 @@ Aine läbimiseks on vaja:
 * **Projektide tähtaeg kolmapäeval, 13. mai kell 10:15** (nädal 37).
 * **Projektide ettekandmine kolmapäeval, 20. mai kell 10:15** (nädal 38).
 
-# DataCamp
+# Kontakt ja küsimused
+
+* Kaur Lumiste kaur.lumiste [at] ut.ee ja Delta majas (Narva mnt 18) kabinet 4079.
 
 ![](DataCamp.png "DataCamp")
 
 Antud kursust toetab [DataCamp](https://www.datacamp.com/). Aines osalejatel on võimalus võtta kõiki DataCamp kursuseid tasuta.
-
-
-# Kontakt ja küsimused
-
-* Kaur Lumiste kaur.lumiste [at] ut.ee ja Delta majas (Narva mnt 18) kabinet 4079.
