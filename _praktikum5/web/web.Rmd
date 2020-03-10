@@ -7,46 +7,47 @@ output:
 
 ### Sissejuhatus
 
-Eva "Usin" Masin on esimeses praktikumis kohatud Mati "Raha" Masina vastand. Talle meeldib rutiinsus, andmete tuim kopeerimine ja sisestamine. Vabal ajal meeldib talle lugeda romaanisarja "Tõde ja õigus" - eelmine nädal luges ta kokku tähekombinatsiooni "pa" esinemissageduse. Homme pärast tööd jätkab ta "pb" esinemissageduse leidmisega.
+Eva "Usin" Masin on esimeses praktikumis kohatud Mati "Raha" Masina vastand. Talle meeldib rutiinsus, andmete tuim kopeerimine ja sisestamine. Vabal ajal meeldib talle lugeda romaanisarja "TÃµde ja Ãµigus" - eelmine nÃ¤dal luges ta kokku tÃ¤hekombinatsiooni "pa" esinemissageduse. Homme pÃ¤rast tÃ¶Ã¶d jÃ¤tkab ta "pb" esinemissageduse leidmisega.
 
-Õnneks oli eelnev tekst fiktsioon ja Eva-laadsed kopeerijad surid välja koos neandertaallastega. 
-Selles praktikumis vaatame, kuidas R-is ellu äratada tehis-Eva, kes oskab veebilehtedelt automaatselt infot eraldada ja selle transformeerida struktureeritud andmestikuks. 
+Ã•nneks oli eelnev tekst fiktsioon ja Eva-laadsed kopeerijad surid vÃ¤lja koos neandertaallastega. 
+Selles praktikumis vaatame, kuidas R-is ellu Ã¤ratada tehis-Eva, kes oskab veebilehtedelt automaatselt infot eraldada ja selle transformeerida struktureeritud andmestikuks. 
 
-Täpsemalt, uurime
+TÃ¤psemalt, uurime
 
-* kuidas eraldada Riigikogu hääletamistulemusi,
+* kuidas eraldada Riigikogu hÃ¤Ã¤letamistulemusi,
 * kuidas eraldada Postimehe uudiste pealkirju,
 * kuidas eraldada ilmajaama vaatlusandmeid,
-* kuidas lotot mängides rikastuda?
+* kuidas lotot mÃ¤ngides rikastuda?
 
-![](veebi_kraapimise_naide.png "Näide")
+![](veebi_kraapimise_naide.png "NÃ¤ide")
 
-Kaks esimest ülesannet õpetavad paketi *rvest* funktsionaalsust ja annavad sissejuhatuse veebikraapimisse minimalistlike veebilehtede põhjal.
+Kaks esimest Ã¼lesannet Ãµpetavad paketi *rvest* funktsionaalsust ja annavad sissejuhatuse veebikraapimisse minimalistlike veebilehtede pÃµhjal.
 
-### Ülesanne 1 (2 punkti) - CSS id
+### Ãœlesanne 1.1 (2 punkti) - CSS id
 
 Eralda [html koodis](../examples/html1.html) sinisena olev tekst muutujasse `tekst`. Kasuta paketti *rvest*. 
 
-![](veebi_kraapimine_ex2.png "Näide")
+![](veebi_kraapimine_ex2.png "NÃ¤ide")
 
-* Vastava html koodiga saad mängida [siin](http://www.w3schools.com/html/tryit.asp?filename=tryhtml_css_id).
+* Vastava html koodiga saad mÃ¤ngida [siin](http://www.w3schools.com/html/tryit.asp?filename=tryhtml_css_id).
 
-* Loe lühiülevaadet, millest koosnevad veebilehed ja uuri paketi *rvest* minimalistlikku näidet [siit](../praktikum5_rvest_minimal).
+* Loe lÃ¼hiÃ¼levaadet, millest koosnevad veebilehed ja uuri paketi *rvest* minimalistlikku nÃ¤idet [siit](../praktikum5_rvest_minimal).
 
-* Minimalistliku näite põhjal peaksid oskama eraldada lähtekoodis olevad 4 lõiku. Et eraldada lõik, kus id="p01", pead teadma, kuidas CSS-is tähistatakse id-sid.
-Suur vihje on olemas eelneva html koodi < style > blokis. Abiks võib-olla ka [CSS selektorite interaktiivne testnäide](http://www.w3schools.com/cssref/trysel.asp).
-
-* (**1 boonuspunkt**) CSS selektorite õppimiseks on tore tutorial http://flukeout.github.io/. Tee läbi esimesed 6 taset ja lisa vastused tekstina kodutöö raportisse.
+* Minimalistliku nÃ¤ite pÃµhjal peaksid oskama eraldada lÃ¤htekoodis olevad 4 lÃµiku. Et eraldada lÃµik, kus id="p01", pead teadma, kuidas CSS-is tÃ¤histatakse id-sid.
+Suur vihje on olemas eelneva html koodi < style > blokis. Abiks vÃµib-olla ka [CSS selektorite interaktiivne testnÃ¤ide](http://www.w3schools.com/cssref/trysel.asp).
 
 * Uuri paketi [*rvest* dokumentatsiooni](http://cran.r-project.org/web/packages/rvest/rvest.pdf). Kasuks tulevad funktsioonid `read_html`, `html_node`, `html_nodes` ja `html_text`.
 
-* Lõpptulemus peaks olema selline: `tekst = c("I am different.")`
+* LÃµpptulemus peaks olema selline: `tekst = c("I am different.")`
 
 ```{r}
-url = "https://andmeteadus.github.io/2018/examples/html1.html"
+# Ãœlesanne 1.1
+url = "https://andmeteadus.github.io/2020/examples/html1.html"
 
 # sinu kood
 ```
+
+* (**1 boonuspunkt**) CSS selektorite Ãµppimiseks on tore tutorial http://flukeout.github.io/. Tee lÃ¤bi esimesed 6 taset ja lisa vastused tekstina kodutÃ¶Ã¶ raportisse.
 
 
 <!--
@@ -78,18 +79,19 @@ print(tekst)
 ```
 -->
 
-### Ülesanne 2 (2 punkti) - CSS class
+### Ãœlesanne 1.2 (2 punkti) - CSS class
 
 Eralda [html koodis](../examples/html2.html) punaselt olev tekst muutujasse `tekst`. Kasuta paketti *rvest*. 
 
-![](veebi_kraapimine_ex1.png "Näide")
+![](veebi_kraapimine_ex1.png "NÃ¤ide")
 
-* Vastava html koodiga saad mängida [siin](http://www.w3schools.com/html/tryit.asp?filename=tryhtml_css_class).
+* Vastava html koodiga saad mÃ¤ngida [siin](http://www.w3schools.com/html/tryit.asp?filename=tryhtml_css_class).
 
-* Lõpptulemuse peaks olema selline: `tekst = c("I am different.", "I am different too.")`
+* LÃµpptulemuse peaks olema selline: `tekst = c("I am different.", "I am different too.")`
 
 ```{r}
-url = "https://andmeteadus.github.io/2018/examples/html2.html"
+# Ãœlesanne 1.2
+url = "https://andmeteadus.github.io/2020/examples/html2.html"
 
 # sinu kood
 ```
@@ -124,128 +126,145 @@ print(tekst)
 ```
 -->
 
-### Ülesanne 3 (3 punkti)
+### Ãœlesanne 1.3 (3 punkti)
 
-Eralda Riigikogu hääletamistulemuste  [veebilehelt](https://www.riigikogu.ee/tegevus/tooulevaade/haaletused/haaletustulemused-kohalolekukontroll/0b930644-4291-451d-94b1-83776cdcd10b) (lähtekoodi nägemiseks paremklikk ja Wiew Page Source), mitu saadikut hääletas Eesti Vabariigi hümni seaduse tagasi lükkamise:
+Eralda Riigikogu hÃ¤Ã¤letamistulemuste  [veebilehelt](https://www.riigikogu.ee/tegevus/tooulevaade/haaletused/haaletustulemused-kohalolekukontroll/05d46fbf-55a4-41a0-ac27-518e4ee5b90b) (lÃ¤htekoodi nÃ¤gemiseks paremklikk ja Wiew Page Source), mitu saadikut hÃ¤Ã¤letas Eesti Vabariigi hÃ¼mni seaduse tagasi lÃ¼kkamise:
 
 * poolt
 * vastu
 * oli erapooletu
-* ei hääletanud
+* ei hÃ¤Ã¤letanud
 
-> Praktikumis tutvusime, kuidas brauseri veebiarenduse tööriistadega leida üles lähtekoodist vajalikud kohad. Variandid olid: 
+> Praktikumis tutvusime, kuidas brauseri veebiarenduse tÃ¶Ã¶riistadega leida Ã¼les lÃ¤htekoodist vajalikud kohad. Variandid olid: 
 > 
-> * Chrome'is vajuta parem klikk ja "inspekteeri elementi". Alernatiivid on klahvikombinatsioon Ctrl + Shift + I või klahv F12. 
+> * Chrome'is vajuta parem klikk ja "inspekteeri elementi". Alernatiivid on klahvikombinatsioon Ctrl + Shift + I vÃµi klahv F12. 
 > * vahendiga [selectorgadget](http://selectorgadget.com/)
 > 
-> Need muudavad lähtekoodis õige klassi, id või sildi leidmise oluliselt lihtsamaks. Mõnes olukorras on kasulikum üks variant, mõnes teine. 
+> Need muudavad lÃ¤htekoodis Ãµige klassi, id vÃµi sildi leidmise oluliselt lihtsamaks. MÃµnes olukorras on kasulikum Ã¼ks variant, mÃµnes teine. 
 
 Vihjed:
 
-* Väärtuste eraldamiseks kasuta atribuuti *href*. Uuri, kuidas eraldada atribuute CSS-i õppimise *tutorialist* http://flukeout.github.io/ (alates levelist 27).
+* VÃ¤Ã¤rtuste eraldamiseks kasuta atribuuti *href*. Uuri, kuidas eraldada atribuute CSS-i Ãµppimise *tutorialist* http://flukeout.github.io/ (alates levelist 27).
 
-* Kasutada paketi *readr* funktsiooni `parse_number()` kui sa ei taha regulaaravaldistega mässata. Vaata näiteks, mida teeb järgmine koodirida `"Kokku: 101 liiget" %>% parse_number()`
+* Kasutada paketi *readr* funktsiooni `parse_number()` kui sa ei taha regulaaravaldistega mÃ¤ssata. Vaata nÃ¤iteks, mida teeb jÃ¤rgmine koodirida `"Kokku: 101 liiget" %>% parse_number()`
 
 ```{r}
-url = "https://www.riigikogu.ee/tegevus/tooulevaade/haaletused/haaletustulemused-kohalolekukontroll/0b930644-4291-451d-94b1-83776cdcd10b"
+# Ãœlesanne 1.3
+url = "https://www.riigikogu.ee/tegevus/tooulevaade/haaletused/haaletustulemused-kohalolekukontroll/05d46fbf-55a4-41a0-ac27-518e4ee5b90b"
 
 # sinu kood
 
 ```
 
 
-### Ülesanne 4 (3 punkti)
+### Ãœlesanne 1.4 (3 punkti)
 
-Eralda hümni seaduse tagasilükkamise hääletamistulemuste andmetabel, kus on 101 rida ja tunnused *Nimi*, *Otsus* ja *Fraktsioon*.
+Eralda hÃ¼mni seaduse tagasilÃ¼kkamise hÃ¤Ã¤letamistulemuste andmetabel, kus on 101 rida ja tunnused *Nimi*, *Otsus* ja *Fraktsioon*.
 
 Vihjed: 
 
 * kasuta funktsiooni `html_table`,
-* tabelis veeru *Otsus* puhastamiseks saab kasutada näiteks paketi *stringr* funktsiooni `str_split_fixed()`. 
+* tabelis veeru *Otsus* puhastamiseks saab kasutada nÃ¤iteks paketi *stringr* funktsiooni `str_split_fixed()`. 
 
 
 ```{r}
+# Ãœlesanne 1.4
  # sinu kood
   
 ```
 
-### Ülesanne 5 (2 punkti)
+### Ãœlesanne 1.5 (2 punkti)
 
-Visualiseeri, kuidas jaotusid otsused fraktsioonide lõikes.
+Visualiseeri, kuidas jaotusid otsused fraktsioonide lÃµikes.
 
 ```{r}
+# Ãœlesanne 1.5
  # sinu kood
   
 ```
 
 
-### Ülesanne 6 (3 punkti)
+### Ãœlesanne 1.6 (3 punkti)
 
-> Eva "Usin" Masin töötab start-upis, mis lubab Eesti turule tuua unikaalse personaalse uudisterakenduse, mis filtreerib uudiseid vastavalt kasutaja soovidele. Eva "Usin" Masin pandi koostama andmebaasi Postimehe esilehe uudiste kohta. Eva teab, kuidas karjääriredelis ülespoole ronida: "Bossi käsu peale olgu uudiste pealkirjad võimalikult kiiresti olemas".
+> Eva "Usin" Masin tÃ¶Ã¶tab start-upis, mis lubab Eesti turule tuua unikaalse personaalse uudisterakenduse, mis filtreerib uudiseid vastavalt kasutaja soovidele. Eva "Usin" Masin pandi koostama andmebaasi Postimehe esilehe uudiste kohta. Eva teab, kuidas karjÃ¤Ã¤riredelis Ã¼lespoole ronida: "Bossi kÃ¤su peale olgu uudiste pealkirjad vÃµimalikult kiiresti olemas".
 
-Automatiseeri seesama protsess. Tagasta kõik Postimehe esilehe uudiste pealkirjad (joonisel näidatud kollasega). 
+Automatiseeri seesama protsess. Tagasta kÃµik Postimehe esilehe uudiste pealkirjad (joonisel nÃ¤idatud kollasega). 
 
-* Ära kurvasta, kui sa ei saa absoluutselt kõiki pealkirju, 97% on praegu piisav.
-* Kui sulle ei meeldi Postimehe veebilehe hiiglaslikku lähtekoodi inspekteerida brauseris vaikimisi olevate vahenditega, siis abiks on praktikumis tutvustatud tööriist [selectorgadget](http://selectorgadget.com/).
-* Vaata, et sinu tagastatud pealkirjade hulgas poleks tühju sõnesid või arve.
+* Ã„ra kurvasta, kui sa ei saa absoluutselt kÃµiki pealkirju, 97% on praegu piisav.
+* Kui sulle ei meeldi Postimehe veebilehe hiiglaslikku lÃ¤htekoodi inspekteerida brauseris vaikimisi olevate vahenditega, siis abiks on praktikumis tutvustatud tÃ¶Ã¶riist [selectorgadget](http://selectorgadget.com/).
+* Vaata, et sinu tagastatud pealkirjade hulgas poleks tÃ¼hju sÃµnesid vÃµi arve.
 
-![](postimees_example.png "Näide")
+![](postimees_example.png "NÃ¤ide")
 
 ```{r}
+# Ãœlesanne 1.6
 url = "http://www.postimees.ee/"
 
 # sinu kood
 ```
 
-### Ülesanne 7 (3 punkti)
+### Ãœlesanne 1.7 (3 punkti)
 
-> Eva "Usin" Masinal on suur huvi ilmaandmete vastu. Kümme minutit pärast iga täistundi märgib ta Ilmateenistuse vaatlusandmeid oma märkmikku, et hiljem analüüsi teha.
+> Eva "Usin" Masinal on suur huvi ilmaandmete vastu. KÃ¼mme minutit pÃ¤rast iga tÃ¤istundi mÃ¤rgib ta Ilmateenistuse vaatlusandmeid oma mÃ¤rkmikku, et hiljem analÃ¼Ã¼si teha.
 
 Automatiseeri seesama protsess. 
 
 Juhised:
 
-* Riigi Ilmateenistus pakub värskeid [ilmaandmeid XML faili kujul](http://www.ilmateenistus.ee/teenused/ilmainfo/eesti-vaatlusandmed-xml/).
+* Riigi Ilmateenistus pakub vÃ¤rskeid [ilmaandmeid XML faili kujul](http://www.ilmateenistus.ee/teenused/ilmainfo/eesti-vaatlusandmed-xml/).
 * Meie tegeleme [Eesti vaatlusandmete XML failiga](http://www.ilmateenistus.ee/ilma_andmed/xml/observations.php).
-* Saa XML failist kätte iga ilmajaama õhurõhk.
-* Saa XML failist kätte iga ilmajaama tuule kiirus.
-* Tee neist õhurõhu ja tuule kiiruse *scatterplot*.
+* Saa XML failist kÃ¤tte iga ilmajaama ÃµhurÃµhk.
+* Saa XML failist kÃ¤tte iga ilmajaama tuule kiirus.
+* Tee neist ÃµhurÃµhu ja tuule kiiruse *scatterplot*.
 
-Näpunäide:
+NÃ¤punÃ¤ide:
 
-* Uuri paketi [*rvest* minimalistlikku näidet info eraldamisest XML failist](../praktikum5_rvest_minimal/#xml).
+* Uuri paketi [*rvest* minimalistlikku nÃ¤idet info eraldamisest XML failist](../praktikum5_rvest_minimal/#xml).
+
+```{r}
+# Ãœlesanne 1.7
+# sinu kood
+
+```
 
 
-### Ülesanne 8 (3 punkti)
+### Ãœlesanne 1.8 (3 punkti)
 
-> Eva "Usin" Masin on lotohuviline, aga ta pole aastaid Viking Lottoga võitnud. Ta arvab, et lototulemused pole päris juhuslikud ning lotos on võimalik statistiline eelis saada.
-Seepärast märgib ta iga lotokolmapäev Viking Lotto loositud numbrid üles ja uurib, kas number kahtesid loositakse rohkem välja, kui juhus lubaks.
+> Eva "Usin" Masin on lotohuviline, aga ta pole aastaid Viking Lottoga vÃµitnud. Ta arvab, et lototulemused pole pÃ¤ris juhuslikud ning lotos on vÃµimalik statistiline eelis saada.
+SeepÃ¤rast mÃ¤rgib ta iga lotokolmapÃ¤ev Viking Lotto loositud numbrid Ã¼les ja uurib, kas number kahtesid loositakse rohkem vÃ¤lja, kui juhus lubaks.
 
-1) Õpeta tehis-Eva tegema seda sama.
+1) Ã•peta tehis-Eva tegema seda sama.
 
 * Eesti Loto veebilehel on toodud [statistika loositud pallide sagedusest](https://www.eestiloto.ee/osi/stats.do?lastDraws=250&gameCode=11&sort=frq0&action=searchNumbers).
-* Eralda Vikinglotto põhinumbrite tabel, kus veergudes on tunnused *Number*, *Sagedus* ja *Sagedus protsentides*.
-* selectorgadget võib sind siin alt vedada ning kergem on lähtekoodi inspekteerida brauseris olevate tööriistadega (Chrome's vajuta `Ctrl + Shift + I` või tee parem klikk ja vajuta inspekteeri elementi).
-* Visualiseeri saadud andmetabelit. Tee näiteks tulpdiagramm, kus x-teljel on arvud 1-48 ning y-telg tähistab sagedust.
+* Eralda Vikinglotto pÃµhinumbrite tabel, kus veergudes on tunnused *Number*, *Sagedus* ja *Sagedus protsentides*.
+* selectorgadget vÃµib sind siin alt vedada ning kergem on lÃ¤htekoodi inspekteerida brauseris olevate tÃ¶Ã¶riistadega (Chrome's vajuta `Ctrl + Shift + I` vÃµi tee parem klikk ja vajuta inspekteeri elementi).
+* Visualiseeri saadud andmetabelit. Tee nÃ¤iteks tulpdiagramm, kus x-teljel on arvud 1-48 ning y-telg tÃ¤histab sagedust.
 
-2) (**Boonusülesanne 1 (3 punkti)**) Viimase 250 loosiga on pall 35 tulnud 18 korral, pall 2 aga 43 korral. Uuri, kas on alust arvata, et Viking Lotto süsteem on kallutatud. Selleks mõtle välja, kuidas seda kontrollida (näiteks võid kasutada simulatsioonidel põhinevat lähenemist). Selgita lühidalt oma lähenemist ja raporteeri, millise tulemuse said. Visualiseeri saadud tulemust.
+```{r}
+# Ãœlesanne 1.8
+# sinu kood
+
+```
 
 
-### Boonusülesanne 2 (5 punkti) - Kas kõik teed viivad Facebooki? (ehk juhuslik ekslemine veebilehtedel)
+2) (**BoonusÃ¼lesanne 1.2 (3 punkti)**) Viimase 250 loosiga on pall 35 tulnud 18 korral, pall 2 aga 43 korral. Uuri, kas on alust arvata, et Viking Lotto sÃ¼steem on kallutatud. Selleks mÃµtle vÃ¤lja, kuidas seda kontrollida (nÃ¤iteks vÃµid kasutada simulatsioonidel pÃµhinevat lÃ¤henemist). Selgita lÃ¼hidalt oma lÃ¤henemist ja raporteeri, millise tulemuse said. Visualiseeri saadud tulemust.
 
-Alusta suvaliselt veebilehelt. Eralda kõik väljuvad lingid. Vali üks neist linkidest suvaliselt. Hüppa sellele lingile. Kui sellel leheküljel pole ühtegi väljuvat linki, mine tagasi. Kui väljuvaid linke on mitmeid, vali jälle välja suvaline ja hüppa sinna. Kui jõudsid Facebooki, on katse lõppenud. Korda seda protsessi mitu korda ja erinevate alglehtedega. Uuri, mitmel juhul jõudsid FBsse.
 
-Näpunäide: Abiks on paketi rvest funktsioon `follow_link()`. 
+### BoonusÃ¼lesanne 1.3 (5 punkti) - Kas kÃµik teed viivad Facebooki? (ehk juhuslik ekslemine veebilehtedel)
+
+Alusta suvaliselt veebilehelt. Eralda kÃµik vÃ¤ljuvad lingid. Vali Ã¼ks neist linkidest suvaliselt. HÃ¼ppa sellele lingile. Kui sellel lehekÃ¼ljel pole Ã¼htegi vÃ¤ljuvat linki, mine tagasi. Kui vÃ¤ljuvaid linke on mitmeid, vali jÃ¤lle vÃ¤lja suvaline ja hÃ¼ppa sinna. Kui jÃµudsid Facebooki, on katse lÃµppenud. Korda seda protsessi mitu korda ja erinevate alglehtedega. Uuri, mitmel juhul jÃµudsid FBsse.
+
+NÃ¤punÃ¤ide: Abiks on paketi rvest funktsioon `follow_link()`. 
 
 <!--
 
-### Boonusülesanne 2 - Facebooki API kasutamine
+### BoonusÃ¼lesanne 2 - Facebooki API kasutamine
 
 Kasuta paketti *Rfacebook* ning leia:
 
-**(1 boonuspunkt)** Mis on olnud Tartu Ülikooli Facebooki lehe kõige populaarsem postitus? Mis on olnud matemaatika ja statistika intituudi Facebooki lehe kõige populaarsem postitus?
+**(1 boonuspunkt)** Mis on olnud Tartu Ãœlikooli Facebooki lehe kÃµige populaarsem postitus? Mis on olnud matemaatika ja statistika intituudi Facebooki lehe kÃµige populaarsem postitus?
 
-**(5 boonuspunkti :-))** Kasuta R-i, et uuendada oma staatust tekstiga 'Teen aine "Statistiline andmeteadus ja visualiseerimine" kodutööd. Väga põnev! :-)'. Abiks on käsk `updateStatus`.
+**(5 boonuspunkti :-))** Kasuta R-i, et uuendada oma staatust tekstiga 'Teen aine "Statistiline andmeteadus ja visualiseerimine" kodutÃ¶Ã¶d. VÃ¤ga pÃµnev! :-)'. Abiks on kÃ¤sk `updateStatus`.
 
 
 Abistavad lingid:
