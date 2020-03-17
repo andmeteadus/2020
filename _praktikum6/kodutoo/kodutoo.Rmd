@@ -5,8 +5,6 @@ output:
     theme: null
 ---
 
-Tähtaeg: 25.03.2019 10:15.
-
 # I osa
 
 (**1 punkt**) Vaata Stanfordi Statistical Learning kursuse videot [hierarhilise klasterdamise kohta](https://www.youtube.com/watch?v=Tuuc9Y06tAc)
@@ -47,8 +45,7 @@ Soovitame sul katsuda jõudu ka teadusartikli endaga [Biomarker Profiling by Nuc
 
 # Mida on vaja esitada?
 
-* I osa vastused tuleb kirjutada meili sisusse või esitada tekstifailina.
-* II ja III osa kohta tuleb esitada nii andmeanalüüsi raport (html või pdf formaadis) kui ka selle lähtekood .Rmd failina.
+* I, II ja III osa kohta tuleb esitada vastustega [Jupyter fail](../kodutood/kodutoo8.ipynb).
 * Lisaks võiksid mainida, kui palju aega kulus I, II ja III osa peale. Mida arvad ülesannetest?
 
 

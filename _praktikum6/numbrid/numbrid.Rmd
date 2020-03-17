@@ -8,27 +8,27 @@ output:
 ### Sissejuhatus
 
 
-Andmebaasihaldurile Madis "Select" Baas meeldib s¸steemianal¸¸tik Katrin "S¸steemne" Kindlus. Lıuna ajal vahetavad nad salvr‰tikule kirjutatud binaarkoodis armastuskirju. T‰na otsustas Madis Katrinile muljet avaldada ning ehitada automaatse binaarkoodi dekodeerija. Ta sattus aga probleemi otsa - kuidas automaatselt tuvastada, kas k‰sitsi kirjutatud number on 0 vıi 1?
+Andmebaasihaldurile Madis "Select" Baas meeldib s√ºsteemianal√º√ºtik Katrin "S√ºsteemne" Kindlus. L√µuna ajal vahetavad nad salvr√§tikule kirjutatud binaarkoodis armastuskirju. T√§na otsustas Madis Katrinile muljet avaldada ning ehitada automaatse binaarkoodi dekodeerija. Ta sattus aga probleemi otsa - kuidas automaatselt tuvastada, kas k√§sitsi kirjutatud number on 0 v√µi 1?
 
-Selles praktikumis uurime k‰sitsi kirjutatud numbrite hingeelu.
+Selles praktikumis uurime k√§sitsi kirjutatud numbrite hingeelu.
 
 ### Andmestik
 
-Selleks on meil kasutada andmestik, kus on palju n‰iteid k‰sitsi kirjutatud numbritest "0" ja "1". Kıik need n‰ited on 28 x 28 piksli suurused mustvalged pildid. Igale pikslile vastab ¸ks t‰isarv vahemikus 0, ..., 255, mis n‰itab antud piksli intensiivsust. Lisaks on kıigi nende n‰idete kohta teada, millist numbrit on konkreetsel pildil kujutatud. 
+Selleks on meil kasutada andmestik, kus on palju n√§iteid k√§sitsi kirjutatud numbritest "0" ja "1". K√µik need n√§ited on 28 x 28 piksli suurused mustvalged pildid. Igale pikslile vastab √ºks t√§isarv vahemikus 0, ..., 255, mis n√§itab antud piksli intensiivsust. Lisaks on k√µigi nende n√§idete kohta teada, millist numbrit on konkreetsel pildil kujutatud. 
 
 ![](numbrid.png "Binaarkood?")
 
-Laadi alla andmestik [numbrid.csv](../data/numbrid.csv). Iga rida vastab ¸hele pildile. Andmestiku viimane veerg *label* n‰itab, kas tegu on nulli vıi ¸hega. ‹lej‰‰nud veerud n‰itavad vastava piksli intensiivsust, kusjuures pikslid on j‰rjestatud ¸lalt alla (alates vasakust ¸lemisest nurgast). 
+Laadi alla andmestik [numbrid.csv](../data/numbrid.csv). Iga rida vastab √ºhele pildile. Andmestiku viimane veerg *label* n√§itab, kas tegu on nulli v√µi √ºhega. √úlej√§√§nud veerud n√§itavad vastava piksli intensiivsust, kusjuures pikslid on j√§rjestatud √ºlalt alla (alates vasakust √ºlemisest nurgast). 
 
-### ‹lesanne 1 (2 punkti) - andmestikuga tutvumine
+### √úlesanne 1 (2 punkti) - andmestikuga tutvumine
 
-a. Visualiseeri n‰iteid nii nullide kui ka ¸htede seast. 
+a. Visualiseeri n√§iteid nii nullide kui ka √ºhtede seast. 
 
-N‰pun‰ited:
+N√§pun√§ited:
 
-* Abiks on ette antud funktsioon `plot_digit`, mille argumendiks sobib andmestiku ¸ks rida (NB! ilma viimase veeruta)
-* Alamjooniste tegemisel on kasuks k‰sk `par(mfrow = c(mitu_rida, mitu_veergu))`
-* ƒ‰riseid saad muuta `par(mar = c(bottom, left, top, right))`
+* Abiks on ette antud funktsioon `plot_digit`, mille argumendiks sobib andmestiku √ºks rida (NB! ilma viimase veeruta)
+* Alamjooniste tegemisel on kasuks k√§sk `par(mfrow = c(mitu_rida, mitu_veergu))`
+* √Ñ√§riseid saad muuta `par(mar = c(bottom, left, top, right))`
 
 ```{r}
 plot_digit = function(digit, ...){
@@ -40,23 +40,23 @@ plot_digit = function(digit, ...){
 
 ```
 
-Lisan‰pun‰ide:
+Lisan√§pun√§ide:
 
-* Selleks, et saada esialgsed graafilisi parameetreid tagasi, vıid k‰ituda j‰rgmiselt:
+* Selleks, et saada esialgsed graafilisi parameetreid tagasi, v√µid k√§ituda j√§rgmiselt:
 
 ```{r, eval=FALSE}
 # sinu kood, kus muudad graafilisi parameetreid mfrow ja mar
-# N‰iteks
+# N√§iteks
 par(mfrow=c(2, 5), mar=c(1, 1, 1, 1) + 0.1)
 
-# P‰rast taasta esialgsed graafilised parameetrid
+# P√§rast taasta esialgsed graafilised parameetrid
 par(mfrow=c(1, 1), mar=c(5, 4, 4, 2) + 0.1)
 ```
 
 
-b. Tutvu ka paketi *pheatmap* funktsionaalsusega ja visualiseeri nulle ja ¸htesid. Abiks on ette antud funktsioon `plot_digit_pheatmap`.
+b. Tutvu ka paketi *pheatmap* funktsionaalsusega ja visualiseeri nulle ja √ºhtesid. Abiks on ette antud funktsioon `plot_digit_pheatmap`.
 
-N‰iteks nullide korral vıiksid joonised v‰lja n‰ha umbes j‰rgnevad. (Aga joonise mitmeks jagamine `mfrow` abil ei tˆˆta siin. Raportisse saad v‰iksemad pildid, kui muudad koodiploki s‰tteid `fig.width`, `fig.height`.)
+N√§iteks nullide korral v√µiksid joonised v√§lja n√§ha umbes j√§rgnevad. (Aga joonise mitmeks jagamine `mfrow` abil ei t√∂√∂ta siin. Raportisse saad v√§iksemad pildid, kui muudad koodiploki s√§tteid `fig.width`, `fig.height`.)
 
 ![](nullid.png "Nullid")
 
@@ -71,44 +71,44 @@ plot_digit_pheatmap = function(digit){
 # sinu kood
 ```
 
-c. Sorteeri andmestiku read selliselt, et ¸leval oleksid nullid ja all ¸hed. Visualiseeri kogu andmestikku kasutadaes `pheatmap` funktsiooni. Kasuta argumente `cluster_rows=FALSE, cluster_cols=FALSE`. Abiks on [pheatmap minimalistlik n‰ide](../praktikum6_pheatmap_minimal).
+c. Sorteeri andmestiku read selliselt, et √ºleval oleksid nullid ja all √ºhed. Visualiseeri kogu andmestikku kasutadaes `pheatmap` funktsiooni. Kasuta argumente `cluster_rows=FALSE, cluster_cols=FALSE`. Abiks on [pheatmap minimalistlik n√§ide](../praktikum6_pheatmap_minimal).
 
 
 ```{r}
 # sinu kood
 ```
 
-K¸simus: Miks on punased triibud vaheldumisi sinistega?
+K√ºsimus: Miks on punased triibud vaheldumisi sinistega?
 
 Vastus: ...
 
-### ‹lesanne 2 (4 punkti)
+### √úlesanne 2 (4 punkti)
 
-a. Tee andmestikul PCA (kontrolli, et oled eelnevalt andmestikust eemaldanud tunnuse label). PCA tegemiseks kasuta funktsiooni `prcomp`. Abiks on [PCA minimalistlik n‰ide](../praktikum6_pca_minimal). 
+a. Tee andmestikul PCA (kontrolli, et oled eelnevalt andmestikust eemaldanud tunnuse label). PCA tegemiseks kasuta funktsiooni `prcomp`. Abiks on [PCA minimalistlik n√§ide](../praktikum6_pca_minimal). 
 
 ```{r}
 # sinu kood
 ```
 
-K¸simus: Eelmisel korral vaatasid videot, kus n‰idati, et vahel on andmestiku "efektiivne dimensionaalsus" v‰iksem kui tunnuste arv. Milline on sinu arvates andmestiku ¥efektiivne dimensionaalsus° praegusel juhul?
+K√ºsimus: Eelmisel korral vaatasid videot, kus n√§idati, et vahel on andmestiku "efektiivne dimensionaalsus" v√§iksem kui tunnuste arv. Milline on sinu arvates andmestiku ¬¥efektiivne dimensionaalsus¬° praegusel juhul?
 
 Vastus: ...
 
-b. Tee hajuvusdiagramm PC1 vs PC2. Seej‰rel m‰rgi joonisele, millised punktid kujutavad numbrit 0 ja millised numbrit 1 (vıid kasutada v‰rvi vıi argumenti `pch`).
+b. Tee hajuvusdiagramm PC1 vs PC2. Seej√§rel m√§rgi joonisele, millised punktid kujutavad numbrit 0 ja millised numbrit 1 (v√µid kasutada v√§rvi v√µi argumenti `pch`).
 
 ```{r}
 # sinu kood
 ```
 
-K¸simus: Mida vıiks selle joonise pıhjal t‰histada PC1?
+K√ºsimus: Mida v√µiks selle joonise p√µhjal t√§histada PC1?
 
 Vastus: ...
 
 c. Visualiseeri PCA kaalusid.
 
-N‰pun‰ited:
+N√§pun√§ited:
 
-* Peakomponendid on lineaarkombinatsioonid esialgsetest tunnustest. N‰iteks $PC1 = \beta_1 * intensiivsus_{\text{esimene_piksel}} + \beta_2 * intensiivsus_{\text{teine_piksel}} + \cdots + \beta_{784} * intensiivsus_{\text{viimane_piksel}}$.
+* Peakomponendid on lineaarkombinatsioonid esialgsetest tunnustest. N√§iteks $PC1 = \beta_1 * intensiivsus_{\text{esimene_piksel}} + \beta_2 * intensiivsus_{\text{teine_piksel}} + \cdots + \beta_{784} * intensiivsus_{\text{viimane_piksel}}$.
 * Tahame visualiseerida PC1 kaalusid $\beta_1, \cdots, \beta_{784}$
 * Neid kaale saame visualiseerida sarnaselt numbritele (st 28 x 28 suuruse pildina)
 
@@ -116,34 +116,34 @@ N‰pun‰ited:
 # sinu kood
 ```
 
-K¸simus: Millistel pikslitel on absoluutv‰‰rtuselt suured kaalud? Interpreteeri selle abil PC1 t‰hendust (milliste pikslite intensiivsus peab olema suur ja milliste pikslite intensiivsus madal, et PC1 v‰‰rtus oleks vıimalikult suur).
+K√ºsimus: Millistel pikslitel on absoluutv√§√§rtuselt suured kaalud? Interpreteeri selle abil PC1 t√§hendust (milliste pikslite intensiivsus peab olema suur ja milliste pikslite intensiivsus madal, et PC1 v√§√§rtus oleks v√µimalikult suur).
 
 Vastus: ...
 
-### ‹lesanne 3 (4 punkti)
+### √úlesanne 3 (4 punkti)
 
-a. Tee n¸¸d PCA andmestikul, mis koosneb ainult nullidest. Lisaks tee hajuvusdiagramm PC1 vs PC2.
+a. Tee n√º√ºd PCA andmestikul, mis koosneb ainult nullidest. Lisaks tee hajuvusdiagramm PC1 vs PC2.
 
 ```{r}
 # sinu kood
 ```
 
-K¸simus: Kas oskad selle joonise pıhjal tılgendada peakomponente PC1 ja PC2?
+K√ºsimus: Kas oskad selle joonise p√µhjal t√µlgendada peakomponente PC1 ja PC2?
 
 Vastus: ...
 
-b. Vali ¸heksa numbrit tasandi erinevatest nurkadest ja visualiseeri neid funktsiooni `plot_digit` abil. (J‰rgmisel joonisel on t‰histatud punasena 25 punkti tasandi erinevatest nurkadest. Paremal pool on n‰idatud number 3 jaoks vıimalik tulemus. Sinul piisab vıtta analoogilisest vırestikust 9 punktikest ja visualiseerida neid numbreid.)
+b. Vali √ºheksa numbrit tasandi erinevatest nurkadest ja visualiseeri neid funktsiooni `plot_digit` abil. (J√§rgmisel joonisel on t√§histatud punasena 25 punkti tasandi erinevatest nurkadest. Paremal pool on n√§idatud number 3 jaoks v√µimalik tulemus. Sinul piisab v√µtta analoogilisest v√µrestikust 9 punktikest ja visualiseerida neid numbreid.)
 
-![](pca_example2.png "N‰ide")
+![](pca_example2.png "N√§ide")
 
-N‰pun‰ide: Kasuks vıib tulla funktsioon `identify`, mis aitab joonisele vajutades leida l‰himad punktid. Uuri mida teeb j‰rgmine koodiblokk:
+N√§pun√§ide: Kasuks v√µib tulla funktsioon `identify`, mis aitab joonisele vajutades leida l√§himad punktid. Uuri mida teeb j√§rgmine koodiblokk:
 
 ```{r, eval=FALSE}
 x = c(1,2,3)
 y = c(2,5,3)
 plot(x, y)
 identify(c(1,2,3), c(2,5,3), n=1)
-# kliki joonisel ja j‰lgi konsooli
+# kliki joonisel ja j√§lgi konsooli
 ```
 
 
@@ -151,26 +151,26 @@ identify(c(1,2,3), c(2,5,3), n=1)
 # sinu kood
 ```
 
-K¸simus: Kuidas tılgendad selle joonise pıhjal peakomponente PC1 ja PC2?
+K√ºsimus: Kuidas t√µlgendad selle joonise p√µhjal peakomponente PC1 ja PC2?
 
 Vastus: ...
 
-c. Punktikeste asemel visualiseeri numbreid. Lıpptulemus vıiks v‰lja n‰ha umbes selline:
+c. Punktikeste asemel visualiseeri numbreid. L√µpptulemus v√µiks v√§lja n√§ha umbes selline:
 
-![](nullid_pca.png "N‰ide")
+![](nullid_pca.png "N√§ide")
 
-N‰pun‰ited:
+N√§pun√§ited:
 
-* Kıigepealt joonista t¸hi aken.
+* K√µigepealt joonista t√ºhi aken.
 ```{r, eval=FALSE}
 plot(0, 0, type = "n", xlim=c(?, ?), ylim=c(?, ?))
 ```
 
-* `for` ts¸kli abil lisa numbrid.
-* Sul ei ole vaja joonistada kıiki numbreid, sest numbrid vıivad kattuda. Vıid joonistada n‰iteks 500 numbrit.
-* Kui numbrid tulevad liiga v‰ikesed, siis muuda argumenti `scale`.
+* `for` ts√ºkli abil lisa numbrid.
+* Sul ei ole vaja joonistada k√µiki numbreid, sest numbrid v√µivad kattuda. V√µid joonistada n√§iteks 500 numbrit.
+* Kui numbrid tulevad liiga v√§ikesed, siis muuda argumenti `scale`.
 
-Siin oleme ette andnud t‰iendatud `plot_digit` funktsiooni, mis muudab valge l‰bipaistvaks (mis on kasulik, kui numbrid joonistuvad ¸ksteise peale). 
+Siin oleme ette andnud t√§iendatud `plot_digit` funktsiooni, mis muudab valge l√§bipaistvaks (mis on kasulik, kui numbrid joonistuvad √ºksteise peale). 
 
 
 ```{r}
@@ -202,7 +202,7 @@ plot_digit = function(digit, x=NA, y=NA, scale=1, add=FALSE, transparency=FALSE,
 
 ```
 
-Minimaalne n‰ide, kuidas `plot_digit` funktsiooni kasutada.
+Minimaalne n√§ide, kuidas `plot_digit` funktsiooni kasutada.
 
 ```{r, eval=FALSE}
 plot(0, 0, type = "n", xlim=c(0, 10), ylim=c(0, 10), asp=1)
@@ -215,58 +215,58 @@ for(i in 1:5){
 }
 ```
 
-![](pca_vis_min.png "N‰ide")
+![](pca_vis_min.png "N√§ide")
 
 ```{r}
 # sinu kood
 ```
 
-K¸simus: Kuidas tılgendad selle joonise pıhjal peakomponente PC1 ja PC2?
+K√ºsimus: Kuidas t√µlgendad selle joonise p√µhjal peakomponente PC1 ja PC2?
 
 Vastus: ...
 
-d. Tee samasugune joonis nagu eelmises punktis esialgse nullide ja ¸htede andmestiku peal.
+d. Tee samasugune joonis nagu eelmises punktis esialgse nullide ja √ºhtede andmestiku peal.
 
 ```{r}
 # sinu kood
 ```
 
-K¸simus: Kuidas tılgendad selle joonise pıhjal peakomponente PC1 ja PC2?
+K√ºsimus: Kuidas t√µlgendad selle joonise p√µhjal peakomponente PC1 ja PC2?
 
 Vastus: ...
 
 
-### Boonus¸lesanne 1 (2 punkti) - implementeeri PCA
+### Boonus√ºlesanne 1 (2 punkti) - implementeeri PCA
 
-Selle ¸lesande eesm‰rk on implementeerida omaenda PCA. Vıid kasutada j‰rgnevat pseudokoodi. 
+Selle √ºlesande eesm√§rk on implementeerida omaenda PCA. V√µid kasutada j√§rgnevat pseudokoodi. 
 
 PCA pseudokood:
 
 1. Tsentreeri andmestik (ehk lahuta igast tunnusest tema keskmine).  
-T‰histame tsentreeritud andmemaatriksit $X$ (vaatlused ridades, tunnused veergudes). 
+T√§histame tsentreeritud andmemaatriksit $X$ (vaatlused ridades, tunnused veergudes). 
 
-2. Arvuta kovariatsioonimaatriks $X^T X$. (N‰pun‰ide: maatriksite korrutamiseks on R-is operaator `%*%`, transponeerimiseks funktsioon `t()`.)
+2. Arvuta kovariatsioonimaatriks $X^T X$. (N√§pun√§ide: maatriksite korrutamiseks on R-is operaator `%*%`, transponeerimiseks funktsioon `t()`.)
 
-3. Leia kovariatsioonimaatriksi omav‰‰rtused ja omavektorid. (N‰pun‰ide: Abiks on funktsioon `eigen`)
+3. Leia kovariatsioonimaatriksi omav√§√§rtused ja omavektorid. (N√§pun√§ide: Abiks on funktsioon `eigen`)
 
 4. Esimese omavektori elemendid on PC1 kordajad, teise omavektori elemendid PC2 kordajad jne. 
-Kasuta n¸¸d neid kordajaid, et leida kıigi andmepunktide jaoks PC1 ja PC2 v‰‰rtus. Selleks tuleb vastavad lineaarkombinatsioonid arvutada kıigi $X$ ridade jaoks. 
+Kasuta n√º√ºd neid kordajaid, et leida k√µigi andmepunktide jaoks PC1 ja PC2 v√§√§rtus. Selleks tuleb vastavad lineaarkombinatsioonid arvutada k√µigi $X$ ridade jaoks. 
 
-> N‰iteks kui esimese omavektori elemendid on $\alpha_1, \alpha_2, ..., \alpha_k$, siis PC1 saadakse tsentreeritud tunnuste lineaarkombinatsioonina $PC_1 = \alpha_1 X_{1} + \alpha_2 X_{2} + ... + \alpha_k X_{k}$. Siin $X_1$ t‰histab tsentreeritud esimest tunnust, $X_2$ teist jne. 
+> N√§iteks kui esimese omavektori elemendid on $\alpha_1, \alpha_2, ..., \alpha_k$, siis PC1 saadakse tsentreeritud tunnuste lineaarkombinatsioonina $PC_1 = \alpha_1 X_{1} + \alpha_2 X_{2} + ... + \alpha_k X_{k}$. Siin $X_1$ t√§histab tsentreeritud esimest tunnust, $X_2$ teist jne. 
 
 
-5. Tagasta PC1 ja PC2 v‰‰rtused. 
+5. Tagasta PC1 ja PC2 v√§√§rtused. 
 
-6. Vırdle minimaalse n‰ite pıhjal, kas sinu PCA annab samu tulemusi, mis `prcomp`.
+6. V√µrdle minimaalse n√§ite p√µhjal, kas sinu PCA annab samu tulemusi, mis `prcomp`.
 
 
 ```{r}
 # sinu kood
 ```
 
-### Boonus¸lesanne 2 (2 punkti) - klassifitseeri numbreid
+### Boonus√ºlesanne 2 (2 punkti) - klassifitseeri numbreid
 
-Paku v‰lja moodus, kuidas pikslite pıhjal eristada numbreid 0 ja 1. Leia mitmel juhul sinu meetod prognoosib ıigesti, mitmel juhul valesti ja raporteeri t‰psus (ıigete klassifitseerimiste arv koguarvust). Vıiksid t‰psuseks saada v‰hemalt 90%.
+Paku v√§lja moodus, kuidas pikslite p√µhjal eristada numbreid 0 ja 1. Leia mitmel juhul sinu meetod prognoosib √µigesti, mitmel juhul valesti ja raporteeri t√§psus (√µigete klassifitseerimiste arv koguarvust). V√µiksid t√§psuseks saada v√§hemalt 90%.
 
 ```{r}
 # sinu kood

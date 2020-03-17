@@ -9,86 +9,86 @@ editor_options:
 
 ### Sissejuhatus
 
-Geenitehnoloogiat tudeeriv Elo "Elu" Eliksiir on kuulnud, et ka geneetika valdkonnas leidub edukaid ettevõtteid, nagu näiteks 23andMe, mis annab inimesele teada tema riski haigestuda erinevatesse haigustesse. Sestap plaanib ta teha idufirma, mis teeniks tulu inimese surma prognoosimisega. Täpsemalt, inimeselt võetaks vereproov, ning selle tulemuste põhjal öeldaks talle, milline on tema tõenäosus surra järgneva 5 aasta jooksul. 
+Geenitehnoloogiat tudeeriv Elo "Elu" Eliksiir on kuulnud, et ka geneetika valdkonnas leidub edukaid ettevÃµtteid, nagu nÃ¤iteks 23andMe, mis annab inimesele teada tema riski haigestuda erinevatesse haigustesse. Sestap plaanib ta teha idufirma, mis teeniks tulu inimese surma prognoosimisega. TÃ¤psemalt, inimeselt vÃµetaks vereproov, ning selle tulemuste pÃµhjal Ã¶eldaks talle, milline on tema tÃµenÃ¤osus surra jÃ¤rgneva 5 aasta jooksul. 
 
-Et kirjutada taotlus rahastuse saamiseks, on tal esmalt vaja välja mõelda, millel see suremuse test üldse peaks põhinema. See tähendab, et millise ühendi sisaldust vereproovist oleks vaja mõõta? Ta leidis, et Geenivaramu teadlased eesotsas Krista Fischeriga (TÜ statistika vilistlane) on 2014. aastal avaldanud teadusartikli [Biomarker Profiling by Nuclear Magnetic Resonance Spectroscopy for the Prediction of All-Cause Mortality: An Observational Study of 17,345 Persons](http://journals.plos.org/plosmedicine/article?id=10.1371/journal.pmed.1001606). 
+Et kirjutada taotlus rahastuse saamiseks, on tal esmalt vaja vÃ¤lja mÃµelda, millel see suremuse test Ã¼ldse peaks pÃµhinema. See tÃ¤hendab, et millise Ã¼hendi sisaldust vereproovist oleks vaja mÃµÃµta? Ta leidis, et Geenivaramu teadlased eesotsas Krista Fischeriga (TÃœ statistika vilistlane) on 2014. aastal avaldanud teadusartikli [Biomarker Profiling by Nuclear Magnetic Resonance Spectroscopy for the Prediction of All-Cause Mortality: An Observational Study of 17,345 Persons](http://journals.plos.org/plosmedicine/article?id=10.1371/journal.pmed.1001606). 
 
-Selle praktikumis uurimegi, kas ja kuidas saab biomarkerite abil ennustada surma. Meil on kasutada valim Geenivaramu andmestikust, mis sisaldab 5000 inimese verest mõõdetud 106 biomarkeri väärtuseid. 
+Selle praktikumis uurimegi, kas ja kuidas saab biomarkerite abil ennustada surma. Meil on kasutada valim Geenivaramu andmestikust, mis sisaldab 5000 inimese verest mÃµÃµdetud 106 biomarkeri vÃ¤Ã¤rtuseid. 
 
-Aga mis üleüldse on biomarker?
+Aga mis Ã¼leÃ¼ldse on biomarker?
 
 > A biomarker is a biological molecule found in blood, body fluids, or tissues that may signal an abnormal process, a condition, or a disease. The level of a particular biomarker may indicate a patient's risk of disease, or likely response to a treatment. For example, cholesterol levels are measured to assess the risk of heart disease.
 
-Ehk et biomarkerid on lihtsalt märgid, mille seast mõned võivad midagi näidata.
+Ehk et biomarkerid on lihtsalt mÃ¤rgid, mille seast mÃµned vÃµivad midagi nÃ¤idata.
 
 ### Andmestik
 
-Kasutame valimit Geenivaramu andmestikust, mida kasutati eelnevalt mainitud teadusartikli juures. Täpsemalt on andmestikus tunnused:
+Kasutame valimit Geenivaramu andmestikust, mida kasutati eelnevalt mainitud teadusartikli juures. TÃ¤psemalt on andmestikus tunnused:
 
 * *sugu*
 * *vanusegrupp*
-* *s5* - indikaator, kas 5 aasta pärast oli surnud
-* *hyp* - kas inimesel on hüpertooniatõbi ehk kõrgvererõhutõbi
+* *s5* - indikaator, kas 5 aasta pÃ¤rast oli surnud
+* *hyp* - kas inimesel on hÃ¼pertooniatÃµbi ehk kÃµrgvererÃµhutÃµbi
 * *suits* - kas on suitsetaja
-* *LDL_D* - esimese biomarkeri väärtus
-* *L_HDL_FC* - teise biomarkeri väärtus
+* *LDL_D* - esimese biomarkeri vÃ¤Ã¤rtus
+* *L_HDL_FC* - teise biomarkeri vÃ¤Ã¤rtus
 * ...
-* *Cit* - viimase biomarkeri väärtus
+* *Cit* - viimase biomarkeri vÃ¤Ã¤rtus
 
-Laadi Moodle-st alla andmestik *biomarkerid.csv* ja loe töökeskkonda.
+Laadi Moodle-st alla andmestik *biomarkerid.csv* ja loe tÃ¶Ã¶keskkonda.
 
-Analüüsi lihtsuse huvides eemalda puuduvaid andmeid sisaldavad read. Abiks on funktsioon `na.omit`. 
+AnalÃ¼Ã¼si lihtsuse huvides eemalda puuduvaid andmeid sisaldavad read. Abiks on funktsioon `na.omit`. 
 
-### Kui hästi on kolesterooli abil võimalik ennustada surma?
+### Kui hÃ¤sti on kolesterooli abil vÃµimalik ennustada surma?
 
-> Elo tutvus Geenivaramu andmestikuga, ent seal oli palju arusaamatute lühenditega biomarkereid. Samas on ta kuulnud, et kolesterool on üks nendest näitajatest, mille näit peab tingimata korras olema. Ehk saaks kolesterooli põhjal hästi prognoosida surma?
+> Elo tutvus Geenivaramu andmestikuga, ent seal oli palju arusaamatute lÃ¼henditega biomarkereid. Samas on ta kuulnud, et kolesterool on Ã¼ks nendest nÃ¤itajatest, mille nÃ¤it peab tingimata korras olema. Ehk saaks kolesterooli pÃµhjal hÃ¤sti prognoosida surma?
 
-Eralda andmestikust alamandmestik, mis sisaldaks tunnuseid *sugu*, *vanusegrupp*, *s5*, *hyp*, *suits* ning  järgmisi biomarkereid:
+Eralda andmestikust alamandmestik, mis sisaldaks tunnuseid *sugu*, *vanusegrupp*, *s5*, *hyp*, *suits* ning  jÃ¤rgmisi biomarkereid:
 
-1. Serum_C - üldkolesterool
+1. Serum_C - Ã¼ldkolesterool
 2. HDL_C - [HDL kolesterool ("hea")](http://en.wikipedia.org/wiki/High-density_lipoprotein)
 3. LDL_C - [LDL kolesterool ("halb")](http://en.wikipedia.org/wiki/Low-density_lipoprotein)
 
-### Ülesanne 1 (2 punkti) - kolesterool soo ja vanusegruppide lõikes
+### Ãœlesanne 1 (2 punkti) - kolesterool soo ja vanusegruppide lÃµikes
 
-Tutvu andmestikuga ja selgita välja, kuidas on kodeeritud tunnus sugu (kas 0 tähistab meest või naist)?
+Tutvu andmestikuga ja selgita vÃ¤lja, kuidas on kodeeritud tunnus sugu (kas 0 tÃ¤histab meest vÃµi naist)?
 
-Visualiseeri, kuidas nende 3 biomarkeri jaotused erinevad soo ja vanusegruppide lõikes.
+Visualiseeri, kuidas nende 3 biomarkeri jaotused erinevad soo ja vanusegruppide lÃµikes.
 
 ```{r}
 #  sinu kood
 ```
 
-### Ülesanne 2 (4 punkti) - surma prognoosimine kolesterooli abil?
+### Ãœlesanne 2 (4 punkti) - surma prognoosimine kolesterooli abil?
 
-Uuri, kas kolesterool võimaldab prognoosida surma. Selleks tuleb andmetele sobitada mudel. 
+Uuri, kas kolesterool vÃµimaldab prognoosida surma. Selleks tuleb andmetele sobitada mudel. 
 
-a. Visualiseeri, kas kolesterooli (Serum_C, HDL_C, LDL_C) abil võiks saada prognoosida surma.  
-b. Tundub, et joonisest ei piisa ning tuleb pöörduda statistiliste mudelite juurde. Kas kasutad lineaarset või logistilist regressiooni? Miks? 
-c. Kui sobitada mudel `glm(s5 ~ HDL_C, family=binomial, data=data)`, siis selgub, et HDL_C on oluline surma prognoosimisel. Kui aga sobitada mudel `glm(s5 ~ HDL_C + sugu, family=binomial, data=data)`, siis miskipärast HDL_C enam ei ole oluline. Hinda vastavad mudelid ja selgita, mis värk on. Kas siis kokkuvõttes HDL_C on oluline või mitte?
-d. Sobita kolm mudelit, et uurida kolesterooli seost surmaga (eraldi mudelid tunnuste Serum_C, HDL_C ja LDL_C jaoks). Muide, kas lisad mudelitesse ka tunnused sugu, vanusegrupp, suits ja hyp? Põhjenda oma otsust. 
-e. Milline on tulemus, st kas siis mõni kolmest kolesterooli tunnusest on olulise mõjuga surma ennustamisel? 
+a. Visualiseeri, kas kolesterooli (Serum_C, HDL_C, LDL_C) abil vÃµiks saada prognoosida surma.  
+b. Tundub, et joonisest ei piisa ning tuleb pÃ¶Ã¶rduda statistiliste mudelite juurde. Kas kasutad lineaarset vÃµi logistilist regressiooni? Miks? 
+c. Kui sobitada mudel `glm(s5 ~ HDL_C, family=binomial, data=data)`, siis selgub, et HDL_C on oluline surma prognoosimisel. Kui aga sobitada mudel `glm(s5 ~ HDL_C + sugu, family=binomial, data=data)`, siis miskipÃ¤rast HDL_C enam ei ole oluline. Hinda vastavad mudelid ja selgita, mis vÃ¤rk on. Kas siis kokkuvÃµttes HDL_C on oluline vÃµi mitte?
+d. Sobita kolm mudelit, et uurida kolesterooli seost surmaga (eraldi mudelid tunnuste Serum_C, HDL_C ja LDL_C jaoks). Muide, kas lisad mudelitesse ka tunnused sugu, vanusegrupp, suits ja hyp? PÃµhjenda oma otsust. 
+e. Milline on tulemus, st kas siis mÃµni kolmest kolesterooli tunnusest on olulise mÃµjuga surma ennustamisel? 
 
 ```{r}
 # sinu kood
 ```
 
-### Kogu andmestikul põhinev analüüs
+### Kogu andmestikul pÃµhinev analÃ¼Ã¼s
 
-Eelnimetatud teadusartiklis vaadeldi kõiki 106 biomarkerit. Tegelenud esialgu kolme biomarkeriga, saime tuttavaks logistilise regressiooniga R-is ning julgeme nüüd asuda artiklis kirjeldatud analüüsi reprodutseerima. Kõigis järgnevates ülesannetes kasutame kogu andmestikku (st kõiki 106 biomarkerit). 
+Eelnimetatud teadusartiklis vaadeldi kÃµiki 106 biomarkerit. Tegelenud esialgu kolme biomarkeriga, saime tuttavaks logistilise regressiooniga R-is ning julgeme nÃ¼Ã¼d asuda artiklis kirjeldatud analÃ¼Ã¼si reprodutseerima. KÃµigis jÃ¤rgnevates Ã¼lesannetes kasutame kogu andmestikku (st kÃµiki 106 biomarkerit). 
 
-### Ülesanne 3 (1 punkt) - korrelatsioonid biomarkerite vahel
+### Ãœlesanne 3 (1 punkt) - korrelatsioonid biomarkerite vahel
 
-* Tee joonis, mis annaks hästi edasi, kas ja millised biomarkerid on omavahel korreleeritud. (Näpunäide: Arvuta korrelatsioonimaatriks käsuga `cor` ning visualiseeri seda.) Interpreteeri, milliseid mustreid ja seoseid näed? 
+* Tee joonis, mis annaks hÃ¤sti edasi, kas ja millised biomarkerid on omavahel korreleeritud. (NÃ¤punÃ¤ide: Arvuta korrelatsioonimaatriks kÃ¤suga `cor` ning visualiseeri seda.) Interpreteeri, milliseid mustreid ja seoseid nÃ¤ed? 
 
 ```{r}
 #  sinu kood
 ```
 
 
-### Ülesanne 4 (2 punkt) - Oluliste biomarkeri tuvastamine
+### Ãœlesanne 4 (2 punkt) - Oluliste biomarkeri tuvastamine
 
-Milline biomarker aitab kõige paremini ennustada surma kui võtame arvesse vanuse ja soo mõju?
+Milline biomarker aitab kÃµige paremini ennustada surma kui vÃµtame arvesse vanuse ja soo mÃµju?
 
 Selleks sobita mudelid
 
@@ -97,9 +97,9 @@ Selleks sobita mudelid
 * ...
 * s5 ~ sugu + vanusegrupp + biomarker_106
 
-ja iga biomarkeri korral eralda mudelist selle p-väärtus ja kordaja.
+ja iga biomarkeri korral eralda mudelist selle p-vÃ¤Ã¤rtus ja kordaja.
 
-Ühele biomarkerile vastava kordaja ja p-väärtuse kättesaamiseks oleme ette andnud funktsiooni:
+Ãœhele biomarkerile vastava kordaja ja p-vÃ¤Ã¤rtuse kÃ¤ttesaamiseks oleme ette andnud funktsiooni:
 
 ```{r, eval=FALSE}
 biomarkeri_pvaartus_kordaja <- function(biomarker, formula0, andmestik){
@@ -120,10 +120,10 @@ biomarkeri_pvaartus_kordaja("LDL_D", formula0, data)
 ```
 
 
-Käsitsi 106 korda antud funktsiooni läbi jooksutada ei tundu hea mõte olevat. Seega tuleks mudelite hindamisprotsess automatiseerida. Üks variant on kasutada `for` tsüklit. Teine võimalus on kasutada funktsiooni `lapply` (väljundiks list), mille esimeseks parameetriks on vektor väärtustega, mida etteantud funktsiooni (teine parameeter) esimeseks sisendiks määrata. Selle funktsiooni ülejäänud parameetrid saab määrata justkui need oleksid funktsiooni `lapply` parameetriteks.
+KÃ¤sitsi 106 korda antud funktsiooni lÃ¤bi jooksutada ei tundu hea mÃµte olevat. Seega tuleks mudelite hindamisprotsess automatiseerida. Ãœks variant on kasutada `for` tsÃ¼klit. Teine vÃµimalus on kasutada funktsiooni `lapply` (vÃ¤ljundiks list), mille esimeseks parameetriks on vektor vÃ¤Ã¤rtustega, mida etteantud funktsiooni (teine parameeter) esimeseks sisendiks mÃ¤Ã¤rata. Selle funktsiooni Ã¼lejÃ¤Ã¤nud parameetrid saab mÃ¤Ã¤rata justkui need oleksid funktsiooni `lapply` parameetriteks.
 
-a. Kirjuta funktsioon `biomarkerite_olulisus`, mis leiab nii kordaja kui p-väärtuse kõikidele biomarkeritele, mis funktsiooni ühe sisendina ette antakse. Kasuta selle funktsiooni sees funktsiooni `biomarkeri_pvaartus_kordaja`. Funktsiooni sisenditeks on
-  - biomarkerid - vektor biomarkeritest, millele kordaja ja p-väärtus leida
+a. Kirjuta funktsioon `biomarkerite_olulisus`, mis leiab nii kordaja kui p-vÃ¤Ã¤rtuse kÃµikidele biomarkeritele, mis funktsiooni Ã¼he sisendina ette antakse. Kasuta selle funktsiooni sees funktsiooni `biomarkeri_pvaartus_kordaja`. Funktsiooni sisenditeks on
+  - biomarkerid - vektor biomarkeritest, millele kordaja ja p-vÃ¤Ã¤rtus leida
   - formula0 - `gml` valemi osa, millele lisatakse veel juurde vaadeldav biomarker
   - andmestik - andmetabel, mille pealt mudelid hinnata 
 
@@ -133,7 +133,7 @@ biomarkerite_olulisus = function(biomarkerid, formula0, andmestik){
   # sinu kood
   
   # Tagastada dataframe, mille veergudeks on biomarkeri nimi, 
-  # selle p-väärtus ning kordaja suurus
+  # selle p-vÃ¤Ã¤rtus ning kordaja suurus
 }
 ```
 
@@ -144,7 +144,7 @@ f <- "s5 ~ sugu + vanusegrupp"
 biomarkerite_olulisus(c("LDL_D", "HDL_C"), f, data)
 ```
 
-Eelneva koodi jooksutamisel võiksid saada väljundiks:
+Eelneva koodi jooksutamisel vÃµiksid saada vÃ¤ljundiks:
 
 ```{r, echo=FALSE}
 data.frame("biomarker" = c("LDL_D", "HDL_C"), 
@@ -152,20 +152,20 @@ data.frame("biomarker" = c("LDL_D", "HDL_C"),
            "kordaja" = c(0.2846, -0.17294))
 ```
 
-b. Kasuta nüüd eelnevalt kirjutatud funktsiooni kõigi 106 biomarkeri jaoks. Prindi välja iga biomarkeri p-väärtus ning kordaja hinnang. 
+b. Kasuta nÃ¼Ã¼d eelnevalt kirjutatud funktsiooni kÃµigi 106 biomarkeri jaoks. Prindi vÃ¤lja iga biomarkeri p-vÃ¤Ã¤rtus ning kordaja hinnang. 
 
-### Boonusülesanne 1 (2 punkti) - paralleelarvutus
+### BoonusÃ¼lesanne 1 (2 punkti) - paralleelarvutus
 
 Muuda funktsiooni `biomarkerite_olulisus` selliselt, et selle sees oleks kasutatud paralleelarvutust, st biomarkeritele vastavate mudelite hindamine oleks jaotatud protsessorituumade vahel. 
 
-Selleks tuleks tavapärane `for` tsükkel või funktsioon `lapply` asendada näiteks funktsiooniga `parLapply` (pakett *parallel*) või funktsiooniga `foreach` ja operaatoriga `%dopar%` (pakett *foreach*). Vali neist välja meelepärasem või rakenda soovi korral mõnda muud paralleelarvutuste võimalust.  
+Selleks tuleks tavapÃ¤rane `for` tsÃ¼kkel vÃµi funktsioon `lapply` asendada nÃ¤iteks funktsiooniga `parLapply` (pakett *parallel*) vÃµi funktsiooniga `foreach` ja operaatoriga `%dopar%` (pakett *foreach*). Vali neist vÃ¤lja meelepÃ¤rasem vÃµi rakenda soovi korral mÃµnda muud paralleelarvutuste vÃµimalust.  
 
-Uuri, mida teevad järgmised näited:
+Uuri, mida teevad jÃ¤rgmised nÃ¤ited:
 
 ```{r, eval = FALSE}
 library(foreach)
 library(doParallel)
-tuumade_arv <- detectCores(logical = FALSE) # Füüsiliste tuumade arv
+tuumade_arv <- detectCores(logical = FALSE) # FÃ¼Ã¼siliste tuumade arv
 klaster <- makeCluster(tuumade_arv)
 registerDoParallel(klaster)
 
@@ -178,7 +178,7 @@ stopCluster(klaster)
 
 ```{r, eval = FALSE}
 library(parallel)
-tuumade_arv <- detectCores(logical = FALSE) # Füüsiliste tuumade arv
+tuumade_arv <- detectCores(logical = FALSE) # FÃ¼Ã¼siliste tuumade arv
 klaster <- makeCluster(tuumade_arv)
 
 parLapply(klaster,letters[1:10], toupper)
@@ -186,88 +186,88 @@ parLapply(klaster,letters[1:10], toupper)
 stopCluster(klaster)
 ```
 
-Kas paralleelarvutusega võitsid kiiruses?
+Kas paralleelarvutusega vÃµitsid kiiruses?
 
 
-### Ülesanne 5 (1 punkt)
+### Ãœlesanne 5 (1 punkt)
 
-Visualiseeri saadud tulemust. Võid teha näiteks sellise joonise p-väärtustest log-skaalal
+Visualiseeri saadud tulemust. VÃµid teha nÃ¤iteks sellise joonise p-vÃ¤Ã¤rtustest log-skaalal
 
 ![](example_plot_biomarkers_uus2.png)
 
-### Ülesanne 6 (4 punkti + 1 boonuspunkt) - p-väärtuse piiri paikapanek
+### Ãœlesanne 6 (4 punkti + 1 boonuspunkt) - p-vÃ¤Ã¤rtuse piiri paikapanek
 
-Nüüd saime kõigi biomarkerite jaoks teada p-väärtused. Jääb veel küsimus, millised neist peaksime liigitama olulisteks. 
+NÃ¼Ã¼d saime kÃµigi biomarkerite jaoks teada p-vÃ¤Ã¤rtused. JÃ¤Ã¤b veel kÃ¼simus, millised neist peaksime liigitama olulisteks. 
 
-Kuna testisime kõigi 106 biomarkeri olulisust surma ennustamisel, puutume kokku mitmese testimise probleemiga. Vaata selle kohta [koomiksit "Significant"](https://xkcd.com/882/) ning uuri [materjalist]( http://www.stat.berkeley.edu/~mgoldman/Section0402.pdf) mitmese testimise ja Bonferroni korrektsiooni kohta. 
+Kuna testisime kÃµigi 106 biomarkeri olulisust surma ennustamisel, puutume kokku mitmese testimise probleemiga. Vaata selle kohta [koomiksit "Significant"](https://xkcd.com/882/) ning uuri [materjalist]( http://www.stat.berkeley.edu/~mgoldman/Section0402.pdf) mitmese testimise ja Bonferroni korrektsiooni kohta. 
 
 (**1 punkt**) Selgita, milles seisnes koomiksi idee. 
 
-(**1 punkt**) Artiklis kasutati olulisuse nivood `p < 0.0005`. Täpsemalt,
+(**1 punkt**) Artiklis kasutati olulisuse nivood `p < 0.0005`. TÃ¤psemalt,
 
 > ... significant at the Bonferroni-corrected threshold of p<0.0005, accounting for testing of 106 candidate biomarkers
 
-Selgita, miks kasutati sellist p-väärtuse piiri (aga mitte klassikalist `p < 0.05`)?
+Selgita, miks kasutati sellist p-vÃ¤Ã¤rtuse piiri (aga mitte klassikalist `p < 0.05`)?
 
-(**2 punkti**) Veendumaks, et `p < 0.05` kasutamisel võime tõepoolest saada liiga palju valepositiivseid tulemusi, tekita andmestik, kus puudub seos tunnuse *s5* ja biomarkerite vahel. Selleks tekita uus tunnus, kus oleks *s5* väärtuseid permuteeritud suvaliselt. Sobita nüüd mudelid, kus prognoosiksid permuteeritud *s5* väärtuseid biomarkerite põhjal (selleks võid kasutada ülesandes 4 kirjutatud funktsiooni). 
+(**2 punkti**) Veendumaks, et `p < 0.05` kasutamisel vÃµime tÃµepoolest saada liiga palju valepositiivseid tulemusi, tekita andmestik, kus puudub seos tunnuse *s5* ja biomarkerite vahel. Selleks tekita uus tunnus, kus oleks *s5* vÃ¤Ã¤rtuseid permuteeritud suvaliselt. Sobita nÃ¼Ã¼d mudelid, kus prognoosiksid permuteeritud *s5* vÃ¤Ã¤rtuseid biomarkerite pÃµhjal (selleks vÃµid kasutada Ã¼lesandes 4 kirjutatud funktsiooni). 
 
-* Mitme biomarkeri p-väärtused tulid väiksemad kui 0.05? 
-* Aga mitu tükki olid olulised Bonferroni korrektsiooni järgi?
-* Mitut olulist p-väärtust oleksid oodanud kummalgi juhul? Selgita. 
-* (**1 boonuspunkt**) Korda permuteerimist 100 korral ning tee kokkuvõte tulemustest. 
+* Mitme biomarkeri p-vÃ¤Ã¤rtused tulid vÃ¤iksemad kui 0.05? 
+* Aga mitu tÃ¼kki olid olulised Bonferroni korrektsiooni jÃ¤rgi?
+* Mitut olulist p-vÃ¤Ã¤rtust oleksid oodanud kummalgi juhul? Selgita. 
+* (**1 boonuspunkt**) Korda permuteerimist 100 korral ning tee kokkuvÃµte tulemustest. 
 
-### Ülesanne 7 (1 punkt) - alternatiiv Bonferroni korrektsioonile
+### Ãœlesanne 7 (1 punkt) - alternatiiv Bonferroni korrektsioonile
 
-Ülesandes 3 nägime, et mitmed biomarkerid on omavahel tugevalt korreleeritud. Niisiis võib Bonferroni korrektsioon osutuda praegu liiga rangeks. Alternatiivselt võiksime leida, kui suur on meie andmestikus mittekorreleeritud tunnuste arv, ning teha nende arvu järgi Bonferroni korrektsiooni. Selleks, et leida andmestiku nn "efektiivne dimensionaalsus", kasuta PCA-d. 
+Ãœlesandes 3 nÃ¤gime, et mitmed biomarkerid on omavahel tugevalt korreleeritud. Niisiis vÃµib Bonferroni korrektsioon osutuda praegu liiga rangeks. Alternatiivselt vÃµiksime leida, kui suur on meie andmestikus mittekorreleeritud tunnuste arv, ning teha nende arvu jÃ¤rgi Bonferroni korrektsiooni. Selleks, et leida andmestiku nn "efektiivne dimensionaalsus", kasuta PCA-d. 
 
 Juhised:
 
-* Rakenda andmestikul PCA-d ning leia, mitu peakomponenti seletavad näiteks 99\% variatsioonist. 
-* Leitud peakomponentide arv näitabki ligikaudu sõltumatute tunnuste arvu meie andmestikus. Tee Bonferroni korrektsioon selle arvu järgi. Millise p-väärtuse piiri saad?
+* Rakenda andmestikul PCA-d ning leia, mitu peakomponenti seletavad nÃ¤iteks 99\% variatsioonist. 
+* Leitud peakomponentide arv nÃ¤itabki ligikaudu sÃµltumatute tunnuste arvu meie andmestikus. Tee Bonferroni korrektsioon selle arvu jÃ¤rgi. Millise p-vÃ¤Ã¤rtuse piiri saad?
 
-### Boonusülesanne 2 (2 punkti) - usaldusintervallid kordajate jaoks
+### BoonusÃ¼lesanne 2 (2 punkti) - usaldusintervallid kordajate jaoks
 
-(**1 boonuspunkt**) Muuda funktsiooni `biomarkeri_pvaartus_kordaja` selliselt, et iga biomarkeri kordajale arvutad ka 95% usaldusintervalli. Võid kasutada normaaljaotusel põhinevat lähendit ning arvutada selle `kordaja_hinnang +- 1.96 * SE`, kus SE on `summary(model)` väljundis toodud `Std. Error`. Funktsiooni tagastatavas andmetabelis peaksid nüüd olema ka veerud `UI_alumine` ja `UI_ylemine`. 
+(**1 boonuspunkt**) Muuda funktsiooni `biomarkeri_pvaartus_kordaja` selliselt, et iga biomarkeri kordajale arvutad ka 95% usaldusintervalli. VÃµid kasutada normaaljaotusel pÃµhinevat lÃ¤hendit ning arvutada selle `kordaja_hinnang +- 1.96 * SE`, kus SE on `summary(model)` vÃ¤ljundis toodud `Std. Error`. Funktsiooni tagastatavas andmetabelis peaksid nÃ¼Ã¼d olema ka veerud `UI_alumine` ja `UI_ylemine`. 
 
-(**1 boonuspunkt**) Visualiseeri tulemust (näiteks iga biomarkeri kohta näita kordaja hinnangut koos usaldusintervalliga). 
+(**1 boonuspunkt**) Visualiseeri tulemust (nÃ¤iteks iga biomarkeri kohta nÃ¤ita kordaja hinnangut koos usaldusintervalliga). 
 
-### Ülesanne 8 (1 punkt) - forward selection
+### Ãœlesanne 8 (1 punkt) - forward selection
 
-Artiklis on kirjeldatud mudeli koostamist järgnevalt: 
+Artiklis on kirjeldatud mudeli koostamist jÃ¤rgnevalt: 
 
 > For biomarker discovery in the Estonian Biobank cohort, a multivariate model was derived in a forward stepwise fashion (Figure 2). First, the biomarker leading to the smallest p-value in the model adjusted for age and sex only was included as a predictor. Subsequently, the biomarker leading to the smallest p-value in the multivariate model adjusted for age, sex, and the first biomarker was included in the prediction model. The process was repeated until no additional biomarkers were significant at the Bonferroni-corrected threshold of p<0.0005, accounting for testing of 106 candidate biomarkers.
 
-Eelmistes ülesannetes leidsid kõige olulisema p-väärtusega biomarkeri. Jätka nüüd *forward selection*-iga:
+Eelmistes Ã¼lesannetes leidsid kÃµige olulisema p-vÃ¤Ã¤rtusega biomarkeri. JÃ¤tka nÃ¼Ã¼d *forward selection*-iga:
 
-* Lisa leitud biomarker mudelisse ning lähtu mudelist `s5 ~ sugu + vanusegrupp + kõige_olulisem_biomarker`
-* Kasuta funktsiooni `biomarkerite_olulisus` ning leia nüüd järgmine biomarker, mis mudelisse lisada. 
-* Jätka senikaua, kuni mudelisse lisatavad biomarkerite p-väärtused on väiksemad kui sinu määratud piir. 
+* Lisa leitud biomarker mudelisse ning lÃ¤htu mudelist `s5 ~ sugu + vanusegrupp + kÃµige_olulisem_biomarker`
+* Kasuta funktsiooni `biomarkerite_olulisus` ning leia nÃ¼Ã¼d jÃ¤rgmine biomarker, mis mudelisse lisada. 
+* JÃ¤tka senikaua, kuni mudelisse lisatavad biomarkerite p-vÃ¤Ã¤rtused on vÃ¤iksemad kui sinu mÃ¤Ã¤ratud piir. 
 
-Artiklis saadi sellise protsessi tulemusena 4 olulist biomarkerit: Alb, VLDL_D, Gp, Cit. Kas said samasugused? Kui kõiki ei saanud, ära muretse.
+Artiklis saadi sellise protsessi tulemusena 4 olulist biomarkerit: Alb, VLDL_D, Gp, Cit. Kas said samasugused? Kui kÃµiki ei saanud, Ã¤ra muretse.
 
-### Ülesanne 9 (1 punkt) - surma tõenäosuse prognoosimine
+### Ãœlesanne 9 (1 punkt) - surma tÃµenÃ¤osuse prognoosimine
 
-Eelmise ülesande tulemusena on sul nüüd olemas lõplik mudel, mis võtab arvesse kõik, mis on oluline surma tõenäosuse prognoosimiseks. Prognoosi iga andmestikus oleva inimese kohta tema tõenäosust surra 5 aasta jooksul ja visualiseeri tulemust (näiteks histogrammi abil).
+Eelmise Ã¼lesande tulemusena on sul nÃ¼Ã¼d olemas lÃµplik mudel, mis vÃµtab arvesse kÃµik, mis on oluline surma tÃµenÃ¤osuse prognoosimiseks. Prognoosi iga andmestikus oleva inimese kohta tema tÃµenÃ¤osust surra 5 aasta jooksul ja visualiseeri tulemust (nÃ¤iteks histogrammi abil).
 
-Näpunäide: Uuri, mida teeb järgnev kood
+NÃ¤punÃ¤ide: Uuri, mida teeb jÃ¤rgnev kood
 
 ```{r, eval=FALSE}
 model = glm(s5 ~ suits + HDL_C, family=binomial, data=data)
 newdata = data.frame(suits = c(0, 0, 1), 
                      HDL_C = c(0.5, -0.2, 1.1), 
                      suvaline_tunnus = c(1, 2, 3))
-# On oluline, et newdata sisaldaks kindlasti kõik need veerud, mida on vaja prognoosimisel
+# On oluline, et newdata sisaldaks kindlasti kÃµik need veerud, mida on vaja prognoosimisel
 predicted_probabilities = predict(model, newdata=newdata, type = "response")
 ```
 
 
-### Ülesanne 10 (2 punkti) - prognooside täpsus
+### Ãœlesanne 10 (2 punkti) - prognooside tÃ¤psus
 
-Eelmises ülesandes prognoosisid surma tõenäosust. Aga mida hakkab tavainimene peale tõenäosusega? Olgem ikka konkreetsed, kas siis sureb 5 aasta jooksul või mitte. 
+Eelmises Ã¼lesandes prognoosisid surma tÃµenÃ¤osust. Aga mida hakkab tavainimene peale tÃµenÃ¤osusega? Olgem ikka konkreetsed, kas siis sureb 5 aasta jooksul vÃµi mitte. 
 
-Selleks otsusta piir, millisest väiksemad tõenäosused klassifitseerid *ei sure* ja suuremad tõenäosused *sureb*. Kasutades seda piiri ning eelmises ülesandes kirjutatud funktsiooni, arvuta kõigi andmestikus olnud inimeste jaoks 5 aasta jooksul suremise prognoos (justkui meil poleks olnud teada tunnuse s5 väärtus). 
+Selleks otsusta piir, millisest vÃ¤iksemad tÃµenÃ¤osused klassifitseerid *ei sure* ja suuremad tÃµenÃ¤osused *sureb*. Kasutades seda piiri ning eelmises Ã¼lesandes kirjutatud funktsiooni, arvuta kÃµigi andmestikus olnud inimeste jaoks 5 aasta jooksul suremise prognoos (justkui meil poleks olnud teada tunnuse s5 vÃ¤Ã¤rtus). 
 
-Milline on sinu prognooside täpsus (st kui suur osa prognoosidest langes kokku tunnuse s5 väärtusega)?
+Milline on sinu prognooside tÃ¤psus (st kui suur osa prognoosidest langes kokku tunnuse s5 vÃ¤Ã¤rtusega)?
 
-Võrdlusmomendi saamiseks paku välja veel mingi teine, naiivne klassifitseerija (see võib põhineda ükskõik kui lihtsal reeglil). Milline on selle täpsus?
+VÃµrdlusmomendi saamiseks paku vÃ¤lja veel mingi teine, naiivne klassifitseerija (see vÃµib pÃµhineda Ã¼kskÃµik kui lihtsal reeglil). Milline on selle tÃ¤psus?
 

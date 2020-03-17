@@ -7,113 +7,113 @@ output:
 
 ### Sissejuhatus
 
-Maidu "Parem" Käsi haaras lapsena kaisukaru küll vasaku käega, kuid ema sõnad "vasak on paha, parem on parem" ei teinud tast ainult paremakäelist, vaid need jäid alatiseks meelde. Näiteks meeldib Maidule kinos istuda kõige parempoosel pingil ja valimistel hääletada kõige parempoolse poliitiku poolt.
-Aga kuidas Maidu teab, kes on kõige parempoolne poliitik?
+Maidu "Parem" KÃ¤si haaras lapsena kaisukaru kÃ¼ll vasaku kÃ¤ega, kuid ema sÃµnad "vasak on paha, parem on parem" ei teinud tast ainult paremakÃ¤elist, vaid need jÃ¤id alatiseks meelde. NÃ¤iteks meeldib Maidule kinos istuda kÃµige parempoosel pingil ja valimistel hÃ¤Ã¤letada kÃµige parempoolse poliitiku poolt.
+Aga kuidas Maidu teab, kes on kÃµige parempoolne poliitik?
 
-Selles ülesanneteblokis vaatamegi, kas peakomponentanalüüsi abil on võimalik poliitikuid liigitada vasak- ja parempoolseteks ning milline on parlamendis valitsev kambavaim.
+Selles Ã¼lesanneteblokis vaatamegi, kas peakomponentanalÃ¼Ã¼si abil on vÃµimalik poliitikuid liigitada vasak- ja parempoolseteks ning milline on parlamendis valitsev kambavaim.
 
 ### Andmestik
 
-Tegeleme andmestikuga, mis kajastab Riigikogu 13. koosseisu hääletusi. Kui viienda kodutöö neljandas ülesandes tuli alla kraapida vaid hümni seaduse tagasilükkamise tulemusi, siis käesolevalt on kasutada kõikide hääletuste tulemusi (välja on jäetud kohaloleku kontrolli ja muud mittesisukad hääletused). Täpsemalt on andmestikus tunnused:
+Tegeleme andmestikuga, mis kajastab Riigikogu 13. koosseisu hÃ¤Ã¤letusi. Kui viienda kodutÃ¶Ã¶ neljandas Ã¼lesandes tuli alla kraapida vaid hÃ¼mni seaduse tagasilÃ¼kkamise tulemusi, siis kÃ¤esolevalt on kasutada kÃµikide hÃ¤Ã¤letuste tulemusi (vÃ¤lja on jÃ¤etud kohaloleku kontrolli ja muud mittesisukad hÃ¤Ã¤letused). TÃ¤psemalt on andmestikus tunnused:
 
 * Nimi - saadiku nimi
-* Fraktsioon - millisesse fraktsiooni kuulus saadik (kui saadik vahetas fraktsiooni, siis on näidatud kõige sagedasem fraktsioon, kuhu saadik Riigikogu XIII vältel kuulunud on)
-* Otsus - saadiku otsus (Poolt, Vastu, Erapooletu, Ei hääletanud, Puudub)
-* kpv - hääletuse kuupäev
-* id - hääletuse id
+* Fraktsioon - millisesse fraktsiooni kuulus saadik (kui saadik vahetas fraktsiooni, siis on nÃ¤idatud kÃµige sagedasem fraktsioon, kuhu saadik Riigikogu XIII vÃ¤ltel kuulunud on)
+* Otsus - saadiku otsus (Poolt, Vastu, Erapooletu, Ei hÃ¤Ã¤letanud, Puudub)
+* kpv - hÃ¤Ã¤letuse kuupÃ¤ev
+* id - hÃ¤Ã¤letuse id
 
-Laadi alla andmestik [*Riigikogu_XIII.csv*](../data/Riigikogu_XIII.csv) ja loe töökeskkonda.
+Laadi alla andmestik [*Riigikogu_XIII.csv*](../data/Riigikogu_XIII.csv) ja loe tÃ¶Ã¶keskkonda.
 
-### Ülesanne 1 (2 punkt) - andmestiku mudimine
+### Ãœlesanne 1 (2 punkt) - andmestiku mudimine
 
-a) Muuda tunnus *Otsus* numbriliseks. Selleks kodeeri hääletused järgmiselt:
+a) Muuda tunnus *Otsus* numbriliseks. Selleks kodeeri hÃ¤Ã¤letused jÃ¤rgmiselt:
 
-* *Vastu* tähista arvuga -1
-* *Poolt* tähista arvuga 1
-* *Puudub, Erapooletu, Ei hääletanud* tähista arvuga 0
+* *Vastu* tÃ¤hista arvuga -1
+* *Poolt* tÃ¤hista arvuga 1
+* *Puudub, Erapooletu, Ei hÃ¤Ã¤letanud* tÃ¤hista arvuga 0
 
-Pane tähele, et väärtused oleksid numbrilised mitte sõned.
+Pane tÃ¤hele, et vÃ¤Ã¤rtused oleksid numbrilised mitte sÃµned.
 
-b) Jäta välja saadikud, keda esineb andmestikus alla 5 korra.
-
-```{r}
-# sinu kood
-```
-
-### Ülesanne 2 (3 punkti) - visualiseeri andmeid heatmapi abil
-
-a) Sorteeri andmestiku read fraktsiooni põhjal ja visualiseeri neid heatmapi abil. Tõlgenda tulemusi.
-
-Näpunäide: 
-
-* Selleks, et kasutada näiteks funktsiooni `pheatmap`, tuleb tekitada andmemaatriks, kus ridades on numbrilisele kujule viidud saadikute hääletused.
+b) JÃ¤ta vÃ¤lja saadikud, keda esineb andmestikus alla 5 korra.
 
 ```{r}
 # sinu kood
 ```
 
-Tõlgendus: ...
+### Ãœlesanne 2 (3 punkti) - visualiseeri andmeid heatmapi abil
 
-b) Visualiseeri andmestikku heatmapi abil, aga seekord klasterda read. Tõlgenda tulemusi.
+a) Sorteeri andmestiku read fraktsiooni pÃµhjal ja visualiseeri neid heatmapi abil. TÃµlgenda tulemusi.
 
-```{r}
-# sinu kood
-```
+NÃ¤punÃ¤ide: 
 
-Tõlgendus: ...
-
-c) Visualiseeri andmestikku heatmapi abil, aga seekord klasterda nii read kui veerud. Tõlgenda tulemusi.
+* Selleks, et kasutada nÃ¤iteks funktsiooni `pheatmap`, tuleb tekitada andmemaatriks, kus ridades on numbrilisele kujule viidud saadikute hÃ¤Ã¤letused.
 
 ```{r}
 # sinu kood
 ```
 
-Tõlgendus: ...
+TÃµlgendus: ...
 
-### Ülesanne 3 (1 punkt)
+b) Visualiseeri andmestikku heatmapi abil, aga seekord klasterda read. TÃµlgenda tulemusi.
 
-Riigikogu 2015. aasta valimised võitis Reformierakond ning koalitsioonilepe sõlmiti REF, IRL ja SDE vahel. 2016. aasta sügisel see koalitsioon purunes. Sellega lõppes Reformierakonna enam kui 17 aastat järjest valitsuses oleku ajajärk ning Eesti sai 11-aastase vahe järel mittereformierakondlasest peaministri. 23. novembril 2016 algas Jüri Ratase valitsus, kus koalitsiooni moodustasid KESK, IRL ja SDE. 
+```{r}
+# sinu kood
+```
 
-Jaga sisseloetud andmestik *data* kaheks alamandmestikuks *data1* ja *data2*. Esimene neist sisaldagu enne kuupäeva 2016-11-23 toimunud hääletusi. Andmestik *data2* sisaldagu hääletusi alates kuupäevast 2016-11-23.
+TÃµlgendus: ...
 
-Näpunäide:
+c) Visualiseeri andmestikku heatmapi abil, aga seekord klasterda nii read kui veerud. TÃµlgenda tulemusi.
 
-* Andmestikus olev tunnus *kpv* on hetkel sõnalisel kujul. Muuda see tunnus kuupäev-tüüpi tunnuseks, kasutades funktsiooni `as.Date()` ja parameetrit `format = "%d.%m.%Y"`.
+```{r}
+# sinu kood
+```
+
+TÃµlgendus: ...
+
+### Ãœlesanne 3 (1 punkt)
+
+Riigikogu 2015. aasta valimised vÃµitis Reformierakond ning koalitsioonilepe sÃµlmiti REF, IRL ja SDE vahel. 2016. aasta sÃ¼gisel see koalitsioon purunes. Sellega lÃµppes Reformierakonna enam kui 17 aastat jÃ¤rjest valitsuses oleku ajajÃ¤rk ning Eesti sai 11-aastase vahe jÃ¤rel mittereformierakondlasest peaministri. 23. novembril 2016 algas JÃ¼ri Ratase valitsus, kus koalitsiooni moodustasid KESK, IRL ja SDE. 
+
+Jaga sisseloetud andmestik *data* kaheks alamandmestikuks *data1* ja *data2*. Esimene neist sisaldagu enne kuupÃ¤eva 2016-11-23 toimunud hÃ¤Ã¤letusi. Andmestik *data2* sisaldagu hÃ¤Ã¤letusi alates kuupÃ¤evast 2016-11-23.
+
+NÃ¤punÃ¤ide:
+
+* Andmestikus olev tunnus *kpv* on hetkel sÃµnalisel kujul. Muuda see tunnus kuupÃ¤ev-tÃ¼Ã¼pi tunnuseks, kasutades funktsiooni `as.Date()` ja parameetrit `format = "%d.%m.%Y"`.
 
 
 ```{r}
 # sinu kood
 ```
 
-### Ülesanne 4 (3 punkti)
+### Ãœlesanne 4 (3 punkti)
 
-a) Tee PCA esialgsele andmestikule. Visualiseeri kahte esimest peakomponenti hajuvusdiagrammi abil, seejuures värvi punktid fraktsioonide alusel. Tõlgenda tulemusi.
+a) Tee PCA esialgsele andmestikule. Visualiseeri kahte esimest peakomponenti hajuvusdiagrammi abil, seejuures vÃ¤rvi punktid fraktsioonide alusel. TÃµlgenda tulemusi.
 
-Näpunäide:
+NÃ¤punÃ¤ide:
 
-* PCA tegemiseks on vaja kasutada laias formaadis andmestikku, kus iga saadik on eraldi real ja veergudes on toimunud hääletustele vastavad otsused.
-
-```{r}
-# sinu kood
-```
-
-Tõlgendus: ...
-
-b) Tee PCA nii andmestikule *data1* kui ka *data2*. Mõlemal juhul visualiseeri kahte esimest peakomponenti hajuvusdiagrammi abil, seejuures värvi punktid fraktsioonide alusel. Tõlgenda tulemusi.
+* PCA tegemiseks on vaja kasutada laias formaadis andmestikku, kus iga saadik on eraldi real ja veergudes on toimunud hÃ¤Ã¤letustele vastavad otsused.
 
 ```{r}
 # sinu kood
 ```
 
-Tõlgendus: ...
+TÃµlgendus: ...
 
-### Ülesanne 5 (1 punkt)
+b) Tee PCA nii andmestikule *data1* kui ka *data2*. MÃµlemal juhul visualiseeri kahte esimest peakomponenti hajuvusdiagrammi abil, seejuures vÃ¤rvi punktid fraktsioonide alusel. TÃµlgenda tulemusi.
 
-a) Eelmises ülesandes rakendasid PCA-d andmestikule *data2* ja visualiseerisid seda kasutades kahte esimest komponenti. Kas piisab ka ühest komponendist?
+```{r}
+# sinu kood
+```
+
+TÃµlgendus: ...
+
+### Ãœlesanne 5 (1 punkt)
+
+a) Eelmises Ã¼lesandes rakendasid PCA-d andmestikule *data2* ja visualiseerisid seda kasutades kahte esimest komponenti. Kas piisab ka Ã¼hest komponendist?
 
 Vastus: ...
 
-b) Kuidas võiks tõlgendada esimest peakomponenti? Kas see näitab vasak- ja parempoolsust?
+b) Kuidas vÃµiks tÃµlgendada esimest peakomponenti? Kas see nÃ¤itab vasak- ja parempoolsust?
 
-> Vasakpoolsust iseloomustab püüd riigi kaudu teostada sotsiaalset ja majanduslikku võrdsustamist. Parempoolsust iseloomustab põhimõte, mille kohaselt iga ühiskonna liige on ise vastutav oma sotsiaalse ja majandusliku heaolu eest. [Vikipeedia](http://et.wikipedia.org/wiki/Eesti_erakonnad_vasak-parem-skaalal)
+> Vasakpoolsust iseloomustab pÃ¼Ã¼d riigi kaudu teostada sotsiaalset ja majanduslikku vÃµrdsustamist. Parempoolsust iseloomustab pÃµhimÃµte, mille kohaselt iga Ã¼hiskonna liige on ise vastutav oma sotsiaalse ja majandusliku heaolu eest. [Vikipeedia](http://et.wikipedia.org/wiki/Eesti_erakonnad_vasak-parem-skaalal)
 

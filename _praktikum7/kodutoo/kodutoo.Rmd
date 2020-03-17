@@ -5,8 +5,6 @@ output:
     theme: null
 ---
 
-Tähtaeg: 01.04.2019 kell 10:15.
-
 # I osa
 
 (**19 punkti**) Lahenda praktikumis alustatud [biomarkerite ülesanded](../praktikum7_biomarkerid).
@@ -30,8 +28,8 @@ Kuidas saavutada 100\% tundlikkus?
 
 # Mida on vaja esitada?
 
-* I osa kohta tuleb esitada nii andmeanalüüsi raport (html või pdf formaadis) kui ka selle lähtekood .Rmd failina.
-* II osa vastused tuleb kirjutada meili sisusse või esitada tekstifailina. Lisaks palun kirjuta, kui palju aega kulus I ja II osa peale. Kas logistiline regressioon ja mitmese testimise korrektsioon olid sinu jaoks uued mõisted? Kuivõrd arusaadav oli nende idee? Mida arvad ülesannetest (kasulikkus, huvitavus)?
+* I ja II osa kohta tuleb esitada vastustega [Jupyter fail](../kodutood/kodutoo7.ipynb). 
+* Lisaks palun kirjuta Jupyter faili, kui palju aega kulus I ja II osa peale. Kas logistiline regressioon ja mitmese testimise korrektsioon olid sinu jaoks uued mõisted? Kuivõrd arusaadav oli nende idee? Mida arvad ülesannetest (kasulikkus, huvitavus)?
 
 
 Lahendused esitada [Moodle keskkonna](https://moodle.ut.ee/course/view.php?id=8013#section-1) kaudu.
