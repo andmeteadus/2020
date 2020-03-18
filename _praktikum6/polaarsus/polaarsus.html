@@ -1,3 +1,4 @@
+
 <html xmlns="http://www.w3.org/1999/xhtml">
 
 <head>
@@ -5,6 +6,7 @@
 <meta charset="utf-8" />
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <meta name="generator" content="pandoc" />
+<meta http-equiv="X-UA-Compatible" content="IE=EDGE" />
 
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -30,6 +32,9 @@ if (window.hljs) {
 
 
 
+
+
+
 </head>
 
 <body>
@@ -48,7 +53,7 @@ if (window.hljs) {
 </div>
 <div id="andmestik" class="section level3">
 <h3>Andmestik</h3>
-<p>Tegeleme andmestikuga, mis kajastab Riigikogu 13. koosseisu hääletusi. Kui viienda kodutöö neljandas ülesandes tuli alla kraapida vaid hümni seaduse tagasilükkamise tulemusi, siis käesolevalt on kasutada kõikide hääletuste tulemusi (välja on jäetud kohaloleku kontrolli ja muud mittesisukad hääletused). Täpsemalt on andmestikus tunnused:</p>
+<p>Tegeleme andmestikuga, mis kajastab Riigikogu 13. koosseisu hääletusi. Kui viienda kodutöö neljandas ülesandes tuli alla kraapida vaid äriseadustiku muutmise seaduse hääletuse tulemusi, siis käesolevalt on kasutada kõikide hääletuste tulemusi (välja on jäetud kohaloleku kontrolli ja muud mittesisukad hääletused). Täpsemalt on andmestikus tunnused:</p>
 <ul>
 <li>Nimi - saadiku nimi</li>
 <li>Fraktsioon - millisesse fraktsiooni kuulus saadik (kui saadik vahetas fraktsiooni, siis on näidatud kõige sagedasem fraktsioon, kuhu saadik Riigikogu XIII vältel kuulunud on)</li>
@@ -58,8 +63,8 @@ if (window.hljs) {
 </ul>
 <p>Laadi alla andmestik <a href="../data/Riigikogu_XIII.csv"><em>Riigikogu_XIII.csv</em></a> ja loe töökeskkonda.</p>
 </div>
-<div id="ulesanne-1-2-punkt---andmestiku-mudimine" class="section level3">
-<h3>Ülesanne 1 (2 punkt) - andmestiku mudimine</h3>
+<div id="ulesanne-3.1-2-punkt---andmestiku-mudimine" class="section level3">
+<h3>Ülesanne 3.1 (2 punkt) - andmestiku mudimine</h3>
 <ol style="list-style-type: lower-alpha">
 <li>Muuda tunnus <em>Otsus</em> numbriliseks. Selleks kodeeri hääletused järgmiselt:</li>
 </ol>
@@ -72,42 +77,47 @@ if (window.hljs) {
 <ol start="2" style="list-style-type: lower-alpha">
 <li>Jäta välja saadikud, keda esineb andmestikus alla 5 korra.</li>
 </ol>
-<pre class="r"><code># sinu kood</code></pre>
+<pre class="r"><code># Ülesanne 3.1
+# sinu kood</code></pre>
 </div>
-<div id="ulesanne-2-3-punkti---visualiseeri-andmeid-heatmapi-abil" class="section level3">
-<h3>Ülesanne 2 (3 punkti) - visualiseeri andmeid heatmapi abil</h3>
+<div id="ulesanne-3.2-3-punkti---visualiseeri-andmeid-heatmapi-abil" class="section level3">
+<h3>Ülesanne 3.2 (3 punkti) - visualiseeri andmeid heatmapi abil</h3>
 <ol style="list-style-type: lower-alpha">
 <li>Sorteeri andmestiku read fraktsiooni põhjal ja visualiseeri neid heatmapi abil. Tõlgenda tulemusi.</li>
 </ol>
 <p>Näpunäide:</p>
 <ul>
-<li>Selleks, et kasutada näiteks funktsiooni <code>pheatmap</code>, tuleb tekitada andmemaatriks, kus ridades on numbrilisele kujule viidud saadikute hääletused.</li>
+<li>Selleks, et kasutada näiteks funktsiooni <code>pheatmap</code>, tuleb tekitada andmemaatriks, kus ridades on numbrilisele kujule viidud saadikute hääletused. Täpsemini veergudes on hääletused (<code>id</code>) ja ridades riigikogu liikmed. Puhtalt numbriliseks aitab muuta funktsioon <code>as.matrix()</code> aga enne peab kõik tekstilised tunnused välja jätma.</li>
 </ul>
-<pre class="r"><code># sinu kood</code></pre>
+<pre class="r"><code># Ülesanne 3.2a
+# sinu kood</code></pre>
 <p>Tõlgendus: …</p>
 <ol start="2" style="list-style-type: lower-alpha">
 <li>Visualiseeri andmestikku heatmapi abil, aga seekord klasterda read. Tõlgenda tulemusi.</li>
 </ol>
-<pre class="r"><code># sinu kood</code></pre>
+<pre class="r"><code># Ülesanne 3.2b
+# sinu kood</code></pre>
 <p>Tõlgendus: …</p>
 <ol start="3" style="list-style-type: lower-alpha">
 <li>Visualiseeri andmestikku heatmapi abil, aga seekord klasterda nii read kui veerud. Tõlgenda tulemusi.</li>
 </ol>
-<pre class="r"><code># sinu kood</code></pre>
+<pre class="r"><code># Ülesanne 3.2c
+# sinu kood</code></pre>
 <p>Tõlgendus: …</p>
 </div>
-<div id="ulesanne-3-1-punkt" class="section level3">
-<h3>Ülesanne 3 (1 punkt)</h3>
+<div id="ulesanne-3.3-1-punkt" class="section level3">
+<h3>Ülesanne 3.3 (1 punkt)</h3>
 <p>Riigikogu 2015. aasta valimised võitis Reformierakond ning koalitsioonilepe sõlmiti REF, IRL ja SDE vahel. 2016. aasta sügisel see koalitsioon purunes. Sellega lõppes Reformierakonna enam kui 17 aastat järjest valitsuses oleku ajajärk ning Eesti sai 11-aastase vahe järel mittereformierakondlasest peaministri. 23. novembril 2016 algas Jüri Ratase valitsus, kus koalitsiooni moodustasid KESK, IRL ja SDE.</p>
 <p>Jaga sisseloetud andmestik <em>data</em> kaheks alamandmestikuks <em>data1</em> ja <em>data2</em>. Esimene neist sisaldagu enne kuupäeva 2016-11-23 toimunud hääletusi. Andmestik <em>data2</em> sisaldagu hääletusi alates kuupäevast 2016-11-23.</p>
 <p>Näpunäide:</p>
 <ul>
 <li>Andmestikus olev tunnus <em>kpv</em> on hetkel sõnalisel kujul. Muuda see tunnus kuupäev-tüüpi tunnuseks, kasutades funktsiooni <code>as.Date()</code> ja parameetrit <code>format = &quot;%d.%m.%Y&quot;</code>.</li>
 </ul>
-<pre class="r"><code># sinu kood</code></pre>
+<pre class="r"><code># Ülesanne 3.3
+# sinu kood</code></pre>
 </div>
-<div id="ulesanne-4-3-punkti" class="section level3">
-<h3>Ülesanne 4 (3 punkti)</h3>
+<div id="ulesanne-3.4-3-punkti" class="section level3">
+<h3>Ülesanne 3.4 (3 punkti)</h3>
 <ol style="list-style-type: lower-alpha">
 <li>Tee PCA esialgsele andmestikule. Visualiseeri kahte esimest peakomponenti hajuvusdiagrammi abil, seejuures värvi punktid fraktsioonide alusel. Tõlgenda tulemusi.</li>
 </ol>
@@ -115,16 +125,18 @@ if (window.hljs) {
 <ul>
 <li>PCA tegemiseks on vaja kasutada laias formaadis andmestikku, kus iga saadik on eraldi real ja veergudes on toimunud hääletustele vastavad otsused.</li>
 </ul>
-<pre class="r"><code># sinu kood</code></pre>
+<pre class="r"><code># Ülesanne 3.4a
+# sinu kood</code></pre>
 <p>Tõlgendus: …</p>
 <ol start="2" style="list-style-type: lower-alpha">
 <li>Tee PCA nii andmestikule <em>data1</em> kui ka <em>data2</em>. Mõlemal juhul visualiseeri kahte esimest peakomponenti hajuvusdiagrammi abil, seejuures värvi punktid fraktsioonide alusel. Tõlgenda tulemusi.</li>
 </ol>
-<pre class="r"><code># sinu kood</code></pre>
+<pre class="r"><code># Ülesanne 3.3b
+# sinu kood</code></pre>
 <p>Tõlgendus: …</p>
 </div>
-<div id="ulesanne-5-1-punkt" class="section level3">
-<h3>Ülesanne 5 (1 punkt)</h3>
+<div id="ulesanne-3.5-1-punkt" class="section level3">
+<h3>Ülesanne 3.5 (1 punkt)</h3>
 <ol style="list-style-type: lower-alpha">
 <li>Eelmises ülesandes rakendasid PCA-d andmestikule <em>data2</em> ja visualiseerisid seda kasutades kahte esimest komponenti. Kas piisab ka ühest komponendist?</li>
 </ol>
@@ -137,6 +149,9 @@ if (window.hljs) {
 </blockquote>
 </div>
 
+
+
+<!-- code folding -->
 
 
 <!-- dynamically load mathjax for compatibility with self-contained -->

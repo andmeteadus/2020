@@ -6,6 +6,7 @@
 <meta charset="utf-8" />
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <meta name="generator" content="pandoc" />
+<meta http-equiv="X-UA-Compatible" content="IE=EDGE" />
 
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -26,6 +27,9 @@ if (window.hljs) {
   }
 }
 </script>
+
+
+
 
 
 
@@ -67,7 +71,7 @@ if (window.hljs) {
 <li>…</li>
 <li><em>Cit</em> - viimase biomarkeri väärtus</li>
 </ul>
-<p>Laadi Moodle-st alla andmestik <em>biomarkerid.csv</em> ja loe töökeskkonda.</p>
+<p>Laadi Moodle-st alla andmestik <a href="../data/biomarkerid.csv">biomarkerid.csv</a> ja loe töökeskkonda.</p>
 <p>Analüüsi lihtsuse huvides eemalda puuduvaid andmeid sisaldavad read. Abiks on funktsioon <code>na.omit</code>.</p>
 </div>
 <div id="kui-hasti-on-kolesterooli-abil-voimalik-ennustada-surma" class="section level3">
@@ -82,14 +86,15 @@ if (window.hljs) {
 <li>LDL_C - <a href="http://en.wikipedia.org/wiki/Low-density_lipoprotein">LDL kolesterool (“halb”)</a></li>
 </ol>
 </div>
-<div id="ulesanne-1-2-punkti---kolesterool-soo-ja-vanusegruppide-loikes" class="section level3">
-<h3>Ülesanne 1 (2 punkti) - kolesterool soo ja vanusegruppide lõikes</h3>
+<div id="ulesanne-1.1-2-punkti---kolesterool-soo-ja-vanusegruppide-loikes" class="section level3">
+<h3>Ülesanne 1.1 (2 punkti) - kolesterool soo ja vanusegruppide lõikes</h3>
 <p>Tutvu andmestikuga ja selgita välja, kuidas on kodeeritud tunnus sugu (kas 0 tähistab meest või naist)?</p>
 <p>Visualiseeri, kuidas nende 3 biomarkeri jaotused erinevad soo ja vanusegruppide lõikes.</p>
-<pre class="r"><code>#  sinu kood</code></pre>
+<pre class="r"><code># Ülesanne 1.1
+# sinu kood</code></pre>
 </div>
-<div id="ulesanne-2-4-punkti---surma-prognoosimine-kolesterooli-abil" class="section level3">
-<h3>Ülesanne 2 (4 punkti) - surma prognoosimine kolesterooli abil?</h3>
+<div id="ulesanne-1.2-4-punkti---surma-prognoosimine-kolesterooli-abil" class="section level3">
+<h3>Ülesanne 1.2 (4 punkti) - surma prognoosimine kolesterooli abil?</h3>
 <p>Uuri, kas kolesterool võimaldab prognoosida surma. Selleks tuleb andmetele sobitada mudel.</p>
 <ol style="list-style-type: lower-alpha">
 <li>Visualiseeri, kas kolesterooli (Serum_C, HDL_C, LDL_C) abil võiks saada prognoosida surma.<br />
@@ -99,21 +104,23 @@ if (window.hljs) {
 <li>Sobita kolm mudelit, et uurida kolesterooli seost surmaga (eraldi mudelid tunnuste Serum_C, HDL_C ja LDL_C jaoks). Muide, kas lisad mudelitesse ka tunnused sugu, vanusegrupp, suits ja hyp? Põhjenda oma otsust.</li>
 <li>Milline on tulemus, st kas siis mõni kolmest kolesterooli tunnusest on olulise mõjuga surma ennustamisel?</li>
 </ol>
-<pre class="r"><code># sinu kood</code></pre>
+<pre class="r"><code># Ülesanne 1.2
+# sinu kood</code></pre>
 </div>
 <div id="kogu-andmestikul-pohinev-analuus" class="section level3">
 <h3>Kogu andmestikul põhinev analüüs</h3>
 <p>Eelnimetatud teadusartiklis vaadeldi kõiki 106 biomarkerit. Tegelenud esialgu kolme biomarkeriga, saime tuttavaks logistilise regressiooniga R-is ning julgeme nüüd asuda artiklis kirjeldatud analüüsi reprodutseerima. Kõigis järgnevates ülesannetes kasutame kogu andmestikku (st kõiki 106 biomarkerit).</p>
 </div>
-<div id="ulesanne-3-1-punkt---korrelatsioonid-biomarkerite-vahel" class="section level3">
-<h3>Ülesanne 3 (1 punkt) - korrelatsioonid biomarkerite vahel</h3>
+<div id="ulesanne-1.3-1-punkt---korrelatsioonid-biomarkerite-vahel" class="section level3">
+<h3>Ülesanne 1.3 (1 punkt) - korrelatsioonid biomarkerite vahel</h3>
 <ul>
 <li>Tee joonis, mis annaks hästi edasi, kas ja millised biomarkerid on omavahel korreleeritud. (Näpunäide: Arvuta korrelatsioonimaatriks käsuga <code>cor</code> ning visualiseeri seda.) Interpreteeri, milliseid mustreid ja seoseid näed?</li>
 </ul>
-<pre class="r"><code>#  sinu kood</code></pre>
+<pre class="r"><code># Ülesanne 1.3
+# sinu kood</code></pre>
 </div>
-<div id="ulesanne-4-2-punkt---oluliste-biomarkeri-tuvastamine" class="section level3">
-<h3>Ülesanne 4 (2 punkt) - Oluliste biomarkeri tuvastamine</h3>
+<div id="ulesanne-1.4-2-punkt---oluliste-biomarkeri-tuvastamine" class="section level3">
+<h3>Ülesanne 1.4 (2 punkt) - Oluliste biomarkeri tuvastamine</h3>
 <p>Milline biomarker aitab kõige paremini ennustada surma kui võtame arvesse vanuse ja soo mõju?</p>
 <p>Selleks sobita mudelid</p>
 <ul>
@@ -148,7 +155,8 @@ biomarkeri_pvaartus_kordaja(&quot;LDL_D&quot;, formula0, data)</code></pre>
 <li>formula0 - <code>gml</code> valemi osa, millele lisatakse veel juurde vaadeldav biomarker</li>
 <li>andmestik - andmetabel, mille pealt mudelid hinnata</li>
 </ul>
-<pre class="r"><code>biomarkerite_olulisus = function(biomarkerid, formula0, andmestik){
+<pre class="r"><code># Ülesanne 1.4a
+biomarkerite_olulisus = function(biomarkerid, formula0, andmestik){
   
   # sinu kood
   
@@ -165,9 +173,11 @@ biomarkerite_olulisus(c(&quot;LDL_D&quot;, &quot;HDL_C&quot;), f, data)</code></
 <ol start="2" style="list-style-type: lower-alpha">
 <li>Kasuta nüüd eelnevalt kirjutatud funktsiooni kõigi 106 biomarkeri jaoks. Prindi välja iga biomarkeri p-väärtus ning kordaja hinnang.</li>
 </ol>
+<pre class="r"><code># Ülesanne 1.4b
+# sinu kood</code></pre>
 </div>
-<div id="boonusulesanne-1-2-punkti---paralleelarvutus" class="section level3">
-<h3>Boonusülesanne 1 (2 punkti) - paralleelarvutus</h3>
+<div id="boonusulesanne-1.1-2-punkti---paralleelarvutus" class="section level3">
+<h3>Boonusülesanne 1.1 (2 punkti) - paralleelarvutus</h3>
 <p>Muuda funktsiooni <code>biomarkerite_olulisus</code> selliselt, et selle sees oleks kasutatud paralleelarvutust, st biomarkeritele vastavate mudelite hindamine oleks jaotatud protsessorituumade vahel.</p>
 <p>Selleks tuleks tavapärane <code>for</code> tsükkel või funktsioon <code>lapply</code> asendada näiteks funktsiooniga <code>parLapply</code> (pakett <em>parallel</em>) või funktsiooniga <code>foreach</code> ja operaatoriga <code>%dopar%</code> (pakett <em>foreach</em>). Vali neist välja meelepärasem või rakenda soovi korral mõnda muud paralleelarvutuste võimalust.</p>
 <p>Uuri, mida teevad järgmised näited:</p>
@@ -190,48 +200,74 @@ parLapply(klaster,letters[1:10], toupper)
 stopCluster(klaster)</code></pre>
 <p>Kas paralleelarvutusega võitsid kiiruses?</p>
 </div>
-<div id="ulesanne-5-1-punkt" class="section level3">
-<h3>Ülesanne 5 (1 punkt)</h3>
+<div id="ulesanne-1.5-1-punkt" class="section level3">
+<h3>Ülesanne 1.5 (1 punkt)</h3>
 <p>Visualiseeri saadud tulemust. Võid teha näiteks sellise joonise p-väärtustest log-skaalal</p>
 <div class="figure">
 <img src="data:image/png;base64,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" />
 
 </div>
+<pre class="r"><code># Ülesanne 1.5
+# sinu kood</code></pre>
 </div>
-<div id="ulesanne-6-4-punkti-1-boonuspunkt---p-vaartuse-piiri-paikapanek" class="section level3">
-<h3>Ülesanne 6 (4 punkti + 1 boonuspunkt) - p-väärtuse piiri paikapanek</h3>
+<div id="ulesanne-1.6-4-punkti-1-boonuspunkt---p-vaartuse-piiri-paikapanek" class="section level3">
+<h3>Ülesanne 1.6 (4 punkti + 1 boonuspunkt) - p-väärtuse piiri paikapanek</h3>
 <p>Nüüd saime kõigi biomarkerite jaoks teada p-väärtused. Jääb veel küsimus, millised neist peaksime liigitama olulisteks.</p>
 <p>Kuna testisime kõigi 106 biomarkeri olulisust surma ennustamisel, puutume kokku mitmese testimise probleemiga. Vaata selle kohta <a href="https://xkcd.com/882/">koomiksit “Significant”</a> ning uuri <a href="http://www.stat.berkeley.edu/~mgoldman/Section0402.pdf">materjalist</a> mitmese testimise ja Bonferroni korrektsiooni kohta.</p>
-<p>(<strong>1 punkt</strong>) Selgita, milles seisnes koomiksi idee.</p>
-<p>(<strong>1 punkt</strong>) Artiklis kasutati olulisuse nivood <code>p &lt; 0.0005</code>. Täpsemalt,</p>
+<ol style="list-style-type: lower-alpha">
+<li>(<strong>1 punkt</strong>) Selgita, milles seisnes koomiksi idee.</li>
+</ol>
+<p>Vastus: …</p>
+<ol start="2" style="list-style-type: lower-alpha">
+<li>(<strong>1 punkt</strong>) Artiklis kasutati olulisuse nivood <code>p &lt; 0.0005</code>. Täpsemalt,</li>
+</ol>
 <blockquote>
 <p>… significant at the Bonferroni-corrected threshold of p&lt;0.0005, accounting for testing of 106 candidate biomarkers</p>
 </blockquote>
 <p>Selgita, miks kasutati sellist p-väärtuse piiri (aga mitte klassikalist <code>p &lt; 0.05</code>)?</p>
-<p>(<strong>2 punkti</strong>) Veendumaks, et <code>p &lt; 0.05</code> kasutamisel võime tõepoolest saada liiga palju valepositiivseid tulemusi, tekita andmestik, kus puudub seos tunnuse <em>s5</em> ja biomarkerite vahel. Selleks tekita uus tunnus, kus oleks <em>s5</em> väärtuseid permuteeritud suvaliselt. Sobita nüüd mudelid, kus prognoosiksid permuteeritud <em>s5</em> väärtuseid biomarkerite põhjal (selleks võid kasutada ülesandes 4 kirjutatud funktsiooni).</p>
+<p>Vastus: ….</p>
+<ol start="3" style="list-style-type: lower-alpha">
+<li>(<strong>2 punkti</strong>) Veendumaks, et <code>p &lt; 0.05</code> kasutamisel võime tõepoolest saada liiga palju valepositiivseid tulemusi, tekita andmestik, kus puudub seos tunnuse <em>s5</em> ja biomarkerite vahel. Selleks tekita uus tunnus, kus oleks <em>s5</em> väärtuseid permuteeritud suvaliselt. Sobita nüüd mudelid, kus prognoosiksid permuteeritud <em>s5</em> väärtuseid biomarkerite põhjal (selleks võid kasutada ülesandes 4 kirjutatud funktsiooni).</li>
+</ol>
 <ul>
 <li>Mitme biomarkeri p-väärtused tulid väiksemad kui 0.05?</li>
 <li>Aga mitu tükki olid olulised Bonferroni korrektsiooni järgi?</li>
 <li>Mitut olulist p-väärtust oleksid oodanud kummalgi juhul? Selgita.</li>
-<li>(<strong>1 boonuspunkt</strong>) Korda permuteerimist 100 korral ning tee kokkuvõte tulemustest.</li>
 </ul>
+<pre class="r"><code># Ülesanne 1.6c
+# sinu kood</code></pre>
+<ol start="4" style="list-style-type: lower-alpha">
+<li>(<strong>1 boonuspunkt</strong>) Korda permuteerimist 100 korral ning tee kokkuvõte tulemustest.</li>
+</ol>
+<pre class="r"><code># Ülesanne B1.6d
+# sinu kood</code></pre>
 </div>
-<div id="ulesanne-7-1-punkt---alternatiiv-bonferroni-korrektsioonile" class="section level3">
-<h3>Ülesanne 7 (1 punkt) - alternatiiv Bonferroni korrektsioonile</h3>
+<div id="ulesanne-1.7-1-punkt---alternatiiv-bonferroni-korrektsioonile" class="section level3">
+<h3>Ülesanne 1.7 (1 punkt) - alternatiiv Bonferroni korrektsioonile</h3>
 <p>Ülesandes 3 nägime, et mitmed biomarkerid on omavahel tugevalt korreleeritud. Niisiis võib Bonferroni korrektsioon osutuda praegu liiga rangeks. Alternatiivselt võiksime leida, kui suur on meie andmestikus mittekorreleeritud tunnuste arv, ning teha nende arvu järgi Bonferroni korrektsiooni. Selleks, et leida andmestiku nn “efektiivne dimensionaalsus”, kasuta PCA-d.</p>
 <p>Juhised:</p>
 <ul>
 <li>Rakenda andmestikul PCA-d ning leia, mitu peakomponenti seletavad näiteks 99% variatsioonist.</li>
 <li>Leitud peakomponentide arv näitabki ligikaudu sõltumatute tunnuste arvu meie andmestikus. Tee Bonferroni korrektsioon selle arvu järgi. Millise p-väärtuse piiri saad?</li>
 </ul>
+<pre class="r"><code># Ülesanne 1.7
+# sinu kood</code></pre>
 </div>
-<div id="boonusulesanne-2-2-punkti---usaldusintervallid-kordajate-jaoks" class="section level3">
-<h3>Boonusülesanne 2 (2 punkti) - usaldusintervallid kordajate jaoks</h3>
-<p>(<strong>1 boonuspunkt</strong>) Muuda funktsiooni <code>biomarkeri_pvaartus_kordaja</code> selliselt, et iga biomarkeri kordajale arvutad ka 95% usaldusintervalli. Võid kasutada normaaljaotusel põhinevat lähendit ning arvutada selle <code>kordaja_hinnang +- 1.96 * SE</code>, kus SE on <code>summary(model)</code> väljundis toodud <code>Std. Error</code>. Funktsiooni tagastatavas andmetabelis peaksid nüüd olema ka veerud <code>UI_alumine</code> ja <code>UI_ylemine</code>.</p>
-<p>(<strong>1 boonuspunkt</strong>) Visualiseeri tulemust (näiteks iga biomarkeri kohta näita kordaja hinnangut koos usaldusintervalliga).</p>
+<div id="boonusulesanne-1.2-2-punkti---usaldusintervallid-kordajate-jaoks" class="section level3">
+<h3>Boonusülesanne 1.2 (2 punkti) - usaldusintervallid kordajate jaoks</h3>
+<ol style="list-style-type: lower-alpha">
+<li>(<strong>1 boonuspunkt</strong>) Muuda funktsiooni <code>biomarkeri_pvaartus_kordaja</code> selliselt, et iga biomarkeri kordajale arvutad ka 95% usaldusintervalli. Võid kasutada normaaljaotusel põhinevat lähendit ning arvutada selle <code>kordaja_hinnang +- 1.96 * SE</code>, kus SE on <code>summary(model)</code> väljundis toodud <code>Std. Error</code>. Funktsiooni tagastatavas andmetabelis peaksid nüüd olema ka veerud <code>UI_alumine</code> ja <code>UI_ylemine</code>.</li>
+</ol>
+<pre class="r"><code># Ülesanne B1.2a
+# sinu kood</code></pre>
+<ol start="2" style="list-style-type: lower-alpha">
+<li>(<strong>1 boonuspunkt</strong>) Visualiseeri tulemust (näiteks iga biomarkeri kohta näita kordaja hinnangut koos usaldusintervalliga).</li>
+</ol>
+<pre class="r"><code># Ülesanne B1.2b
+# sinu kood</code></pre>
 </div>
-<div id="ulesanne-8-1-punkt---forward-selection" class="section level3">
-<h3>Ülesanne 8 (1 punkt) - forward selection</h3>
+<div id="ulesanne-1.8-1-punkt---forward-selection" class="section level3">
+<h3>Ülesanne 1.8 (1 punkt) - forward selection</h3>
 <p>Artiklis on kirjeldatud mudeli koostamist järgnevalt:</p>
 <blockquote>
 <p>For biomarker discovery in the Estonian Biobank cohort, a multivariate model was derived in a forward stepwise fashion (Figure 2). First, the biomarker leading to the smallest p-value in the model adjusted for age and sex only was included as a predictor. Subsequently, the biomarker leading to the smallest p-value in the multivariate model adjusted for age, sex, and the first biomarker was included in the prediction model. The process was repeated until no additional biomarkers were significant at the Bonferroni-corrected threshold of p&lt;0.0005, accounting for testing of 106 candidate biomarkers.</p>
@@ -243,26 +279,36 @@ stopCluster(klaster)</code></pre>
 <li>Jätka senikaua, kuni mudelisse lisatavad biomarkerite p-väärtused on väiksemad kui sinu määratud piir.</li>
 </ul>
 <p>Artiklis saadi sellise protsessi tulemusena 4 olulist biomarkerit: Alb, VLDL_D, Gp, Cit. Kas said samasugused? Kui kõiki ei saanud, ära muretse.</p>
+<pre class="r"><code># Ülesanne 1.8
+# sinu kood</code></pre>
 </div>
-<div id="ulesanne-9-1-punkt---surma-toenaosuse-prognoosimine" class="section level3">
-<h3>Ülesanne 9 (1 punkt) - surma tõenäosuse prognoosimine</h3>
+<div id="ulesanne-1.9-1-punkt---surma-toenaosuse-prognoosimine" class="section level3">
+<h3>Ülesanne 1.9 (1 punkt) - surma tõenäosuse prognoosimine</h3>
 <p>Eelmise ülesande tulemusena on sul nüüd olemas lõplik mudel, mis võtab arvesse kõik, mis on oluline surma tõenäosuse prognoosimiseks. Prognoosi iga andmestikus oleva inimese kohta tema tõenäosust surra 5 aasta jooksul ja visualiseeri tulemust (näiteks histogrammi abil).</p>
 <p>Näpunäide: Uuri, mida teeb järgnev kood</p>
-<pre class="r"><code>model = glm(s5 ~ suits + HDL_C, family=binomial, data=data)
+<pre class="r"><code># Ülesanne 1.9
+model = glm(s5 ~ suits + HDL_C, family=binomial, data=data)
 newdata = data.frame(suits = c(0, 0, 1), 
                      HDL_C = c(0.5, -0.2, 1.1), 
                      suvaline_tunnus = c(1, 2, 3))
 # On oluline, et newdata sisaldaks kindlasti kõik need veerud, mida on vaja prognoosimisel
-predicted_probabilities = predict(model, newdata=newdata, type = &quot;response&quot;)</code></pre>
+predicted_probabilities = predict(model, newdata=newdata, type = &quot;response&quot;)
+
+# sinu kood</code></pre>
 </div>
-<div id="ulesanne-10-2-punkti---prognooside-tapsus" class="section level3">
-<h3>Ülesanne 10 (2 punkti) - prognooside täpsus</h3>
+<div id="ulesanne-1.10-2-punkti---prognooside-tapsus" class="section level3">
+<h3>Ülesanne 1.10 (2 punkti) - prognooside täpsus</h3>
 <p>Eelmises ülesandes prognoosisid surma tõenäosust. Aga mida hakkab tavainimene peale tõenäosusega? Olgem ikka konkreetsed, kas siis sureb 5 aasta jooksul või mitte.</p>
 <p>Selleks otsusta piir, millisest väiksemad tõenäosused klassifitseerid <em>ei sure</em> ja suuremad tõenäosused <em>sureb</em>. Kasutades seda piiri ning eelmises ülesandes kirjutatud funktsiooni, arvuta kõigi andmestikus olnud inimeste jaoks 5 aasta jooksul suremise prognoos (justkui meil poleks olnud teada tunnuse s5 väärtus).</p>
 <p>Milline on sinu prognooside täpsus (st kui suur osa prognoosidest langes kokku tunnuse s5 väärtusega)?</p>
 <p>Võrdlusmomendi saamiseks paku välja veel mingi teine, naiivne klassifitseerija (see võib põhineda ükskõik kui lihtsal reeglil). Milline on selle täpsus?</p>
+<pre class="r"><code># Ülesanne 1.10
+# sinu kood</code></pre>
 </div>
 
+
+
+<!-- code folding -->
 
 
 <!-- dynamically load mathjax for compatibility with self-contained -->

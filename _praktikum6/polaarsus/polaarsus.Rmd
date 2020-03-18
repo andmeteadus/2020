@@ -14,7 +14,7 @@ Selles ülesanneteblokis vaatamegi, kas peakomponentanalüüsi abil on võimalik
 
 ### Andmestik
 
-Tegeleme andmestikuga, mis kajastab Riigikogu 13. koosseisu hääletusi. Kui viienda kodutöö neljandas ülesandes tuli alla kraapida vaid hümni seaduse tagasilükkamise tulemusi, siis käesolevalt on kasutada kõikide hääletuste tulemusi (välja on jäetud kohaloleku kontrolli ja muud mittesisukad hääletused). Täpsemalt on andmestikus tunnused:
+Tegeleme andmestikuga, mis kajastab Riigikogu 13. koosseisu hääletusi. Kui viienda kodutöö neljandas ülesandes tuli alla kraapida vaid äriseadustiku muutmise seaduse hääletuse tulemusi, siis käesolevalt on kasutada kõikide hääletuste tulemusi (välja on jäetud kohaloleku kontrolli ja muud mittesisukad hääletused). Täpsemalt on andmestikus tunnused:
 
 * Nimi - saadiku nimi
 * Fraktsioon - millisesse fraktsiooni kuulus saadik (kui saadik vahetas fraktsiooni, siis on näidatud kõige sagedasem fraktsioon, kuhu saadik Riigikogu XIII vältel kuulunud on)
@@ -24,7 +24,7 @@ Tegeleme andmestikuga, mis kajastab Riigikogu 13. koosseisu hääletusi. Kui vii
 
 Laadi alla andmestik [*Riigikogu_XIII.csv*](../data/Riigikogu_XIII.csv) ja loe töökeskkonda.
 
-### Ülesanne 1 (2 punkt) - andmestiku mudimine
+### Ülesanne 3.1 (2 punkt) - andmestiku mudimine
 
 a) Muuda tunnus *Otsus* numbriliseks. Selleks kodeeri hääletused järgmiselt:
 
@@ -37,19 +37,23 @@ Pane tähele, et väärtused oleksid numbrilised mitte sõned.
 b) Jäta välja saadikud, keda esineb andmestikus alla 5 korra.
 
 ```{r}
+# Ülesanne 3.1
 # sinu kood
+
 ```
 
-### Ülesanne 2 (3 punkti) - visualiseeri andmeid heatmapi abil
+### Ülesanne 3.2 (3 punkti) - visualiseeri andmeid heatmapi abil
 
 a) Sorteeri andmestiku read fraktsiooni põhjal ja visualiseeri neid heatmapi abil. Tõlgenda tulemusi.
 
 Näpunäide: 
 
-* Selleks, et kasutada näiteks funktsiooni `pheatmap`, tuleb tekitada andmemaatriks, kus ridades on numbrilisele kujule viidud saadikute hääletused.
+* Selleks, et kasutada näiteks funktsiooni `pheatmap`, tuleb tekitada andmemaatriks, kus ridades on numbrilisele kujule viidud saadikute hääletused. Täpsemini veergudes on hääletused (`id`) ja ridades riigikogu liikmed. Puhtalt numbriliseks aitab muuta funktsioon `as.matrix()` aga enne peab kõik tekstilised tunnused välja jätma.
 
 ```{r}
+# Ülesanne 3.2a
 # sinu kood
+
 ```
 
 Tõlgendus: ...
@@ -57,7 +61,9 @@ Tõlgendus: ...
 b) Visualiseeri andmestikku heatmapi abil, aga seekord klasterda read. Tõlgenda tulemusi.
 
 ```{r}
+# Ülesanne 3.2b
 # sinu kood
+
 ```
 
 Tõlgendus: ...
@@ -65,12 +71,14 @@ Tõlgendus: ...
 c) Visualiseeri andmestikku heatmapi abil, aga seekord klasterda nii read kui veerud. Tõlgenda tulemusi.
 
 ```{r}
+# Ülesanne 3.2c
 # sinu kood
+
 ```
 
 Tõlgendus: ...
 
-### Ülesanne 3 (1 punkt)
+### Ülesanne 3.3 (1 punkt)
 
 Riigikogu 2015. aasta valimised võitis Reformierakond ning koalitsioonilepe sõlmiti REF, IRL ja SDE vahel. 2016. aasta sügisel see koalitsioon purunes. Sellega lõppes Reformierakonna enam kui 17 aastat järjest valitsuses oleku ajajärk ning Eesti sai 11-aastase vahe järel mittereformierakondlasest peaministri. 23. novembril 2016 algas Jüri Ratase valitsus, kus koalitsiooni moodustasid KESK, IRL ja SDE. 
 
@@ -82,10 +90,12 @@ Näpunäide:
 
 
 ```{r}
+# Ülesanne 3.3
 # sinu kood
+
 ```
 
-### Ülesanne 4 (3 punkti)
+### Ülesanne 3.4 (3 punkti)
 
 a) Tee PCA esialgsele andmestikule. Visualiseeri kahte esimest peakomponenti hajuvusdiagrammi abil, seejuures värvi punktid fraktsioonide alusel. Tõlgenda tulemusi.
 
@@ -94,7 +104,9 @@ Näpunäide:
 * PCA tegemiseks on vaja kasutada laias formaadis andmestikku, kus iga saadik on eraldi real ja veergudes on toimunud hääletustele vastavad otsused.
 
 ```{r}
+# Ülesanne 3.4a
 # sinu kood
+
 ```
 
 Tõlgendus: ...
@@ -102,12 +114,14 @@ Tõlgendus: ...
 b) Tee PCA nii andmestikule *data1* kui ka *data2*. Mõlemal juhul visualiseeri kahte esimest peakomponenti hajuvusdiagrammi abil, seejuures värvi punktid fraktsioonide alusel. Tõlgenda tulemusi.
 
 ```{r}
+# Ülesanne 3.3b
 # sinu kood
+
 ```
 
 Tõlgendus: ...
 
-### Ülesanne 5 (1 punkt)
+### Ülesanne 3.5 (1 punkt)
 
 a) Eelmises ülesandes rakendasid PCA-d andmestikule *data2* ja visualiseerisid seda kasutades kahte esimest komponenti. Kas piisab ka ühest komponendist?
 

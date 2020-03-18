@@ -26,7 +26,7 @@ Sünteetilise kasvuhormooni kasutamist on raske tuvastada. Üks põhjustest on k
 
 ### Andmestik
 
-Laadi Moodle-st alla andmestik *doping.csv* ja loe töökeskkonda. Andmestikus on järgmised tunnused:
+Laadi Moodle-st alla andmestik [doping.csv](../data/doping.csv) ja loe töökeskkonda. Andmestikus on järgmised tunnused:
 
 * *ethnicity* - etnilisus: kas *african* või *caucasian*
 * *kit* - dopingutesti erinevad variandid (kit1 ja kit2)
@@ -39,7 +39,9 @@ Laadi Moodle-st alla andmestik *doping.csv* ja loe töökeskkonda. Andmestikus o
 Lisa andmetabelisse tunnus *ratio*, mis näitab tunnuste *rec* ja *pit* suhet. Visualiseeri tunnuste *rec*, *pit* ja *ratio* jaotusi.
 
 ```{r}
+# Ülesanne 1
 # sinu kood
+
 ```
 
 ### Ülesanne 2 (3 punkti) -  jaotustest
@@ -75,7 +77,9 @@ Joonista ka gammajaotuse tihedusfunktsioonid $\Gamma(\alpha, \beta)$ erinevate $
 
 
 ```{r}
-# sinu kood
+# Ülesanne 2
+# sinu kood + kommentaar
+
 ```
 
 b. Tihti eeldatakse statistikas, et tunnus on normaaljaotusega. Kas isovormide suhe võiks põhimõtteliselt olla normaaljaotusega? Põhjenda. 
@@ -99,18 +103,20 @@ a. Mis sa arvad, miks jäeti analüüsist välja andmepunktid, kus rec või pit 
 b. Visualiseeri hajuvusdiagrammi abil, millised andmepunktid jäid analüüsist välja.
 
 ```{r}
+# Ülesanne 3b
 # sinu kood
+
 ```
 
 Edasises kasuta andmestikku, kus rec ja pit on suuremad kui 0.05. 
 
 ### Ülesanne 4 (4 punkti) - parameetrilise jaotuse sobitamine
 
+> Praktikumis tuletasime meelde statistika põhitõdesid (parameetrite hindamist suurima tõepära meetodil) ning kasutasime paketi `MASS` funktsiooni `fitdistr`.
+
 a. [Log-normaaljaotusel](http://en.wikipedia.org/wiki/Log-normal_distribution) on kaks parameetrit. Kuidas leiad sellised parameetrite väärtused, mille korral jaotus sobiks andmetega kõige paremini? Leia need parameetrid "kit1 - valged" osapopulatsiooni jaoks. 
 
 b. Ka [gammajaotusel](http://en.wikipedia.org/wiki/Gamma_distribution) on kaks parameetrit. Kuidas leiad sellised parameetrite väärtused, mille korral jaotus sobiks andmetega kõige paremini? Leia need parameetrid "kit1 - valged" osapopulatsiooni jaoks.
-
-> Praktikumis tuletasime meelde statistika põhitõdesid (parameetrite hindamist suurima tõepära meetodil) ning kasutasime paketi `MASS` funktsiooni `fitdistr`.
 
 c. Leia kummagi jaotuse 99.99% kvantiil. 
 
@@ -123,6 +129,12 @@ Näpunäited:
 * Joonis võiks välja näha umbes selline
 
 ![](doping_hist.png)
+
+```{r}
+# Ülesanne 4
+# sinu kood
+
+```
 
 ### Ülesanne 5 (3 punkti) - kas jaotus sobib andmetega
 
@@ -138,11 +150,14 @@ WADA väitis, et log-normaaljaotus sobib andmetele kõige paremini. Kas said sam
 
 Sobita nüüd kõigile neljale alamgrupile log-normaaljaotus ja leia selle 99.99% kvantiil.
 
+Ametlik piirmäär kit1 korral oli 1.81 ja kit2 korral 1.68. Kas said sarnased tulemused?
+
 ```{r}
-# sinu kood
+# Ülesanne 6
+# sinu kood + kommentaar
+
 ```
 
-Ametlik piirmäär kit1 korral oli 1.81 ja kit2 korral 1.68. Kas said sarnased tulemused?
 
 ### Kuidas verifitseeris otsustuspiire WADA?
 
@@ -155,7 +170,7 @@ Esmased otsustuspiirid on määratud. Nüüd tuleb neid verifitseerida. Kuidas t
 * Visati välja 10 *imelikku* (liiga kõrget) andmepunkti.
 * Selle andmestiku põhjal arvutatud kvantiilid tulid väiksemad kui esmase uuringu kvantiilid. Järeldati, et esmased piirmäärad on verifitseeritud.
 
-Laadi Moodle-st alla andmestik *doping_verification.csv*. 
+Laadi Moodle-st alla andmestik [doping_verification.csv](../data/doping_verification.csv). 
 
 ### Boonusülesanne (kuni 5 punkti)
 
@@ -167,7 +182,7 @@ Uuri ise midagi põnevat. Näiteks testi, kas tõesti enam log-normaaljaotus ei 
 
 ### Ülesanne 7 (6 punkti) - bootstrap usaldusintervall otsustuspiirile
 
-Testi otsustuspiirid olid määratud vaid 106 sportlase põhjal, kui testiga hakati juba sportlaseid ´vahele võtma¡. Samas eeldati, et test teeb vaid 1 vea 10000 testis. Sellise täpsuse saamiseks oli valimimaht ilmselgelt liiga väike.
+Testi otsustuspiirid olid määratud vaid 106 sportlase põhjal, kui testiga hakati juba sportlaseid "vahele võtma". Samas eeldati, et test teeb vaid 1 vea 10000 testis. Sellise täpsuse saamiseks oli valimimaht ilmselgelt liiga väike.
 
 Artiklis oli kirjas
 

@@ -20,7 +20,7 @@ Selleks on meil kasutada andmestik, kus on palju näiteid käsitsi kirjutatud nu
 
 Laadi alla andmestik [numbrid.csv](../data/numbrid.csv). Iga rida vastab ühele pildile. Andmestiku viimane veerg *label* näitab, kas tegu on nulli või ühega. Ülejäänud veerud näitavad vastava piksli intensiivsust, kusjuures pikslid on järjestatud ülalt alla (alates vasakust ülemisest nurgast). 
 
-### Ülesanne 1 (2 punkti) - andmestikuga tutvumine
+### Ülesanne 2.1 (2 punkti) - andmestikuga tutvumine
 
 a. Visualiseeri näiteid nii nullide kui ka ühtede seast. 
 
@@ -29,8 +29,18 @@ Näpunäited:
 * Abiks on ette antud funktsioon `plot_digit`, mille argumendiks sobib andmestiku üks rida (NB! ilma viimase veeruta)
 * Alamjooniste tegemisel on kasuks käsk `par(mfrow = c(mitu_rida, mitu_veergu))`
 * Ääriseid saad muuta `par(mar = c(bottom, left, top, right))`
+* Selleks, et saada esialgsed graafilisi parameetreid tagasi, võid käituda järgmiselt:
+```
+# sinu kood, kus muudad graafilisi parameetreid mfrow ja mar
+# Näiteks
+par(mfrow=c(2, 5), mar=c(1, 1, 1, 1) + 0.1)
+
+# Pärast taasta esialgsed graafilised parameetrid
+par(mfrow=c(1, 1), mar=c(5, 4, 4, 2) + 0.1)
+```
 
 ```{r}
+# Ülesanne 2.1a
 plot_digit = function(digit, ...){
   cols = grey(seq(1, 0, length = 256))
   image(t(matrix(as.numeric(digit), nrow=28, ncol=28)[28:1, ]), col = cols, ...)
@@ -38,19 +48,6 @@ plot_digit = function(digit, ...){
 
 # sinu kood
 
-```
-
-Lisanäpunäide:
-
-* Selleks, et saada esialgsed graafilisi parameetreid tagasi, võid käituda järgmiselt:
-
-```{r, eval=FALSE}
-# sinu kood, kus muudad graafilisi parameetreid mfrow ja mar
-# Näiteks
-par(mfrow=c(2, 5), mar=c(1, 1, 1, 1) + 0.1)
-
-# Pärast taasta esialgsed graafilised parameetrid
-par(mfrow=c(1, 1), mar=c(5, 4, 4, 2) + 0.1)
 ```
 
 
@@ -61,6 +58,7 @@ Näiteks nullide korral võiksid joonised välja näha umbes järgnevad. (Aga jo
 ![](nullid.png "Nullid")
 
 ```{r, eval=FALSE}
+# Ülesanne 2.1b
 library(pheatmap)
 
 plot_digit_pheatmap = function(digit){
@@ -75,36 +73,40 @@ c. Sorteeri andmestiku read selliselt, et üleval oleksid nullid ja all ühed. V
 
 
 ```{r}
+# Ülesanne 2.1c
 # sinu kood
 ```
 
-Küsimus: Miks on punased triibud vaheldumisi sinistega?
+d. **Küsimus:** Miks on punased triibud vaheldumisi sinistega?
 
 Vastus: ...
 
-### Ülesanne 2 (4 punkti)
+### Ülesanne 2.2 (4 punkti)
 
 a. Tee andmestikul PCA (kontrolli, et oled eelnevalt andmestikust eemaldanud tunnuse label). PCA tegemiseks kasuta funktsiooni `prcomp`. Abiks on [PCA minimalistlik näide](../praktikum6_pca_minimal). 
 
 ```{r}
+# Ülesanne 2.2a
 # sinu kood
+
 ```
 
-Küsimus: Eelmisel korral vaatasid videot, kus näidati, et vahel on andmestiku "efektiivne dimensionaalsus" väiksem kui tunnuste arv. Milline on sinu arvates andmestiku ´efektiivne dimensionaalsus¡ praegusel juhul?
+b. **Küsimus:** Eelmisel korral vaatasid videot, kus näidati, et vahel on andmestiku "efektiivne dimensionaalsus" väiksem kui tunnuste arv. Milline on sinu arvates andmestiku ´efektiivne dimensionaalsus¡ praegusel juhul?
 
 Vastus: ...
 
-b. Tee hajuvusdiagramm PC1 vs PC2. Seejärel märgi joonisele, millised punktid kujutavad numbrit 0 ja millised numbrit 1 (võid kasutada värvi või argumenti `pch`).
+c. Tee hajuvusdiagramm PC1 vs PC2. Seejärel märgi joonisele, millised punktid kujutavad numbrit 0 ja millised numbrit 1 (võid kasutada värvi või argumenti `pch`).
 
 ```{r}
+# Ülesanne 2.2c
 # sinu kood
 ```
 
-Küsimus: Mida võiks selle joonise põhjal tähistada PC1?
+d. **Küsimus:** Mida võiks selle joonise põhjal tähistada PC1?
 
 Vastus: ...
 
-c. Visualiseeri PCA kaalusid.
+e. Visualiseeri PCA kaalusid.
 
 Näpunäited:
 
@@ -113,59 +115,61 @@ Näpunäited:
 * Neid kaale saame visualiseerida sarnaselt numbritele (st 28 x 28 suuruse pildina)
 
 ```{r}
+# Ülesanne 2.2e
 # sinu kood
+
 ```
 
-Küsimus: Millistel pikslitel on absoluutväärtuselt suured kaalud? Interpreteeri selle abil PC1 tähendust (milliste pikslite intensiivsus peab olema suur ja milliste pikslite intensiivsus madal, et PC1 väärtus oleks võimalikult suur).
+f. **Küsimus:** Millistel pikslitel on absoluutväärtuselt suured kaalud? Interpreteeri selle abil PC1 tähendust (milliste pikslite intensiivsus peab olema suur ja milliste pikslite intensiivsus madal, et PC1 väärtus oleks võimalikult suur).
 
 Vastus: ...
 
-### Ülesanne 3 (4 punkti)
+### Ülesanne 2.3 (4 punkti)
 
 a. Tee nüüd PCA andmestikul, mis koosneb ainult nullidest. Lisaks tee hajuvusdiagramm PC1 vs PC2.
 
 ```{r}
+# Ülesanne 2.3a
 # sinu kood
 ```
 
-Küsimus: Kas oskad selle joonise põhjal tõlgendada peakomponente PC1 ja PC2?
+b. **Küsimus:** Kas oskad selle joonise põhjal tõlgendada peakomponente PC1 ja PC2?
 
 Vastus: ...
 
-b. Vali üheksa numbrit tasandi erinevatest nurkadest ja visualiseeri neid funktsiooni `plot_digit` abil. (Järgmisel joonisel on tähistatud punasena 25 punkti tasandi erinevatest nurkadest. Paremal pool on näidatud number 3 jaoks võimalik tulemus. Sinul piisab võtta analoogilisest võrestikust 9 punktikest ja visualiseerida neid numbreid.)
+c. Vali üheksa numbrit tasandi erinevatest nurkadest ja visualiseeri neid funktsiooni `plot_digit` abil. (Järgmisel joonisel on tähistatud punasena 25 punkti tasandi erinevatest nurkadest. Paremal pool on näidatud number 3 jaoks võimalik tulemus. Sinul piisab võtta analoogilisest võrestikust 9 punktikest ja visualiseerida neid numbreid.)
 
 ![](pca_example2.png "Näide")
 
 Näpunäide: Kasuks võib tulla funktsioon `identify`, mis aitab joonisele vajutades leida lähimad punktid. Uuri mida teeb järgmine koodiblokk:
 
 ```{r, eval=FALSE}
+# Ülesanne 2.3c
 x = c(1,2,3)
 y = c(2,5,3)
 plot(x, y)
 identify(c(1,2,3), c(2,5,3), n=1)
 # kliki joonisel ja jälgi konsooli
-```
 
-
-```{r}
 # sinu kood
+
 ```
 
-Küsimus: Kuidas tõlgendad selle joonise põhjal peakomponente PC1 ja PC2?
+
+d. **Küsimus:** Kuidas tõlgendad selle joonise põhjal peakomponente PC1 ja PC2?
 
 Vastus: ...
 
-c. Punktikeste asemel visualiseeri numbreid. Lõpptulemus võiks välja näha umbes selline:
+e. Punktikeste asemel visualiseeri numbreid. Lõpptulemus võiks välja näha umbes selline:
 
 ![](nullid_pca.png "Näide")
 
 Näpunäited:
 
 * Kõigepealt joonista tühi aken.
-```{r, eval=FALSE}
+```
 plot(0, 0, type = "n", xlim=c(?, ?), ylim=c(?, ?))
 ```
-
 * `for` tsükli abil lisa numbrid.
 * Sul ei ole vaja joonistada kõiki numbreid, sest numbrid võivad kattuda. Võid joonistada näiteks 500 numbrit.
 * Kui numbrid tulevad liiga väikesed, siis muuda argumenti `scale`.
@@ -218,25 +222,28 @@ for(i in 1:5){
 ![](pca_vis_min.png "Näide")
 
 ```{r}
+# Ülesanne 2.3e
 # sinu kood
 ```
 
-Küsimus: Kuidas tõlgendad selle joonise põhjal peakomponente PC1 ja PC2?
+f. **Küsimus:** Kuidas tõlgendad selle joonise põhjal peakomponente PC1 ja PC2?
 
 Vastus: ...
 
-d. Tee samasugune joonis nagu eelmises punktis esialgse nullide ja ühtede andmestiku peal.
+g. Tee samasugune joonis nagu eelmises punktis esialgse nullide ja ühtede andmestiku peal.
 
 ```{r}
+# Ülesanne 2.3g
 # sinu kood
+
 ```
 
-Küsimus: Kuidas tõlgendad selle joonise põhjal peakomponente PC1 ja PC2?
+h. **Küsimus:** Kuidas tõlgendad selle joonise põhjal peakomponente PC1 ja PC2?
 
 Vastus: ...
 
 
-### Boonusülesanne 1 (2 punkti) - implementeeri PCA
+### Boonusülesanne 2.1 (2 punkti) - implementeeri PCA
 
 Selle ülesande eesmärk on implementeerida omaenda PCA. Võid kasutada järgnevat pseudokoodi. 
 
@@ -261,13 +268,15 @@ Kasuta nüüd neid kordajaid, et leida kõigi andmepunktide jaoks PC1 ja PC2 vä
 
 
 ```{r}
+# Ülesanne B2.1
 # sinu kood
 ```
 
-### Boonusülesanne 2 (2 punkti) - klassifitseeri numbreid
+### Boonusülesanne 2.2 (2 punkti) - klassifitseeri numbreid
 
 Paku välja moodus, kuidas pikslite põhjal eristada numbreid 0 ja 1. Leia mitmel juhul sinu meetod prognoosib õigesti, mitmel juhul valesti ja raporteeri täpsus (õigete klassifitseerimiste arv koguarvust). Võiksid täpsuseks saada vähemalt 90%.
 
 ```{r}
+# Ülesanne B2.2
 # sinu kood
 ```
