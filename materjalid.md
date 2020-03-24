@@ -19,8 +19,12 @@ E-raamatud:
 
 ## Visualiseerimine
 
-* [Financial Times artiklid andmete visualiseerimisest](https://www.ft.com/data-visualisation);
+* [Millist graafikut valida?](https://www.youtube.com/watch?v=6lm4wJ1qm0w)
 * Millist graafikut kasutada vastavalt andmetüübile? [Financial Times juhend joonistele](https://github.com/ft-interactive/chart-doctor/tree/master/visual-vocabulary).
+* [Financial Times artiklid andmete visualiseerimisest](https://www.ft.com/data-visualisation);
+* [Miks on sektordiagrammid halvad](https://youtu.be/do4hN1UQIl0)
+* [Blogi visualiseerimisest teadustöös](http://ristretto.black/category/graph/)
+
 
 ## Veel kasulikke linke:
 

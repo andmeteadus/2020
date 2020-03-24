@@ -33,8 +33,6 @@ Pettuse tuvastamine Benfordi seaduse abil.
 * Praktikumis kasutatud materjalid:
     * [ggplot2 minimalistlik näide](../praktikum2_ggplot2)
     * Karpdiagrammide tõlgendamise [ülesanne 1](../slides/praktikum2_boxplot_quiz1.pdf) ja [ülesanne 2](../slides/praktikum2_boxplot_quiz2.pdf)
-	* [Millist graafikut millal kasutada?](https://raw.githubusercontent.com/ft-interactive/chart-doctor/master/visual-vocabulary/poster.png)
-		* [_Eelmise punkti detailsem seletus_](https://github.com/ft-interactive/chart-doctor/tree/master/visual-vocabulary)
 * [*Growth in a time of debt*: riigi võlakoormuse ja SKP vaheline seos](../praktikum2_riigivolg)
 * [Pettuse tuvastamise ülesanded](../praktikum2_pettus)
 * [Kodutöö](../praktikum2_kodutoo)
@@ -49,6 +47,9 @@ Joonised paketiga ggplot2: erinevad joonisetüübid. Interaktiivsed rakendused p
 * Praktikumis kasutatud materjalid:
     * [tidyr minimalistlik näide](../praktikum3_tidyr)
     * [jaotuste ära arvamise ülesanne](../praktikum3_quiz1) ja [graafikute tajumise ülesanne](../praktikum3_quiz2)
+	* [Millist graafikut kasutada?](https://www.youtube.com/watch?v=6lm4wJ1qm0w))
+	* [Millist graafikut millal kasutada vastvalt andmetüübile?](https://raw.githubusercontent.com/ft-interactive/chart-doctor/master/visual-vocabulary/poster.png)
+		* [_Eelmise punkti detailsem seletus_](https://github.com/ft-interactive/chart-doctor/tree/master/visual-vocabulary)
 * [Õppetulemuste visualiseerimise ülesanded](../praktikum3_oppeained)
 * [Kodutöö](../praktikum3_kodutoo)
     * Tähtaeg 04.03.2020 kell 23:59.
