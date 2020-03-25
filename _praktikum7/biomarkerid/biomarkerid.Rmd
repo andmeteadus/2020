@@ -11,7 +11,7 @@ editor_options:
 
 Geenitehnoloogiat tudeeriv Elo "Elu" Eliksiir on kuulnud, et ka geneetika valdkonnas leidub edukaid ettevõtteid, nagu näiteks 23andMe, mis annab inimesele teada tema riski haigestuda erinevatesse haigustesse. Sestap plaanib ta teha idufirma, mis teeniks tulu inimese surma prognoosimisega. Täpsemalt, inimeselt võetaks vereproov, ning selle tulemuste põhjal öeldaks talle, milline on tema tõenäosus surra järgneva 5 aasta jooksul. 
 
-Et kirjutada taotlus rahastuse saamiseks, on tal esmalt vaja välja mõelda, millel see suremuse test üldse peaks põhinema. See tähendab, et millise ühendi sisaldust vereproovist oleks vaja mõõta? Ta leidis, et Geenivaramu teadlased eesotsas Krista Fischeriga (TÜ statistika vilistlane) on 2014. aastal avaldanud teadusartikli [Biomarker Profiling by Nuclear Magnetic Resonance Spectroscopy for the Prediction of All-Cause Mortality: An Observational Study of 17,345 Persons](http://journals.plos.org/plosmedicine/article?id=10.1371/journal.pmed.1001606). 
+Et kirjutada taotlus rahastuse saamiseks, on tal esmalt vaja välja mõelda, millel see suremuse test üldse peaks põhinema. See tähendab, et millise ühendi sisaldust vereproovist oleks vaja mõõta? Ta leidis, et Geenivaramu teadlased eesotsas Krista Fischeriga (TÜ statistika professor) on 2014. aastal avaldanud teadusartikli [Biomarker Profiling by Nuclear Magnetic Resonance Spectroscopy for the Prediction of All-Cause Mortality: An Observational Study of 17,345 Persons](http://journals.plos.org/plosmedicine/article?id=10.1371/journal.pmed.1001606). 
 
 Selle praktikumis uurimegi, kas ja kuidas saab biomarkerite abil ennustada surma. Meil on kasutada valim Geenivaramu andmestikust, mis sisaldab 5000 inimese verest mõõdetud 106 biomarkeri väärtuseid. 
 
@@ -35,7 +35,7 @@ Kasutame valimit Geenivaramu andmestikust, mida kasutati eelnevalt mainitud tead
 * ...
 * *Cit* - viimase biomarkeri väärtus
 
-Laadi Moodle-st alla andmestik [biomarkerid.csv](../data/biomarkerid.csv) ja loe töökeskkonda.
+Lae alla andmestik [biomarkerid.csv](../data/biomarkerid.csv) ja loe töökeskkonda.
 
 Analüüsi lihtsuse huvides eemalda puuduvaid andmeid sisaldavad read. Abiks on funktsioon `na.omit`. 
 
@@ -66,13 +66,33 @@ Visualiseeri, kuidas nende 3 biomarkeri jaotused erinevad soo ja vanusegruppide 
 Uuri, kas kolesterool võimaldab prognoosida surma. Selleks tuleb andmetele sobitada mudel. 
 
 a. Visualiseeri, kas kolesterooli (Serum_C, HDL_C, LDL_C) abil võiks saada prognoosida surma.  
+```{r}
+# Ülesanne 1.2a
+# sinu kood
+
+```
 b. Tundub, et joonisest ei piisa ning tuleb pöörduda statistiliste mudelite juurde. Kas kasutad lineaarset või logistilist regressiooni? Miks? 
+```{r}
+# Ülesanne 1.2b
+# sinu kood
+
+```
 c. Kui sobitada mudel `glm(s5 ~ HDL_C, family=binomial, data=data)`, siis selgub, et HDL_C on oluline surma prognoosimisel. Kui aga sobitada mudel `glm(s5 ~ HDL_C + sugu, family=binomial, data=data)`, siis miskipärast HDL_C enam ei ole oluline. Hinda vastavad mudelid ja selgita, mis värk on. Kas siis kokkuvõttes HDL_C on oluline või mitte?
+```{r}
+# Ülesanne 1.2c
+# sinu kood
+
+```
 d. Sobita kolm mudelit, et uurida kolesterooli seost surmaga (eraldi mudelid tunnuste Serum_C, HDL_C ja LDL_C jaoks). Muide, kas lisad mudelitesse ka tunnused sugu, vanusegrupp, suits ja hyp? Põhjenda oma otsust. 
+```{r}
+# Ülesanne 1.2d
+# sinu kood
+
+```
 e. Milline on tulemus, st kas siis mõni kolmest kolesterooli tunnusest on olulise mõjuga surma ennustamisel? 
 
 ```{r}
-# Ülesanne 1.2
+# Ülesanne 1.2e
 # sinu kood
 
 ```
@@ -200,9 +220,26 @@ parLapply(klaster,letters[1:10], toupper)
 stopCluster(klaster)
 ```
 
+```{r}
+# Ülesanne B1.1
+# sinu kood
+
+```
+
 Kas paralleelarvutusega võitsid kiiruses?
 
+**NB!** Kui erinevust ei tulnud, siis kasutad sa suure tõenäosusega MRO-d ([Microsoft R-Open](https://mran.microsoft.com/)), millel on paralleelarvutused (rohkemal või vähemal määral) vaikimisi sisse ehitatud. Võid antud ülesande ja MRO-ga teha - 
 
+* Paigalda MRO 
+* Muuda RStudios kasutatavat R-i (Tools -> Global Options -> R version)
+* Jooksuta oma kood ülesande 1.4 kood uuesti ja esita siia tulemuste erinevused. 
+* Mõõda erinevate R-de kasutamisel programmi käivitusaega, kasuta funktsiooni system.time({}):
+
+```
+system.time({ sleep_for_a_minute() })
+#   user  system elapsed
+#  0.004   0.000  60.051
+```
 
 ### Ülesanne 1.5 (1 punkt)
 

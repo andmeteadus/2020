@@ -49,7 +49,7 @@ if (window.hljs) {
 <div id="sissejuhatus" class="section level3">
 <h3>Sissejuhatus</h3>
 <p>Geenitehnoloogiat tudeeriv Elo “Elu” Eliksiir on kuulnud, et ka geneetika valdkonnas leidub edukaid ettevõtteid, nagu näiteks 23andMe, mis annab inimesele teada tema riski haigestuda erinevatesse haigustesse. Sestap plaanib ta teha idufirma, mis teeniks tulu inimese surma prognoosimisega. Täpsemalt, inimeselt võetaks vereproov, ning selle tulemuste põhjal öeldaks talle, milline on tema tõenäosus surra järgneva 5 aasta jooksul.</p>
-<p>Et kirjutada taotlus rahastuse saamiseks, on tal esmalt vaja välja mõelda, millel see suremuse test üldse peaks põhinema. See tähendab, et millise ühendi sisaldust vereproovist oleks vaja mõõta? Ta leidis, et Geenivaramu teadlased eesotsas Krista Fischeriga (TÜ statistika vilistlane) on 2014. aastal avaldanud teadusartikli <a href="http://journals.plos.org/plosmedicine/article?id=10.1371/journal.pmed.1001606">Biomarker Profiling by Nuclear Magnetic Resonance Spectroscopy for the Prediction of All-Cause Mortality: An Observational Study of 17,345 Persons</a>.</p>
+<p>Et kirjutada taotlus rahastuse saamiseks, on tal esmalt vaja välja mõelda, millel see suremuse test üldse peaks põhinema. See tähendab, et millise ühendi sisaldust vereproovist oleks vaja mõõta? Ta leidis, et Geenivaramu teadlased eesotsas Krista Fischeriga (TÜ statistika professor) on 2014. aastal avaldanud teadusartikli <a href="http://journals.plos.org/plosmedicine/article?id=10.1371/journal.pmed.1001606">Biomarker Profiling by Nuclear Magnetic Resonance Spectroscopy for the Prediction of All-Cause Mortality: An Observational Study of 17,345 Persons</a>.</p>
 <p>Selle praktikumis uurimegi, kas ja kuidas saab biomarkerite abil ennustada surma. Meil on kasutada valim Geenivaramu andmestikust, mis sisaldab 5000 inimese verest mõõdetud 106 biomarkeri väärtuseid.</p>
 <p>Aga mis üleüldse on biomarker?</p>
 <blockquote>
@@ -71,7 +71,7 @@ if (window.hljs) {
 <li>…</li>
 <li><em>Cit</em> - viimase biomarkeri väärtus</li>
 </ul>
-<p>Laadi Moodle-st alla andmestik <a href="../data/biomarkerid.csv">biomarkerid.csv</a> ja loe töökeskkonda.</p>
+<p>Lae alla andmestik <a href="../data/biomarkerid.csv">biomarkerid.csv</a> ja loe töökeskkonda.</p>
 <p>Analüüsi lihtsuse huvides eemalda puuduvaid andmeid sisaldavad read. Abiks on funktsioon <code>na.omit</code>.</p>
 </div>
 <div id="kui-hasti-on-kolesterooli-abil-voimalik-ennustada-surma" class="section level3">
@@ -97,14 +97,29 @@ if (window.hljs) {
 <h3>Ülesanne 1.2 (4 punkti) - surma prognoosimine kolesterooli abil?</h3>
 <p>Uuri, kas kolesterool võimaldab prognoosida surma. Selleks tuleb andmetele sobitada mudel.</p>
 <ol style="list-style-type: lower-alpha">
-<li>Visualiseeri, kas kolesterooli (Serum_C, HDL_C, LDL_C) abil võiks saada prognoosida surma.<br />
-</li>
+<li>Visualiseeri, kas kolesterooli (Serum_C, HDL_C, LDL_C) abil võiks saada prognoosida surma.</li>
+</ol>
+<pre class="r"><code># Ülesanne 1.2a
+# sinu kood</code></pre>
+<ol start="2" style="list-style-type: lower-alpha">
 <li>Tundub, et joonisest ei piisa ning tuleb pöörduda statistiliste mudelite juurde. Kas kasutad lineaarset või logistilist regressiooni? Miks?</li>
+</ol>
+<pre class="r"><code># Ülesanne 1.2b
+# sinu kood</code></pre>
+<ol start="3" style="list-style-type: lower-alpha">
 <li>Kui sobitada mudel <code>glm(s5 ~ HDL_C, family=binomial, data=data)</code>, siis selgub, et HDL_C on oluline surma prognoosimisel. Kui aga sobitada mudel <code>glm(s5 ~ HDL_C + sugu, family=binomial, data=data)</code>, siis miskipärast HDL_C enam ei ole oluline. Hinda vastavad mudelid ja selgita, mis värk on. Kas siis kokkuvõttes HDL_C on oluline või mitte?</li>
+</ol>
+<pre class="r"><code># Ülesanne 1.2c
+# sinu kood</code></pre>
+<ol start="4" style="list-style-type: lower-alpha">
 <li>Sobita kolm mudelit, et uurida kolesterooli seost surmaga (eraldi mudelid tunnuste Serum_C, HDL_C ja LDL_C jaoks). Muide, kas lisad mudelitesse ka tunnused sugu, vanusegrupp, suits ja hyp? Põhjenda oma otsust.</li>
+</ol>
+<pre class="r"><code># Ülesanne 1.2d
+# sinu kood</code></pre>
+<ol start="5" style="list-style-type: lower-alpha">
 <li>Milline on tulemus, st kas siis mõni kolmest kolesterooli tunnusest on olulise mõjuga surma ennustamisel?</li>
 </ol>
-<pre class="r"><code># Ülesanne 1.2
+<pre class="r"><code># Ülesanne 1.2e
 # sinu kood</code></pre>
 </div>
 <div id="kogu-andmestikul-pohinev-analuus" class="section level3">
@@ -198,7 +213,19 @@ klaster &lt;- makeCluster(tuumade_arv)
 parLapply(klaster,letters[1:10], toupper)
 
 stopCluster(klaster)</code></pre>
+<pre class="r"><code># Ülesanne B1.1
+# sinu kood</code></pre>
 <p>Kas paralleelarvutusega võitsid kiiruses?</p>
+<p><strong>NB!</strong> Kui erinevust ei tulnud, siis kasutad sa suure tõenäosusega MRO-d (<a href="https://mran.microsoft.com/">Microsoft R-Open</a>), millel on paralleelarvutused (rohkemal või vähemal määral) vaikimisi sisse ehitatud. Võid antud ülesande ja MRO-ga teha -</p>
+<ul>
+<li>Paigalda MRO</li>
+<li>Muuda RStudios kasutatavat R-i (Tools -&gt; Global Options -&gt; R version)</li>
+<li>Jooksuta oma kood ülesande 1.4 kood uuesti ja esita siia tulemuste erinevused.</li>
+<li>Mõõda erinevate R-de kasutamisel programmi käivitusaega, kasuta funktsiooni system.time({}):</li>
+</ul>
+<pre><code>system.time({ sleep_for_a_minute() })
+#   user  system elapsed
+#  0.004   0.000  60.051</code></pre>
 </div>
 <div id="ulesanne-1.5-1-punkt" class="section level3">
 <h3>Ülesanne 1.5 (1 punkt)</h3>
