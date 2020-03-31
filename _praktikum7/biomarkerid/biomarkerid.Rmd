@@ -72,30 +72,21 @@ a. Visualiseeri, kas kolesterooli (Serum_C, HDL_C, LDL_C) abil võiks saada prog
 
 ```
 b. Tundub, et joonisest ei piisa ning tuleb pöörduda statistiliste mudelite juurde. Kas kasutad lineaarset või logistilist regressiooni? Miks? 
-```{r}
-# Ülesanne 1.2b
-# sinu kood
 
-```
 c. Kui sobitada mudel `glm(s5 ~ HDL_C, family=binomial, data=data)`, siis selgub, et HDL_C on oluline surma prognoosimisel. Kui aga sobitada mudel `glm(s5 ~ HDL_C + sugu, family=binomial, data=data)`, siis miskipärast HDL_C enam ei ole oluline. Hinda vastavad mudelid ja selgita, mis värk on. Kas siis kokkuvõttes HDL_C on oluline või mitte?
 ```{r}
 # Ülesanne 1.2c
-# sinu kood
+# sinu kood + kommentaar
 
 ```
 d. Sobita kolm mudelit, et uurida kolesterooli seost surmaga (eraldi mudelid tunnuste Serum_C, HDL_C ja LDL_C jaoks). Muide, kas lisad mudelitesse ka tunnused sugu, vanusegrupp, suits ja hyp? Põhjenda oma otsust. 
 ```{r}
 # Ülesanne 1.2d
-# sinu kood
+# sinu kood + kommentaar
 
 ```
 e. Milline on tulemus, st kas siis mõni kolmest kolesterooli tunnusest on olulise mõjuga surma ennustamisel? 
 
-```{r}
-# Ülesanne 1.2e
-# sinu kood
-
-```
 
 ### Kogu andmestikul põhinev analüüs
 
@@ -107,7 +98,7 @@ Eelnimetatud teadusartiklis vaadeldi kõiki 106 biomarkerit. Tegelenud esialgu k
 
 ```{r}
 # Ülesanne 1.3
-# sinu kood
+# sinu kood + kommentaar
 
 ```
 
@@ -228,7 +219,7 @@ stopCluster(klaster)
 
 Kas paralleelarvutusega võitsid kiiruses?
 
-**NB!** Kui erinevust ei tulnud, siis kasutad sa suure tõenäosusega MRO-d ([Microsoft R-Open](https://mran.microsoft.com/)), millel on paralleelarvutused (rohkemal või vähemal määral) vaikimisi sisse ehitatud. Võid antud ülesande ja MRO-ga teha - 
+**NB!** Kui erinevust ei tulnud, siis kasutad sa suure tõenäosusega MRO-d ([Microsoft R-Open](https://mran.microsoft.com/)), millel on paralleelarvutused (rohkemal või vähemal määral) vaikimisi sisse ehitatud. Võid antud ülesande ka MRO-ga teha - 
 
 * Paigalda MRO 
 * Muuda RStudios kasutatavat R-i (Tools -> Global Options -> R version)
@@ -280,7 +271,7 @@ c. (**2 punkti**) Veendumaks, et `p < 0.05` kasutamisel võime tõepoolest saada
 
 ```{r}
 # Ülesanne 1.6c
-# sinu kood
+# sinu kood + kommentaar
 
 ```
 
@@ -288,7 +279,7 @@ d. (**1 boonuspunkt**) Korda permuteerimist 100 korral ning tee kokkuvõte tulem
 
 ```{r}
 # Ülesanne B1.6d
-# sinu kood
+# sinu kood + kommentaar
 
 ```
 
@@ -304,7 +295,7 @@ Juhised:
 
 ```{r}
 # Ülesanne 1.7
-# sinu kood
+# sinu kood + kommentaar
 
 ```
 
@@ -379,6 +370,6 @@ Võrdlusmomendi saamiseks paku välja veel mingi teine, naiivne klassifitseerija
 
 ```{r}
 # Ülesanne 1.10
-# sinu kood
+# sinu kood + kommentaar
 
 ```

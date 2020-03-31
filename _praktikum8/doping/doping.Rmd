@@ -26,7 +26,7 @@ Sünteetilise kasvuhormooni kasutamist on raske tuvastada. Üks põhjustest on k
 
 ### Andmestik
 
-Laadi Moodle-st alla andmestik [doping.csv](../data/doping.csv) ja loe töökeskkonda. Andmestikus on järgmised tunnused:
+Lae alla andmestik [doping.csv](../data/doping.csv) ja loe töökeskkonda. Andmestikus on järgmised tunnused:
 
 * *ethnicity* - etnilisus: kas *african* või *caucasian*
 * *kit* - dopingutesti erinevad variandid (kit1 ja kit2)
@@ -170,7 +170,7 @@ Esmased otsustuspiirid on määratud. Nüüd tuleb neid verifitseerida. Kuidas t
 * Visati välja 10 *imelikku* (liiga kõrget) andmepunkti.
 * Selle andmestiku põhjal arvutatud kvantiilid tulid väiksemad kui esmase uuringu kvantiilid. Järeldati, et esmased piirmäärad on verifitseeritud.
 
-Laadi Moodle-st alla andmestik [doping_verification.csv](../data/doping_verification.csv). 
+Lae alla andmestik [doping_verification.csv](../data/doping_verification.csv). 
 
 ### Boonusülesanne (kuni 5 punkti)
 
