@@ -24,6 +24,7 @@ E-raamatud:
 * [Financial Times artiklid andmete visualiseerimisest](https://www.ft.com/data-visualisation);
 * [Miks on sektordiagrammid halvad](https://youtu.be/do4hN1UQIl0)
 * [Blogi visualiseerimisest teadustöös](http://ristretto.black/category/graph/)
+* [Data Visualization for Human Perception](https://www.interaction-design.org/literature/book/the-encyclopedia-of-human-computer-interaction-2nd-ed/data-visualization-for-human-perception)(alampeatükk tasuta e-raamatust [The Encyclopedia of Human-Computer Interaction](https://www.interaction-design.org/literature/book/the-encyclopedia-of-human-computer-interaction-2nd-ed))
 
 
 ## Veel kasulikke linke:
