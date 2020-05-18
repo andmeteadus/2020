@@ -18,6 +18,8 @@ Videomängude müüginumbrite andmestik on aastast 2016 ning koosneb 16 tunnuses
 ## [Relvavägivald ja metrood New Yorgis](https://andmeteadus2020.shinyapps.io/ny_subway_crime/)
 Aluseks on võetud relvaga toime pandud kuriteod New Yorgis. Rakenduses saab uurida, kas metroopeatuste läheduses toimub rohkem tulistamisi, kui mujal. 
 
+## [Erakondade rahastus](https://andmeteadus2020.shinyapps.io/erakondade_rahastus/)
+Kõikide erakondade eesmärk on valimistel võimalikult palju hääli saada. Selleks on vaja aga mitmesuguseid kulutusi teha ning erakonnaseadus kohustab erakondi oma kulutusi deklareerima. Erakonnad annavad ülevaate ka saadud annetustest. Rakendus annab ülevaate erakondade kogutud annetustest, valimiskampaaniate ajal tehtud kulutustest ja nende seotust valimistulemusega.
 
 Vt. ka [2019. aasta projekte](https://andmeteadus.github.io/2019/projektid/)
 
