@@ -6,10 +6,10 @@ title: Projektid
 Projekti juhend on leitav [siit](../projekt_juhend/).
 <br><br>
 
-## [Maavärinad](http://htmlpreview.github.io/?https://github.com/andmeteadus/2020/blob/gh-pages/projektid_veebilehed/maavarinad.html)
+## [Maavärinad](http://htmlpreview.github.io/?https://github.com/andmeteadus/2020/blob/master/projektid_veebilehed/maavarinad.html)
 Maavärin on maapinna võnkumine, mida põhjustavad seismilised lained. Maavärina võimsust hinnatakse Richteri logaritmilises skaalas -0,3st kuni 9,5ni (seni võimsaim) ning maavärina tagajärgi hinnatakse Mercalli visuaalse skaalaga. Uurime maavärinate andmestiku põhjal, kus, kui palju ja millise võimsusega maavärinaid maailmas aset leiab.
 
-## [Koolitöötajate liikumisaktiivsus](http://htmlpreview.github.io/?https://github.com/andmeteadus/2020/blob/gh-pages/projektid_veebilehed/koolitootajate_liikumisaktiivsus.html)
+## [Koolitöötajate liikumisaktiivsus](http://htmlpreview.github.io/?https://github.com/andmeteadus/2020/blob/master/projektid_veebilehed/koolitootajate_liikumisaktiivsus.html)
 Ebapiisav liikumine on suureks terviseriskiks nii täiskasvanutele kui ka lastele. Küsitlusuuringute kohaselt on vaid 11% Eesti täiskasvanutest on 4-6 korda nädalas kehaliselt aktiivsed. Eestis on aga vähe uuringuid, kus oleks täiskasvanute liikumisaktiivsust mõõdetud objektiivselt liikumisanduritega. Projekti eesmärk on kirjeldada Eesti koolitöötajate liikumisaktiivsust.
 
 ## [Videomängude müük](https://andmeteadus2020.shinyapps.io/videomangud/)
