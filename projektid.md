@@ -21,6 +21,12 @@ Aluseks on võetud relvaga toime pandud kuriteod New Yorgis. Rakenduses saab uur
 ## [Erakondade rahastus](https://andmeteadus2020.shinyapps.io/erakondade_rahastus/)
 Kõikide erakondade eesmärk on valimistel võimalikult palju hääli saada. Selleks on vaja aga mitmesuguseid kulutusi teha ning erakonnaseadus kohustab erakondi oma kulutusi deklareerima. Erakonnad annavad ülevaate ka saadud annetustest. Rakendus annab ülevaate erakondade kogutud annetustest, valimiskampaaniate ajal tehtud kulutustest ja nende seotust valimistulemusega.
 
+## [FIFA MM-de ajalugu](https://andmeteadus2020.shinyapps.io/fifa/)
+Jalgpalli maailmameistrivõistlused suurimad riikidevahelised võistlused spordis. Turniiri korraldatakse alates 1930. aastast iga nelja aasta tagant. Rakenduses saab lähemalt uurida toimunud MM-i parimaid, seoseid publiku ning väravate arvu vahel ja oma lemmikmeeskonna mängude tulemusi. Riike saab võrrelda omavaheliste mängude tulemuste põhjal.
+
+## [Päästeameti andmed - hukkunute statistika](https://andmeteadus2020.shinyapps.io/paasteamet/)
+Rakendus, mis võimaldab visualiseerida tulesurmasid ja uppumisi aastatel 2010 - 2019 maakondade kaupa. Hukkunute andmed pärinevad päästeameti kodulehelt. Lisaks võimaldab rakendus kõrvutada hukkunute andmed kuu keskmise temperatuuriga. Ilmastikuandmed on saadud Eesti Vabariigi ilmateenistuse kodulehelt.
+
 Vt. ka [2019. aasta projekte](https://andmeteadus.github.io/2019/projektid/)
 
 <!--
