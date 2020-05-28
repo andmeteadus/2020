@@ -27,6 +27,13 @@ Jalgpalli maailmameistrivõistlused suurimad riikidevahelised võistlused spordi
 ## [Päästeameti andmed - hukkunute statistika](https://andmeteadus2020.shinyapps.io/paasteamet/)
 Rakendus, mis võimaldab visualiseerida tulesurmasid ja uppumisi aastatel 2010 - 2019 maakondade kaupa. Hukkunute andmed pärinevad päästeameti kodulehelt. Lisaks võimaldab rakendus kõrvutada hukkunute andmed kuu keskmise temperatuuriga. Ilmastikuandmed on saadud Eesti Vabariigi ilmateenistuse kodulehelt.
 
+## [Rohemõtlemise institutsionaliseerumine](https://andmeteadus2019.shinyapps.io/rohemotlemine/)
+This Shiny application will help you to visualize a fraction of The Manifesto Project database to better understand institutional change in industrial societies.
+
+## [Olümpiamängud: Ateena 1896 kuni Rio 2016](https://andmeteadus2019.shinyapps.io/olympia/)
+Shiny rakendus millega saab analüüsida olümpiamänge vahemikus 1896 kuni 2016. Otsi infot erinevate riikide olümpiamedalite saagi kohta ning avasta isiklikku infot iga olümpiavõistleja kohta.
+
+
 Vt. ka [2019. aasta projekte](https://andmeteadus.github.io/2019/projektid/)
 
 <!--
