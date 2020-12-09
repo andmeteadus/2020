@@ -33,6 +33,7 @@ Pettuse tuvastamine Benfordi seaduse abil.
 * Praktikumis kasutatud materjalid:
     * [ggplot2 minimalistlik näide](../praktikum2_ggplot2)
     * Karpdiagrammide tõlgendamise [ülesanne 1](../slides/praktikum2_boxplot_quiz1.pdf) ja [ülesanne 2](../slides/praktikum2_boxplot_quiz2.pdf)
+	* [Miks on oluline reprodutseerida teadusuuringuid](https://www.ted.com/talks/ben_goldacre_what_doctors_don_t_know_about_the_drugs_they_prescribe)
 * [*Growth in a time of debt*: riigi võlakoormuse ja SKP vaheline seos](../praktikum2_riigivolg)
 * [Pettuse tuvastamise ülesanded](../praktikum2_pettus)
 * [Kodutöö](../praktikum2_kodutoo)
